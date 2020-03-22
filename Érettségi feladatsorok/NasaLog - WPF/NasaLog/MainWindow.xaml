@@ -1,0 +1,27 @@
+﻿<Window x:Class="NasaLog.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NasaLog"
+        mc:Ignorable="d"
+        Title="Nasa Log" Height="322" Width="431" FontSize="16">
+    <Grid>
+        <Label Content="5. feladat:" HorizontalAlignment="Left" Margin="21,19,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl5" Content="..." HorizontalAlignment="Left" Margin="104,19,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="6. feladat:" HorizontalAlignment="Left" Margin="21,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.372,2.194" Width="87"/>
+        <Label x:Name="lbl6" Content="..." HorizontalAlignment="Left" Margin="104,55,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="8. feladat:" HorizontalAlignment="Left" Margin="21,91,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl8" Content="..." HorizontalAlignment="Left" Margin="104,91,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="9. feladat:" HorizontalAlignment="Left" Margin="21,127,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lst9" HorizontalAlignment="Left" Height="100" Margin="104,127,0,0" VerticalAlignment="Top" Width="189"/>
+
+        <Label Content="10. feladat:" HorizontalAlignment="Left" Margin="12,242,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt10" HorizontalAlignment="Left" Height="23" Margin="104,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" TextChanged="txt10_TextChanged"/>
+        <Label x:Name="lbl10" Content="..." HorizontalAlignment="Left" Margin="158,242,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
