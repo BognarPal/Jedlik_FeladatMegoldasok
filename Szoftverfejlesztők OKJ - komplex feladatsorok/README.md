@@ -1,0 +1,1 @@
+### [Dolgozó nyilvántartás (.Net Core 3.1, WPF, MySql, Entity Framework)[(https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/Szoftverfejleszt%C5%91k%20OKJ%20-%20komplex%20feladatsorok/Dolgoz%C3%B3%20nyilv%C3%A1ntart%C3%A1s)]
