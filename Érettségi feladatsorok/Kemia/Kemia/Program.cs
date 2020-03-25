@@ -38,9 +38,9 @@ namespace Kemia
                 Console.Write("5. feladat: Kérek egy vegyjelet: ");
                 vegyjel = Console.ReadLine();
             }
-            /*while ( vegyjel.Length != 1 && vegyjel.Length != 2 && 
-                    (vegyjel.ToUpper()[0] < 'A' || vegyjel.ToUpper()[0] > 'Z') &&
-                    (vegyjel.Length == 2 &&  (vegyjel.ToUpper()[1] < 'A' || vegyjel.ToUpper()[1] > 'Z')) );*/
+            /*while ( vegyjel.Length != 1 && vegyjel.Length != 2 || 
+                    (vegyjel.ToUpper()[0] < 'A' || vegyjel.ToUpper()[0] > 'Z') ||
+                    (vegyjel.Length == 2  &&  (vegyjel.ToUpper()[1] < 'A' || vegyjel.ToUpper()[1] > 'Z')) );*/
             while (!VegyjelOK(vegyjel));
 
             int i = 0;
