@@ -7,4 +7,4 @@ Induló állomány: felfedezesek.csv
 Pontozás: Értékelési útmutató.docx
 
 ## Kapcsolódó videó
-...hamarosan
+https://youtu.be/fJEiqpkVvAg
