@@ -65,6 +65,8 @@ namespace EgyszamjatekGui
             sw.WriteLine(sor);
             sw.Close();
             MessageBox.Show("Az állomány bővítése sikeres volt", "Üzenet", MessageBoxButton.OK, MessageBoxImage.Information);
+            txtNev.Text = "";
+            txtTippek.Text = "";
         }
     }
 }
