@@ -1,0 +1,18 @@
+﻿<Window x:Class="EgyszamjatekGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EgyszamjatekGui"
+        mc:Ignorable="d"
+        Title="Egyszámjáték GUI" Height="200" Width="400">
+    <Grid>
+        <Label Content="Játékos neve:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Játékos tippjei:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTippekSzama" Content="0 db" HorizontalAlignment="Left" Margin="338,49,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNev" HorizontalAlignment="Left" Height="23" Margin="97,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+        <TextBox x:Name="txtTippek" HorizontalAlignment="Left" Height="23" Margin="97,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" TextChanged="txtTippek_TextChanged"/>
+        <Button x:Name="btnHozzaadas" Content="Játékos hozzáadása" HorizontalAlignment="Left" Margin="125,100,0,0" VerticalAlignment="Top" Width="134" Click="btnHozzaadas_Click"/>
+
+    </Grid>
+</Window>
