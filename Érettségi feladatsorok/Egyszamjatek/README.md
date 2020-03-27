@@ -6,4 +6,4 @@ Feladat leírása: feladat.pdf
 Induló állományok: egyszamjatek*.txt
 
 ## Kapcsolódó videó
-https://youtu.be/_5l3-5NOzH0
+https://youtu.be/waASgVtTowI
