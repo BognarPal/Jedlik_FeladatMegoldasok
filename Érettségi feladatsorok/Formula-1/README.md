@@ -7,5 +7,5 @@ Induló állományok: forras.zip
 Javítási útmutató: 2019-2020 Informatika ismeretek - Próba érettségi javítókulcs.pdf
 
 ## Kapcsolódó videók
-Web-es feladat megoldása: https://youtu.be/FVv4YVs9f6U
+Web-es feladat megoldása: https://youtu.be/FVv4YVs9f6U  
 Adatbázis kezelés feladat megoldása: https://youtu.be/juuiI11m_o4  
