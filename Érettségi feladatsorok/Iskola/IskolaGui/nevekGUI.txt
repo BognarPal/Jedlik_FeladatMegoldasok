@@ -1,0 +1,650 @@
+2006;c;Bodnar Szilvia
+2005;b;Rasztik Gyorgy
+2006;e;Muller Reka
+2005;b;Maltesics Fanni
+2007;a;Csermak Edit
+2006;a;Somlyo Ildiko
+2007;c;Boros Petra
+2004;d;Gaal Daniel
+2007;a;Hirth Ferenc
+2004;a;Nagy Katalin
+2004;d;Csepregi Daniel
+2005;b;Kovacs Orsolya
+2004;e;Refi Csaba
+2004;b;Denes Anna
+2004;b;Szabo Brigitta
+2004;c;Huszar Renato Pal
+2004;d;Kovacs Zsofia
+2004;d;Vavrek Kristof
+2006;e;Hidas Reka
+2006;d;Kun Michael
+2007;a;Ruff Noemi
+2007;b;Berze Eva
+2004;a;Endredy Lakatos Margit
+2004;b;Salanki Eszter Rita
+2005;d;Magyar Vivien Evelin
+2007;a;Csermak Roza
+2007;d;Barta Gergo
+2006;d;Dobos Andras
+2004;a;Magat Klaudia
+2004;c;Schmidt Borbala
+2005;a;Szabo Mihaly
+2004;d;Boganyi Margaret
+2005;d;Weidinger Peter
+2007;e;Petrik Zsofia
+2004;a;Tolcsvay-Nagy Reka Luca
+2005;e;Fabian Aniko
+2004;c;Berndt Martin
+2005;e;Matefi Mercedesz
+2005;a;Matefi Emese
+2005;d;Orso Andras
+2006;e;Varga Zsuzsa
+2007;a;Farkas Zsuzsa
+2007;e;Romhanyi Daniel Robert
+2004;e;Falvay Zsanett
+2004;b;Szentes Zoltan
+2007;c;Csepregi Gyorgy
+2004;d;Romhanyi Rebeka
+2004;b;Laczko Reka
+2007;e;Kardos Istvan
+2006;a;Janosi Mihaly
+2007;b;Farkas Steven
+2007;b;Horvath Janet
+2005;e;Csaba Dora
+2007;d;Kucsera Jesus
+2007;c;Csepregi Mihaly
+2005;a;LotsosRicky Kinga
+2004;b;Hozman Richard
+2006;d;Rasztik Dora
+2007;a;Dohoczki Maria
+2005;a;Maller Akos
+2004;e;Bene Eszter
+2006;b;Wagner Endre
+2006;b;Bengi Sandor
+2007;d;Lehotzky Oliver
+2006;d;Bakos Reka
+2007;b;Varga Zsofia
+2005;b;Hangyasi Kristof
+2006;d;Gonda Gyorgy
+2004;c;Stang Tamas
+2005;e;Nemeth Tamas
+2007;e;Tapai Anne
+2007;b;Deri Dina
+2007;b;Madarasz Edina
+2005;e;Lemak Veronika
+2006;e;Kiraly Balint
+2007;a;Kovacs Krisztina Judit
+2007;b;Homola Sandor
+2006;e;Dettai Felicia
+2004;d;Novak Beata
+2005;c;Hirth Janos
+2007;b;Nagymarosy Natalie
+2006;c;Mattyus Balazs
+2005;a;Gonda Bela
+2006;c;Wagner Istvan
+2007;b;Hegyi Roza
+2007;d;Hatala Roza
+2007;e;Vaszil Krisztina
+2005;d;Vanyur Reka
+2004;d;Bajor Mark
+2005;d;Kriszten David
+2006;e;Molnar Adam
+2007;e;Palinkas Antal
+2007;c;Bruder Barbara
+2004;b;Pifku Bence
+2005;e;Joo Peter
+2006;b;Kiss Beatrix
+2006;c;Sandor Miklos
+2006;b;Berezvai Jozsef
+2005;a;Lehotzky Arthur
+2007;e;Mangult Bettina
+2005;b;Joo Krisztian
+2005;c;Sitku Natalia
+2005;a;Bodnar Richard
+2007;b;Szabo David
+2004;b;Wolff Viktoria
+2005;e;Varga Gergely
+2005;b;Monostori Mihaly
+2006;b;Balogh Dora
+2004;e;Nagy Judit
+2006;b;Kulcsar Tamas
+2004;c;Hangyasi Boglarka
+2005;e;Kovacs Gabor
+2004;e;Pridalko Vilmos
+2006;a;Kovacs Aron
+2007;b;Buchanan Zoltan Csaba
+2005;a;Molnar Viktoria
+2006;d;Fule Noemi
+2006;c;Erdohelyi Csilla
+2004;a;Renyi Ferenc
+2004;d;Kophazi Ildiko
+2004;d;Kis Viktoria
+2004;e;Fuller Zsuzsanna
+2005;c;Csanyi Zsuzsa
+2007;b;Sarvari Piroska
+2007;e;Balazs Pal
+2004;b;Mezo Sandor
+2006;c;Wellington Tunde
+2004;e;Gombos Beata
+2007;a;Bordas Vivien Evelin
+2004;c;Kocsis Gergo
+2005;e;Callahan Kitti
+2005;a;Bodor Bettina
+2004;d;Schiller Krisztina
+2006;a;Balogh Agnes
+2005;b;Vadkerti Viktoria
+2005;d;Lehotzky Gabor
+2007;c;Keri Marta
+2007;a;Sarosdi Dora
+2007;c;Hargitai Ildiko
+2007;b;Mate Aron
+2006;c;Stang Istvan
+2007;c;Pal Janos
+2007;c;Negyesi Attila
+2005;c;Szalma Diana
+2005;e;Szabo Jesus
+2007;d;Tapay Janos Tamas
+2004;a;Balazs Istvan
+2004;e;Bogar Marta
+2004;e;Toman Istvan
+2005;a;Balogh Edina
+2005;b;Nemeth Diana
+2004;a;Lehotzky Adam Gabor
+2004;c;Karatson Kristof
+2005;d;Batkai Kinga
+2005;c;Domokos Tunde
+2007;d;Barkasz Csilla
+2004;d;Hidas Zoltan Csaba
+2005;b;Bohdaneczky Adrienn
+2004;e;Hamza Vivien
+2005;b;Valo Adam Gabor
+2007;c;Mate Laszlo
+2006;c;Bodnar Emese
+2005;e;Jedlovszky Gellert Sandor
+2006;a;Takacs Melinda
+2007;b;Barta Gergo
+2006;a;Somlyo Steven
+2006;d;Lehotzky Janos
+2006;e;Kiss Reka
+2005;c;Hatala Ilona
+2007;b;Nagy Janos
+2007;a;Szekely Mate
+2005;d;King Mercedesz
+2006;a;Szabados Viktoria
+2005;e;Tompos Adam Gabor
+2006;d;Bauer Krisztina
+2006;b;Major Anna
+2007;c;Gyocsi Ildiko
+2005;c;Fulop Tamas
+2006;a;Vajda Fruzsina Borbala
+2007;b;Magat Noemi
+2005;a;Schmidt Andras
+2005;e;Pinter Sandor
+2005;c;Kiraly Istvan
+2005;e;Bruder Krisztina
+2005;e;Mattyus Diana
+2005;a;Gerse Andras
+2006;a;Elek Balazs
+2006;a;Batkai Antal
+2007;c;Csepregi Korl
+2004;c;Dylski Judit
+2007;b;Bodi Monika
+2007;a;Kovacs Leila
+2006;b;Rabai Viktoria
+2006;c;Bolyos Borbala
+2006;d;Ignacz Mercedesz Marta
+2005;a;Bodor Klara
+2006;d;Batkai Szabina
+2004;c;Katona Boglarka
+2004;b;Gaal Peter
+2005;c;Kovacs Jozsef
+2004;a;Domokos Krisztina
+2005;d;TolcsvayNagy Daniel Robert
+2005;b;Fialowski Olga Zsofia
+2006;a;Kiraly Zoltan
+2006;e;Csermak Henrik
+2007;d;Ivancsik Edit
+2004;b;Vagner Peter
+2007;d;Elbert Bence
+2004;b;Kun David
+2004;c;Farkas Tunde
+2007;d;Pazmany Emese
+2004;d;Iszaly Karoly
+2004;c;Bihacker Szabolcs Tivadar
+2004;d;Karatson Patricia Mercedesz
+2004;d;Laczkovics Lakatos Margit
+2006;a;Kovacs Reka
+2007;c;Ihasz Bernadett
+2007;d;Molnar Krisztina
+2007;e;Komlos Lakatos Margit
+2006;e;Miskolczi Reka
+2006;c;Borka Adam Gabor
+2006;e;Hollos Eva
+2007;b;Szalma Erno
+2007;e;Bodnar Gyula
+2004;b;Krizsan Adrienn
+2004;e;Fekete Szilvia
+2006;a;Zacher Karoly
+2006;a;Prokopp Reka
+2006;c;Toman Zsofia
+2005;e;Pazmany Alessandro
+2004;e;Simon Szabolcs Tivadar
+2005;e;Kuller Andrea
+2006;d;Bognar Frank
+2007;c;Szalma Luca Krisztina
+2004;e;Keri Julio
+2007;d;Beres Zoltan
+2004;d;Farkas Janet
+2005;b;Komlos Zoltan
+2007;a;Wootsch Gergely
+2007;b;Lehotzky Dorottya
+2007;c;Valo Istvan
+2007;c;Bilicska Daniel Robert
+2006;b;Bako Balazs Istvan
+2004;d;Vari Renata
+2005;a;Callahan Attila
+2004;b;Antalfi Akos
+2007;b;Miller Gabor
+2004;e;Lemak Andrea
+2006;d;Csanyi Zsuzsa
+2004;a;Csetnegi Andre
+2005;d;Cselotei Balazs
+2005;d;Voros Kitti Noemi
+2006;b;Denes Ildiko
+2006;a;Czulek Gyorgy
+2007;d;Berze Dalma
+2006;d;Lendvai Gyula
+2005;d;Kelan Istvan
+2007;a;Boka Daniel Andras
+2006;b;Pinter Tunde
+2007;e;Peter Fruzsina
+2004;d;Pazmany Kristof
+2007;e;Arkossy Daniel
+2004;e;Berzlanovich Imre
+2006;c;Denes Zsuzsa
+2006;c;Bakos Gergely
+2005;c;Hegedus Tamas
+2005;d;Banfi Akos
+2006;d;Kovacs Laura
+2005;e;Denes Gyorgy
+2004;b;Horvath Gyorgy
+2004;e;Klezly Bettina
+2007;d;Szabo Ildiko
+2006;b;Barkasz Katalin
+2005;d;Goldberg Marta
+2006;a;Farkas Gyorgy
+2007;c;Emho Petra
+2004;b;Koschler Tamas
+2005;a;Madarasz Nikolett
+2004;b;Lemak Janos
+2006;a;Kovacs Lajos
+2007;b;Orso Christopher
+2006;b;Prokopp Viktoria
+2006;e;Beke Andras
+2007;a;Denes Anna
+2004;b;Zsigmondi Zoltan
+2004;b;Csetnegi Szilvia
+2005;d;Ruff Gabor
+2006;c;Szabo Attila
+2006;d;Fried Tamas
+2005;c;Szabo Allan
+2005;c;Forgacs Richard
+2005;b;Arkossy Reka
+2005;d;Hangyasi Gyula
+2006;a;Hegedus Agnes
+2006;b;Malovics Reka Luca
+2005;c;Molnar Tamas
+2005;a;Illyes Erno
+2005;c;Cselotei Maria
+2006;b;Toman Beatrix
+2007;e;Meszaros Andrea
+2006;b;Totka Gergo
+2005;a;Mitlasovszki Mercedesz
+2006;b;Horvath Csilla Livia
+2006;c;Scholz Akos
+2005;e;Farkas Edit
+2004;d;Unk Anne
+2005;e;Monostori Gergo
+2005;a;Feher Viktoria
+2005;e;Gombor Thomas
+2005;e;Saghy Istvan
+2005;e;Katona Peter
+2007;e;Fialowski Szilvia
+2004;b;Kovacs Jozsef
+2005;c;Wellington Peter
+2007;a;Suyama Krisztian
+2006;b;Unk Eszter
+2007;e;Kettesy Zsofia
+2007;a;Illes Viktoria
+2005;e;Peter Peter
+2007;d;Fried Eszter Leticia
+2005;a;Varga Brigitta
+2004;e;Callahan Eszter
+2005;e;Eszes Ildiko
+2004;b;Mezo Istvan
+2004;b;Pomothy Gyorgy
+2005;d;Berndt Oliver
+2006;a;Pinter Tunde
+2007;c;Marton Richard
+2004;d;Borka Edina
+2006;d;Balogh Imre
+2005;b;Alahrawi Balint
+2004;c;Csaba Attila
+2004;d;Homola Leila
+2004;d;Palfi Leila
+2007;b;Ivacs Zsolt
+2005;e;Farkas Dora
+2006;a;Mitlasovszki Eszter Adel
+2007;d;Komlos Allan
+2006;e;Szabo Janos Tamas
+2007;e;Vido Jesus
+2004;c;Csermenyi Balint
+2006;e;Bilicska Gyorgy
+2005;b;Berghoffer David
+2006;d;Bohdaneczky Arthur
+2006;b;Maller Attila
+2004;d;Muller Karoly
+2005;b;Mangult Reka
+2006;b;Czmarko Istvan
+2007;a;Jambrik Daniel
+2007;a;Lukacs Viktor
+2005;e;Bolyos Adam Ferenc
+2007;c;Hermann Istvan
+2007;d;Nagy Istvan
+2004;a;Bekes Viktoria
+2006;e;Elek Anne
+2004;b;Balazs Nikolett
+2006;c;Ilcsik Bence
+2005;e;Saghy Dorottya
+2005;a;Palfi Vilmos
+2005;a;Berky Renato Pal
+2005;c;Peacock Katalin
+2007;b;Reyes Adrienn
+2006;a;Kovacs Patrik
+2006;c;Gulyas Krisztina
+2004;d;Rakoczi Frank
+2007;d;Barkasz Matyas
+2007;d;Beres Gyula
+2004;c;Pasztor Zsofia
+2004;d;Mangult Akos
+2006;a;Kovacs Sandor
+2005;c;Banfi Patricia
+2005;c;Orzoi Gyorgy
+2004;c;Bodnar Orsolya
+2007;e;Kophazi Reka Nora
+2006;d;Ivacs Jozsef
+2005;e;Sarkozi Bonita
+2006;c;Denes Szabina
+2006;e;Tombor Mercedesz
+2007;a;Erdei Daniel Andras
+2004;d;King Tamas
+2004;d;Erdelyi Botond
+2005;c;Baksay Ildiko
+2004;a;Palfi Gyorgy
+2005;b;Gyocsi Edit
+2005;c;Matefi Antal Ferenc
+2005;d;Ivancsik Reka
+2004;c;Gonda Edina
+2005;d;Vaszil Milan
+2004;e;Willkins Anna
+2006;d;Emho Oliver
+2006;e;Meszaros Arpad
+2004;c;Zsigmondi Eszter
+2007;a;Regos Peter
+2005;e;Patkai Netta
+2005;b;Kiss Balazs Istvan
+2005;a;Busi Dorottya
+2005;c;Bajor Brigitta
+2006;a;Vajnai Zsofia
+2006;e;Kovacs Lujein
+2006;a;Vancza Korl
+2004;b;Denes Katalin
+2007;d;Szikra Judit
+2006;c;Jenes Andras
+2006;c;Molnar Attila
+2007;c;Miskolczi Gabor
+2005;a;Fried Viktoria
+2006;a;Szabados Marcell
+2005;c;Csetnegi Zsofia
+2006;a;Csanyi Zsofia
+2005;e;Banfi Kristof
+2006;d;Fekete Istvan
+2007;d;Bartha Eva
+2007;c;Pomothy Gergo
+2005;b;Fialowski Pal
+2007;e;Tverdota Nikolett
+2005;e;Kovacs Marta
+2006;d;Berghoffer Theodor
+2004;e;Nagy Bettina
+2004;a;Fialowski Bettina
+2005;b;Bator Adam
+2004;b;Fekete Kinga
+2004;a;Dodsworth Noemi
+2005;c;Somlyo Karoly
+2004;e;Ivancsik Istvan
+2004;a;Komlos Korl
+2007;a;Jenes Beatrix
+2005;a;Kovacs Botond
+2004;a;Miskolczi Marton Istvan
+2006;a;Nemeth Eszter Rita
+2007;e;Szedresi Gergely
+2006;b;Bodor Gabor
+2004;a;Beres Ferenc
+2007;c;Mate Pal
+2006;e;Sitku Patricia Mercedesz
+2006;b;Nemeth Ferenc
+2005;a;Selley Szilvia
+2005;b;Hangyasi Gabor
+2007;e;Dorfler Tamas
+2006;e;Bordas Janos Oszkar
+2005;e;Varga Theodor
+2004;d;Wellington Zsofia
+2007;a;Csermenyi Zoltan
+2006;a;Olay Zoltan
+2007;c;Kiss Barbara
+2004;d;Drexler Eszter
+2006;a;Ivancsik Endre
+2006;b;Hargitai Krisztina
+2005;e;Szabados Alexandra
+2004;a;Jakobi Lujein
+2007;b;Czmarko Viktoria
+2004;a;Kovacs Balazs Istvan
+2005;c;Kelan Zsofia
+2005;d;Patkai Christopher
+2007;e;Kiss Mercedesz
+2005;a;Szabo Gyula
+2005;b;Schneider Edit
+2004;c;Bartha Zoltan Csaba
+2005;d;Kovacs Veronika
+2005;e;Ivancsik Matyas
+2007;c;Toman Barbara
+2004;c;Selley Bernadett
+2005;b;Arkossy Vivien Evelin
+2005;b;Macz Balazs
+2006;b;Szabo Andras
+2004;a;Bilicska Viktoria
+2006;c;Negyesi Andras
+2007;c;Kovacs Anna
+2006;b;Bodnar Frank
+2007;b;Farkas David
+2006;c;Vari Erno
+2005;b;Komlos Aniko
+2005;b;Peter Dora
+2005;e;Pasztor Tunde
+2007;e;LotsosRicky Viktoria
+2007;c;Meszaros Zoltan
+2007;c;Karatson Eszter Adel
+2004;c;Palfi Eszter
+2004;d;Kovacs Tamas
+2005;d;Kiss Renato Pal
+2006;c;Batkai Csaba
+2007;e;Kovacs David
+2006;d;Erdei Gyorgy
+2004;c;Fulop Bence
+2006;c;Nemeth Nikolett
+2004;c;Lorinczi Barbara
+2006;e;Kovacs Istvan
+2007;a;Fekete Daniel
+2007;e;Hozman Sandor
+2007;d;Pronay Tibor
+2006;b;Homola Emese
+2006;a;Hollos Adrienn
+2007;e;Sarvari Imre
+2004;e;Batkai Richard
+2005;c;Malovics Gergely
+2004;e;Kardos Thomas
+2005;e;Somogyvari Katalin
+2006;c;Szanto Barnabas
+2004;b;Kovacs Tunde
+2004;b;Bernath Peter
+2005;e;Vasarhelyi Noemi
+2005;a;Onodi Eszter Adel
+2006;c;Maltesics Gergely
+2005;c;Halasz Reka
+2004;b;Lorinczi Orsolya
+2004;c;Varga Balazs
+2006;d;Csornyei Bence
+2006;b;Csornyei Csaba
+2004;b;Bohdaneczky Marta
+2007;a;Rabai Aron
+2005;d;Bartha Emil
+2005;a;Kis Martin
+2005;b;Erdei Maria
+2005;e;Csermenyi Andras
+2005;e;Deri Gergely
+2007;d;Varga Laura
+2004;b;Nagy Marcell
+2007;d;Farkas Zoltan
+2005;b;Ignacz Balazs
+2007;b;Izsak Kristof
+2005;d;Nagy Julio
+2006;b;Kovacs Peter
+2004;b;Kovacs Zsofia
+2005;d;Boros Tamas
+2006;a;Drexler Ildiko
+2007;a;Fulop Peter
+2007;a;Goldberg Sandor
+2007;e;Szalma Fruzsina
+2004;c;Somlyo Martin
+2005;c;Klezly Bence
+2006;b;Kucsera Csaba
+2007;a;Pinter Melinda
+2006;c;Sandor Evelin
+2006;b;Mattyus Anna
+2006;e;Elek Bela
+2004;a;Pal Antal
+2005;c;Csigas Maria
+2007;b;Reitmeyer Gabor
+2005;b;Pridalko Zsolt
+2007;b;Bajor Sandor
+2007;c;Csepregi Kristof
+2007;c;Nagy Dina
+2005;d;Tompos Richard
+2005;d;Weidinger Viktoria
+2005;c;Berki Klaudia
+2006;b;Emho Dorottya
+2005;e;Hardy Csilla
+2004;a;Farkas Andre
+2006;a;Balogh Aniko
+2006;e;Szentpetery Beatrix
+2005;c;Salanki Fanni
+2007;d;Csigas Jozsef
+2004;c;Jambor Dora
+2007;a;Lehotzky Istvan
+2004;b;Miller Mercedesz Marta
+2005;b;Izsak Andrea
+2005;d;Kiss Kristof
+2007;a;Resch Nancy
+2006;d;Bodecs Roza
+2004;c;Simon Istvan
+2005;d;Refi Zoltan
+2007;d;Jenes Arpad
+2007;b;Maltesics Eszter
+2007;e;Peacock Kristen
+2007;e;Tapay Istvan
+2006;c;Zsok Gabor
+2007;b;Demeter Bence
+2007;b;Vancza Zoltan
+2007;d;Endredy Adam Gabor
+2005;d;Davolio Fruzsina Borbala
+2004;b;Szentes Maria
+2007;b;Mozsar Rezso
+2006;d;Hozman Piroska
+2004;b;Goldberg Beata
+2006;c;Sandor Tamas
+2007;e;Demeny Daniel
+2005;b;Marton Dorottya
+2004;c;Kovacs Mercedesz Marta
+2006;b;Tombor Erzsebet
+2006;a;Farkas Monika
+2005;d;Schneider Renato Pal
+2004;e;Domokos Gergely
+2007;b;Kulcsar Istvan
+2006;d;Varga Emese
+2005;c;Vari Laura
+2004;a;Muller Nikolett
+2006;d;Sarvari Dorottya
+2007;e;Vas Laura
+2007;a;Hamza Erno Gergo
+2004;d;Pomothy Eleonora
+2006;b;Kiss Zsuzsa
+2007;c;Bodor Attila
+2004;c;Forgacs Reka
+2005;b;Cselotei Gergo
+2007;c;Weidinger Richard
+2004;b;Kovacs Anne
+2004;c;Fuller Gabor
+2005;a;Kovacs Natalia
+2004;c;Forgacs Beatrix
+2007;e;Lemak Netta
+2004;c;Keri Fruzsina Borbala
+2004;a;Selley Krisztian
+2005;d;Elek Andrew
+2006;b;Gergely Anna
+2007;a;Palinkas Luca Sara
+2004;b;Kallai Arnold
+2005;d;Pifku Bettina
+2005;d;Buros Laszlo Endre
+2004;d;Neher Sandor
+2007;c;Mirak Viktoria
+2007;b;Bognar Andras
+2007;d;Bartha Balazs
+2005;b;Rosta Kristen
+2007;a;Tompos Istvan
+2005;b;Lendvai Kinga
+2005;c;Deri Zsofia
+2004;a;Zilahy Janet
+2007;c;Czulek Veronika
+2004;a;Klezly Dezso
+2006;d;Mate Rahel
+2006;e;Mattyus Nikoletta
+2006;c;Berki Laszlo Ferenc
+2006;e;Kiss Dezso
+2004;d;Iszaly Mercedesz
+2006;d;Denes Gergo
+2006;a;Smith Gabor
+2004;c;Pal Krisztina Judit
+2005;c;Horvath Gabor
+2007;a;Somogyvari Laura
+2004;e;Pifku Erno Gergo
+2006;b;Berezvai Gergely Bence
+2004;a;Szekely Netta
+2005;e;Gombaszogi Peter
+2005;a;Dorfler Barbara
+2005;d;Pucheli Edina
+2006;b;Nemeth Tunde
+2005;d;Katona Balazs
+2007;c;Olay Kitti Noemi
+2007;d;Falvay Veronika
+2005;c;Arany Olga
+2006;a;Farkas Virag
+2005;c;Knipf Krisztian
+2007;d;Izsak Zoltan
+2007;e;Tompos Zsofia
+2006;c;Fialowski Tunde
+2007;d;Onodi Ildiko
+2005;c;Molnar Agnes
+2004;b;Pucheli Katalin
+2004;b;Eizen Szabina
+2004;c;Major Tamas
+2006;c;Krizsan Vivien Evelin

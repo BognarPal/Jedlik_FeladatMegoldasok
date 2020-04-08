@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iskola", "Iskola\Iskola.csproj", "{AECEE8F8-5490-499C-A6D4-C923430F19FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IskolaGui", "IskolaGui\IskolaGui.csproj", "{0D8B3054-CB0A-4CEA-8098-AFCC498FF959}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AECEE8F8-5490-499C-A6D4-C923430F19FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECEE8F8-5490-499C-A6D4-C923430F19FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECEE8F8-5490-499C-A6D4-C923430F19FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECEE8F8-5490-499C-A6D4-C923430F19FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8B3054-CB0A-4CEA-8098-AFCC498FF959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8B3054-CB0A-4CEA-8098-AFCC498FF959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8B3054-CB0A-4CEA-8098-AFCC498FF959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8B3054-CB0A-4CEA-8098-AFCC498FF959}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {572D3D41-21A4-4FC0-9077-A83FBE84DCCB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forumla One</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="site.css">
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <nav class="sidebar navbar navbar-expand-lg navbar-dark bg-dark d-lg-block">
+        <h1 class="navbar-brand">
+            FORMULA ONE
+        </h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#home">Kezdőlap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#history">Történet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#records">"Leg"-ek</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#avgspeed">Átlagsebességek</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="section-100 bg-image">
+            <h1 class="text-center">Érdekességek a Forma-1 világából</h1>
+        </section>
+
+        <section id="history" class="section-100 bg-image p-2">
+            <h2 class="text-center py-3">Története</h2>
+            <h3>A kezdetek:</h3>
+            <p>A Forma-1 gyökerei egészen a 20. század első éveiig vezethetők vissza, az autóversenyzés bölcsőjébe, Franciaországba. Az első nagydíjat, grand prix-t 1906-ban
+                rendezték, a Renault-t vezető győztes pedig nem volt más, mint a magyar Szisz Ferenc.</p>
+
+            <h3>A Forma-1 születése:</h3>
+            <p>Már a 30-as években felmerült a grand prix-k világbajnokságba való szervezése, de a második világháború közbeszólt, így az európai autóversenyzés csak a 40-es évek
+                végén éledt újra. Az első bajnoki idényt pedig 1950-ben rendezték, a legelső futam a silverstone-i Brit Nagydíj volt.</p>
+
+            <h3>A Forma-1 aranykora:</h3>
+            <p>Az F1-be 1977-ben belépő Renault hozta a sportág következő nagy újítását. A francia gyártó turbómotorjai kezdetben ugyan siralmasan megbízhatatlanok voltak, de a
+                technológia elterjedt és egy évtizedig uralta a száguldó cirkuszt, az erőforrások az egészen elképesztő, 1000 lóerő feletti teljesítményt is hozták. Manapság talán
+                az 1980-as évekre tekintenek legtöbben aranykorként, amikor Nelson Piquet, Alain Prost, Nigel Mansell, Ayrton Senna küzdött a Brabham, a McLaren, a Lotus és a
+                Williams autóiban ülve.</p>
+
+            <h3>A '90-es évek:</h3>
+            <p>A Forma-1-ben tulajdonképpen csak Mansell '92-es révbe érése, Prost '93-as visszavonulása és Senna '94-es halála zárta le végleg a 80-as éveket, ezután emelkedtek
+                fel a korszak új sztárjai.</p>
+
+            <h3>Napjaink:</h3>
+            <p>A Ferrari és Schumacher totálisan uralta a 2000-es évtized elejét, öt éven keresztül minden bajnoki címet begyűjtött. A Renault és Fernando Alonso 2005-2006-ban
+                törte meg a sorozatot, a főszerep ezután már a következő generációé, napjaink sztárjaié lett.</p>
+        </section>
+
+        <section id="records">
+            <div class="row mx-0">
+                <div class="bg-black col-sm-12 col-md-6 p-3">
+                    <h3 class="bg-dark p-2 col-sm-12 text-center">
+                        Legtöbb nagydíj
+                    </h3>
+                    <div class="row">
+                        <img class="col-sm-4" src="img/rubens_barrichello.jpg" alt="Rubens Barrichello">
+                        <div class="col-sm-8">
+                            <ol>
+                                <li class="felkover">Rubens Barrichello (326)</li>
+                                <li>Kimi Räikkönen (315)</li>
+                                <li>Fernando Alonso (314)</li>
+                                <li>Jenson Button (309)</li>
+                                <li>Michael Schumacher (308)</li>
+                                <li>Felipe Massa (272)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black col-sm-12 col-md-6 p-3">
+                    <h3 class="bg-dark p-2 col-sm-12 text-center">
+                        Legtöbb megnyert futam
+                    </h3>
+                    <div class="row">
+                        <img class="col-sm-4" src="img/michael_schumacher.jpg" alt="Michael Schumacher">
+                        <div class="col-sm-8">
+                            <ol>
+                                <li class="felkover">Michael Schumacher (91)</li>
+                                <li>Lewis Hamilton (84)</li>
+                                <li>Sebastian Vettel (53)</li>
+                                <li>Alain Prost (51)</li>
+                                <li>Ayrton Senna (41)</li>
+                                <li>Fernando Alonso (32)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black col-sm-12 col-md-6 p-3">
+                    <h3 class="bg-dark p-2 col-sm-12 text-center">
+                        Bajnoki címek
+                    </h3>
+                    <div class="row">
+                        <img class="col-sm-4" src="img/juan_manuel-fangio.jpg" alt="Juan Manuel Fangio">
+                        <div class="col-sm-8">
+                            <ol>
+                                <li>Michael Schumacher (7)</li>
+                                <li>Lewis Hamilton (6)</li>
+                                <li class="felkover">Juan Manuel Fangio (5)</li>
+                                <li>
+                                    Alain Prost (4)
+                                    <br>
+                                    Sebastian Vettel (4)
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black col-sm-12 col-md-6 p-3">
+                    <h3 class="bg-dark p-2 col-sm-12 text-center">
+                        Csapat bajnoki címek
+                    </h3>
+                    <div class="row">
+                        <img class="col-sm-4" src="img/ferrari.jpg" alt="Ferrari">
+                        <div class="col-sm-8">
+                            <ol>
+                                <li class="felkover">Ferrari (16)</li>
+                                <li>Williams (9)</li>
+                                <li>McLaren (8)</li>
+                                <li>Lotus (7)</li>
+                                <li>Mercedes (6)</li>
+                                <li>Red Bull (4)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legfiatalabb versenyző -->
+                <div class="bg-black col-sm-12 col-md-4 p-3 text-center">
+                    <h3 class="bg-dark p-3 w-100">
+                        Legfiatalabb versenyző
+                    </h3>
+                    <img src="img/max_verstappen.jpg" class="w-100" alt="Max Verstappen" title="Max Verstappen">
+                    <p>Max Verstappen 2015-ben 17 éves és 166 napos korában indult az Osztrák nagydíjon.</p>
+                </div>
+                <!-- Legidősebb versenyző -->
+                <div class="bg-black col-sm-12 col-md-4 p-3 text-center">
+                    <h3 class="bg-dark p-3 w-100">
+                        Legidősebb versenyző
+                    </h3>
+                    <img src="img/louis_chiron.jpg" class="w-100" alt="Louis Chiron" title="Louis Chiron">
+                    <p>Louis Chiron 58 évesen és 288 naposan állt rajthoz 1958-ban Monacoban.</p>
+                </div>
+                <!-- Legtöbb Grand Prix -->
+                <div class="bg-black col-sm-12 col-md-4 p-3 text-center">
+                    <h3 class="bg-dark p-3 w-100">
+                        Legtöbb Grand Prix
+                    </h3>
+                    <img src="img/monza_info.jpg" class="w-100" alt="Monza" title="Monza">
+                    <p>1950 óta a legtöbb versenyt az olaszországi Monzában rendezték.</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="avgspeed" class="section-100 bg-image p-2">
+            <h2 class="text-center py-3">Átlagsebesség számítás</h2>
+            <div class="row mx-0">
+                <div class=".d-none .d-md-block col-md-5">
+                    <img id="circuitimage" src="" class="w-100">
+                </div>
+
+                <form class="col-md-5 offset-md-1">
+                    <div class="form-group">
+                        <label for="circuit">Pálya</label>
+                        <select class="form-control" id="circuit" oninput="calculate()">
+                            <option value=""></option>
+                            <option value="HUN">Hungaroring</option>
+                            <option value="MON">Monaco</option>
+                            <option value="BEL">Spa-Francorchamps</option>
+                            <option value="ITA">Monza</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="laptime">1 kör ideje (másodpercben)</label>
+                        <input type="number" class="form-control" id="laptime" placeholder="pl.: 105.954" oninput="calculate()">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="averagespeed">Átlagsebesség</label>
+                        <input type="text" class="form-control" id="averagespeed" readonly>
+                    </div>
+                </form>
+
+                <script>
+                    showCircuit();
+                </script>
+
+            </div>
+
+        </section>
+    </main>
+
+    <audio id="f1sound">
+        <source src="fromula-one-car-sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer class="text-right p-2">
+        Források: <a href="http://formula.uw.hu/f1tortenet.html">F1 történet</a>, 
+        <a href="https://en.wikipedia.org/wiki/List_of_Formula_One_driver_records">Wikipedia</a>
+    </footer>
+
+
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>
