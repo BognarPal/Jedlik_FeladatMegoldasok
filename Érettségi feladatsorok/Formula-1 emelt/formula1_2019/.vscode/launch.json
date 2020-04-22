@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Attach to node",
+            "type": "node",
+            "request": "attach",
+            "restart": false,
+            "port": 9229,
+            "skipFiles": ["${workspaceRoot}/node_modules/**", "<node_internals>/**"]
+        }
+    ]
+}

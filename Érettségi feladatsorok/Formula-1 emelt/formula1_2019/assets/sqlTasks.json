@@ -1,0 +1,47 @@
+﻿[
+  {
+    "id": 15,
+    "description": "A gp táblát bővítse egy új rekorddal, az id legyen: 1920.05.01, a név: Belga, a helyszin pedig: Belgium!",
+    "adminPage": false
+  },
+  {
+    "id": 16,
+    "description": "A gp táblába hibásan került bele a „Némte” szó a nev mezőbe egy rekordban, SQL utasítással utólag javítsa „Német”-re!",
+    "adminPage": false
+  },
+  {
+    "id": 17,
+    "description": "Sokan úgy gondolják, hogy a Hill vezetéknevű pilóták egy családhoz tartoznak. Őket nem rokoni szálak kötik össze, hanem az, hogy mindhárman világbajnokságot nyertek. Készítsen lekérdezést, amely megjeleníti a Hill vezetéknevű versenyzők nevét, nemzetiségét és születési évét a születési év sorrendjében a minta szerint!",
+    "adminPage": true
+  },
+  {
+    "id": 18,
+    "description": "Adja meg lekérdezés segítségével, hogy az adatbázis mely „P” betűvel kezdődő futamgyőztesek (nagydíjgyőztesek) nevét tartalmazza! Ügyeljen arra, hogy egy versenyző neve se jelenjen meg többször!",
+    "adminPage": true
+  },
+  {
+    "id": 19,
+    "description": "Juan-Manuel Fangio volt a korszak egyik legnevesebb versenyzője. Készítsen lekérdezést, amely megadja, hogy hány éves volt abban az évben, amikor az első versenyén indult! Az életkort az évszámok különbségével számolja!",
+    "adminPage": true
+  },
+  {
+    "id": 20,
+    "description": "Készítsen lekérdezést, amely megadja, hogy a Ferrari típusú versenyautók esetében mi volt az a három leggyakoribb hiba, ami miatt nem fejezték be a futamot!",
+    "adminPage": true
+  },
+  {
+    "id": 21,
+    "description": "Hozzon létre SQL utasítással az eredmeny táblában egy logikai típusú, privat azonosítójú mezőt, majd készítsen SQL utasítást, amely a privat mező értékét igazra állítja, ha a versenyzőnek nem volt csapata! Mindkét utasítást mentse!",
+    "adminPage": false
+  },
+  {
+    "id": 22,
+    "description": "Ismerősünk szerette volna kideríteni, hogy mely országok kerültek a rendezők közé az első magyarországi nagydíjat követően. Úgy gondolta, meghatározza a rendező országokat az első magyarországival bezárólag, majd megkeresi a rendezők közül azokat, amelyek az előző listában nem szerepelnek.",
+    "adminPage": true
+  },
+  {
+    "id": 23,
+    "description": "Készítsen lekérdezést, amely megjeleníti az 1958-ban Monacoban rendezett nagydíj első 3 helyezettjének helyezését, nevét és csapatát!",
+    "adminPage": true
+  }
+]
