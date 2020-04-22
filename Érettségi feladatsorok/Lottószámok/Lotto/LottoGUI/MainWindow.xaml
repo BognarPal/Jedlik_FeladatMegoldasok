@@ -1,0 +1,18 @@
+﻿<Window x:Class="LottoGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LottoGUI"
+        mc:Ignorable="d"
+        Title="Lottószámok" Height="344" Width="501">
+    <Grid>
+        <Label Content="Kihúzott számok listája" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Ki nem húzott prímszámok" HorizontalAlignment="Left" Margin="281,25,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ListBox x:Name="lstStat" HorizontalAlignment="Left" Height="189" Margin="28,56,0,0" VerticalAlignment="Top" Width="181"/>
+        <ListBox x:Name="lstPrim" HorizontalAlignment="Left" Height="189" Margin="284,56,0,0" VerticalAlignment="Top" Width="89"/>
+        <Button x:Name="btn10" Content="10. feladat" HorizontalAlignment="Left" Margin="28,270,0,0" VerticalAlignment="Top" Width="181" FontWeight="Bold" Click="btn10_Click"/>
+        <Button x:Name="btn11" Content="11. feladat" HorizontalAlignment="Left" Margin="286,270,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="87" Click="btn11_Click"/>
+
+    </Grid>
+</Window>
