@@ -12,9 +12,11 @@ A ide felkerülő forráskódok mindegyikének a megoldása is megtalálható vi
 ## Adatbázis-kezelés  
 ### [Napelemek](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Napelemek%20-%20SQL)  
 ### [Formula-1 középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Formula-1)  
+### [Formula-1 emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Formula-1%20emelt)
 
 ## Weboldal szerkesztés  
 ### [Formula-1 középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Formula-1)  
+### [Formula-1 emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Formula-1%20emelt)
 
 # Szoftverfejlesztő komplex feladatsorok   
 ### [Dolgozó nyilvántartás (.Net Core 3.1, WPF, MySql, Entity Framework)](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/Szoftverfejleszt%C5%91k%20OKJ%20-%20komplex%20feladatsorok/Dolgoz%C3%B3%20nyilv%C3%A1ntart%C3%A1s)
