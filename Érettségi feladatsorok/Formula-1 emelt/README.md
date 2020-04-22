@@ -7,5 +7,5 @@ Induló állományok: forras.zip
 Javítási útmutató: formula1_2019_javitasi.pdf  
 
 ## Kapcsolódó videók
-Web-es feladat megoldása: https://youtu.be/dedddZcauPE
+Web-es feladat megoldása: https://youtu.be/dedddZcauPE  
 Adatbázis kezelés feladat megoldása: https://youtu.be/jozfaH_7jc8
