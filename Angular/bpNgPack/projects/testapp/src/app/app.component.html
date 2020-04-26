@@ -1,0 +1,12 @@
+<button (click)="visible=true">Open modal</button>
+
+<button class="ml-3" (click)="confirm()">Open confirm</button>
+
+<bp-modal [(visible)]="visible">
+  <bp-modal-header>Teszt</bp-modal-header>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Dolorem, ipsam voluptate ducimus debitis laboriosam quos officiis dignissimos quibusdam magnam facilis? 
+  <bp-modal-footer>
+    <button (click)="visible=false">Close</button>
+  </bp-modal-footer>
+</bp-modal>

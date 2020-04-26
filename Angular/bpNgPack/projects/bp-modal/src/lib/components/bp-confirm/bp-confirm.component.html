@@ -1,0 +1,11 @@
+<bp-modal [style]="{width: size === 'sm' ? '300px' : (size === 'md' ? '450px' : '600px')}" [visible]="true">
+    <bp-modal-header>
+        {{ title }}
+    </bp-modal-header>
+    <span [innerHTML]="message"></span>
+    <bp-modal-footer class="mx-auto">
+        <button type="button" class="btn btn-secondary mr-2" (click)="decline()">{{ cancelText }}</button>
+        <button *ngIf="okText" type="button" class="btn btn-primary ml-2" (click)="accept()">{{ okText }}</button>
+    </bp-modal-footer>
+</bp-modal>
+

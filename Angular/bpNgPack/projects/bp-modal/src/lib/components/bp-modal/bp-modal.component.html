@@ -1,0 +1,27 @@
+<div *ngIf="visible" class="modal" tabindex="-1" [style]="{'z-index': modalSettings.zIndexModal, 'display': 'block'}" >
+    <div class="modal-dialog modal-dialog-scrollable modal-lg m-0 position-fixed" [ngStyle]="style">
+      <div class="modal-content">            
+        <div class="modal-header disable-text-selection" (mousedown)="initDrag($event)" style="background-color: #f4f4f4;">
+          <h6 class="modal-title font-weight-bold">
+            <ng-content select="bp-modal-header"></ng-content>
+          </h6>
+          <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="modal-body" [ngStyle]="contentStyle">
+          <ng-content></ng-content>
+        </div>
+  
+        <!-- footer -->
+        <div #footer class="d-flex" [ngClass]="footer.children.length === 0 ? '' : 'p-2'"
+          style="border-top: 1px solid #dee2e6; border-bottom-right-radius: calc(0.3rem - 1px); border-bottom-left-radius: calc(0.3rem - 1px);">
+          <ng-content select="bp-modal-footer" style="width: 100%"></ng-content>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="visible" class="modal-backdrop fade show" [style]="{'z-index': modalSettings.zIndexFade}"></div>
