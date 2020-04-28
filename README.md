@@ -8,6 +8,7 @@ A ide felkerülő forráskódok mindegyikének a megoldása is megtalálható vi
 ### [Kémia](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Kemia)
 ### [Egyszám játék](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Egyszamjatek)
 ### [Iskola](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Iskola)
+### [Forgoracs2020](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Forgoracs2020)
 
 ## Adatbázis-kezelés  
 ### [Napelemek](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Napelemek%20-%20SQL)  
