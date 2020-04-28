@@ -1,0 +1,12 @@
+﻿<Window x:Class="Forgoracs2020GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Forgoracs2020GUI"
+        mc:Ignorable="d"
+        Title="GUI - 16" Height="345" Width="291">
+    <Canvas x:Name="canvas">
+        <Button x:Name="btnMentes" Content="Kódlemez mentése"  Width="260" Height="28" Canvas.Left="10" Canvas.Top="10" Click="btnMentes_Click"/>
+    </Canvas>
+</Window>
