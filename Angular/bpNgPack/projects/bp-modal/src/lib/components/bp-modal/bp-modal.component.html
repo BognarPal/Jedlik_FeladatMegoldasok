@@ -5,7 +5,7 @@
           <h6 class="modal-title font-weight-bold">
             <ng-content select="bp-modal-header"></ng-content>
           </h6>
-          <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+          <button *ngIf="closeButton" type="button" class="close" aria-label="Close" (click)="dismiss()">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>

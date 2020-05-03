@@ -21,6 +21,7 @@ export class BPModalFooterComponent { }
 export class BPModalComponent implements AfterViewChecked {
   @Input() style: any;
   @Input() contentStyle: any;
+  @Input() closeButton = true;
   @Input() get visible(): boolean {
     return this._visible;
   }
