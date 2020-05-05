@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  CLIENT_ID: '54620519795-h3m66hnsm23re7o437p1ubc8nv3r7lj9.apps.googleusercontent.com',
-  API_KEY: 'AIzaSyAyMiKBwDgC1gJl5NXGakTmSf4IXMKX4io'
+  CLIENT_ID: '',
+  API_KEY: ''
 };
 
 /*
