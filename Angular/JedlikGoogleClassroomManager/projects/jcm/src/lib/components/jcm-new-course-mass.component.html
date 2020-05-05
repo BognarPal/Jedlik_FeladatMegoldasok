@@ -1,0 +1,64 @@
+<bp-modal id="newCourseDialog" [(visible)]="visible" [style]="{'width': '850px', 'max-height': '80vh'}">
+    <bp-modal-header>
+        <h3>Kurzusok létrehozása TXT-ből</h3>
+    </bp-modal-header>
+
+    <div *ngIf="courses.length === 0" class="drop-zone row" (drop)="filezoneDrop($event)" (dragover)="filezoneDragover($event)" (dragleave)="filezoneDragleave($event)"
+        [ngClass]="isFileOverZone ? 'bg-light text-success drop-zone-border-active' : 'bg-white text-secondary drop-zone-border-inactive'">
+        <p class="offset-md-3 col-md-6 text-center py-5 my-0">Ide húzza be a TXT fájlt</p>
+        <div class="col-md-3 text-right">
+            <span class="btn btn-lg btn-secondary py-0 px-1 border-0 mt-1 px-1" (click)="manualFileBrowse.click()">Tallózás</span>
+        </div>
+
+        <input #manualFileBrowse type="file" (change)="fileBrowsed($event)" class="d-none">
+    </div>
+
+    <div *ngIf="courses.length !== 0" class="border border-secondary my-1">
+        <div *ngFor="let course of courses" style="background-color: #ddd;" class="my-0 p-2 border border-secondary" (click)="openCourse(course)">
+            <h5 style="cursor: pointer;" class="my-0" [ngClass]="course.hasError ? 'text-danger' : ''" ><span *ngIf="!course.checked" class="px-1">⌛</span>{{course.name}}</h5>
+            <div *ngIf="openedCourse && openedCourse.name === course.name">
+                <div class="row">
+                    <div class="col-2"><b><u>Tulajdonos:</u></b></div>
+                    <div *ngIf="!course.checkedOwner" class="col-10 text-danger">{{course.owner}}</div>
+                    <div *ngIf="course.checkedOwner" class="col-10"> 
+                        <span class="badge badge-pill badge-secondary m-1">{{course.checkedOwner}}</span>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-2"><b><u>Tanárok:</u></b></div>
+                    <div class="col-10">{{course.teachers}}</div>
+                    <div class="offset-2 col-10"> 
+                        <span class="badge badge-pill badge-secondary m-1" *ngFor="let teacher of course.checkedTeachers">{{teacher}}</span>
+                        <span class="badge badge-pill badge-danger m-1" *ngFor="let teacher of course.failedTeachers">{{teacher}}</span>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-2"><b><u>Tanulók:</u></b></div>
+                    <div class="col-10 text-break">{{course.students}}</div>
+                    <div class="offset-2 col-10"> 
+                        <span class="badge badge-pill badge-secondary m-1" *ngFor="let student of course.checkedStudents">{{student}}</span>
+                        <span class="badge badge-pill badge-danger m-1" *ngFor="let student of course.failedStudents">{{student}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="saving && courses.length !== 0" class="my-1 w-100" style="position: absolute; top: 1rem; border: 1px solid rgba(0,0,0,0)">
+        <div *ngFor="let course of courses" class="my-0 p-2" style="border: 1px solid rgba(0,0,0,0)">
+            <div style="background-color: rgba(0,255,0,0.5); height: 1.5rem;" class="my-0" [ngStyle]="{'width': course.status + '%'}"></div>
+        </div>
+    </div>
+
+    <bp-modal-footer class="text-right w-100">
+        <div *ngIf="errorMessage != ''" class="alert alert-danger">
+            {{errorMessage}}
+        </div>
+
+        <button class="btn btn-secondary btn-lg float-left" (click)="viewSample.emit()">Minta TXT</button>
+        <button class="btn btn-primary btn-lg mr-3" (click)="save()" [disabled]="saving">Mentés</button>
+        <button class="btn btn-secondary btn-lg" (click)="cancel()">Mégsem</button>
+
+    </bp-modal-footer>
+</bp-modal>

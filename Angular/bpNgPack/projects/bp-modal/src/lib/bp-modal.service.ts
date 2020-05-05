@@ -1,5 +1,5 @@
 import { Injectable, ComponentFactoryResolver, Injector, ApplicationRef, ComponentRef, EmbeddedViewRef } from '@angular/core';
-import { BPConfirmComponent } from './components';
+import { BPConfirmComponent } from './components/bp-confirm/bp-confirm.component';
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,15 @@
+<div class="col-2 w-100 float-left">
+    <img [src]="model.photoUrl">
+</div>
+<div *ngIf="model.isAdmin" class="offset-2 col-10 pl-4 text-danger">
+    Admin user
+</div>
+<div class="offset-2 col-10 pl-4">
+    {{model.email}}    
+</div>
+<div class="offset-2 col-10 pl-4">
+    <span class="mr-2" *ngFor="let phone of model.phones">{{phone.type}}: {{phone.value}}</span>
+</div>
+<div class="offset-2 col-10 pl-4">
+    Ut. bejelentkezés: {{model.lastLoginTime}}
+</div>

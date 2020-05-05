@@ -1,0 +1,31 @@
+<bp-modal id="googleUsersSelectDialog" [(visible)]="visible" [style]="{width: '650px'}" [closeButton]="false">
+    <bp-modal-header>
+        <h3>{{ title }}</h3>
+    </bp-modal-header>
+
+    <div>
+        <h4 *ngFor="let user of userList" class="d-inline mx-1">
+            <span class="badge badge-pill badge-secondary">
+                {{user.email}}
+                <button type="button" class="ml-1 badge badge-light badge-pill p-1" (click)="removeUser(user)" [disabled]="saving">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </span>
+        </h4>
+    </div>
+    <form #newForm="ngForm">
+        <div class="form-group">
+            <label for="emailAddress">E-mail cím</label>
+            <input [g-user]="true" type="text" class="form-control form-control-lg" id="emailAddress" [(ngModel)]="emailAddress" name="emailAddress"
+                (userMatch)="userMatch($event)" [disabled]="saving">
+        </div>
+    </form>
+    <bp-modal-footer class="text-right w-100">
+        <div *ngIf="errorMessage != ''" class="alert alert-danger">
+            {{errorMessage}}
+        </div>
+
+        <button class="btn btn-primary btn-lg mr-3" (click)="save()" [disabled]="saving" >Mentés</button>
+        <button class="btn btn-secondary btn-lg" (click)="visible=false" [disabled]="saving">Mégsem</button>
+    </bp-modal-footer>
+</bp-modal>

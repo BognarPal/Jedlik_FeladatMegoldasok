@@ -1,0 +1,18 @@
+.drop-zone {    
+    width: calc(100% - 1rem);
+    min-height: 6rem;
+    margin: 0.5rem;
+}
+
+.drop-zone-border-inactive {
+    border: 3px dotted #888;
+}
+
+.drop-zone-border-active {
+    border: 3px solid #28a745;
+}
+
+.badge {
+    font-size: 1rem; 
+    font-weight: normal;
+}

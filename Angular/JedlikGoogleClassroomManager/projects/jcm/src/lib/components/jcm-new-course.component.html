@@ -1,0 +1,25 @@
+<bp-modal id="newCourseDialog" [(visible)]="visible" [style]="{width: '650px'}">
+    <bp-modal-header>
+        <h3>Új kurzus létrehozása</h3>
+    </bp-modal-header>
+
+    <form #newForm="ngForm">
+        <div class="form-group">
+            <label for="courseName">Kurzus neve</label>
+            <input type="text" class="form-control form-control-lg" id="courseName" placeholder="09A-XY Ének-Zene (2020/2021)" [(ngModel)]="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="courseOwner">Kurzus tulajdonosa (e-mail cím)</label>
+            <input g-user type="text" class="form-control form-control-lg" id="courseOwner" [(ngModel)]="owner" name="owner">
+        </div>
+    </form>
+    <bp-modal-footer class="text-right w-100">
+        <div *ngIf="errorMessage != ''" class="alert alert-danger">
+            {{errorMessage}}
+        </div>
+
+        <button class="btn btn-primary btn-lg mr-3" (click)="save()">Mentés</button>
+        <button class="btn btn-secondary btn-lg" (click)="visible=false">Mégsem</button>
+
+    </bp-modal-footer>
+</bp-modal>

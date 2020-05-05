@@ -1,13 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BPModalService } from './bp-modal.service';
+import { BPModalComponent, BPModalHeaderComponent, BPModalFooterComponent } from './components/bp-modal/bp-modal.component';
+import { BPConfirmComponent } from './components/bp-confirm/bp-confirm.component';
 
-import {
-  BPModalComponent,
-  BPModalHeaderComponent,
-  BPModalFooterComponent,
-  BPConfirmComponent
-} from './components';
+
 
 @NgModule({
   declarations: [

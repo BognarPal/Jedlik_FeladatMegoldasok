@@ -1,0 +1,38 @@
+table thead th {
+    position: sticky; 
+    top: -1px;
+}
+
+table thead th:nth-child(1) {
+    width: 55%;
+}
+
+table thead th:nth-child(2) {
+    width: 15%;
+}
+
+table thead th:nth-child(3) {
+    width: 8%;
+}
+
+table thead th:nth-child(4) {
+    width: 22%;
+}
+
+.filter-form input[name="name"] {
+    width: calc(55% - 1rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.filter-form select[name="state"] {
+    width: 15%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}

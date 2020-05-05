@@ -1,0 +1,138 @@
+<div class="card">
+    <h5 class="card-header font-weight-bold text-white" [ngClass]="course.courseState === 'ARCHIVED' ? 'bg-danger' : 'bg-success'">
+        <a [href]="course.alternateLink" target="classrooom" class="text-white">
+            {{ course.name}}
+        </a>
+        <span class="float-right">
+            {{ course.courseState }}
+        </span>
+    </h5>
+    <div class="card-header font-weight-bold">
+        <p *ngIf="course.description" class="font-italic">{{ course.description }}</p>
+        <div class="row mx-0">
+            <div class="col-sm-4">
+                Tulajdonos: {{course.ownerName }}
+            </div>
+            <div class="col-sm-4">
+                Létrehozva: {{course.creationTime | date:'yyyy.MM.dd hh:mm'}}
+            </div>
+            <div class="col-sm-4 text-right">
+                <span class="mr-2" style="cursor: pointer;" (click)="deleteCourse()">
+                    <svg enable-background="new 0 0 32 32" height="32px" class="my-n2" id="Layer_1" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Kurzus törlése</title>
+                        <g id="trash">
+                            <path clip-rule="evenodd" d="M29.98,6.819c-0.096-1.57-1.387-2.816-2.98-2.816h-3v-1V3.001   c0-1.657-1.344-3-3-3H11c-1.657,0-3,1.343-3,3v0.001v1H5c-1.595,0-2.885,1.246-2.981,2.816H2v1.183v1c0,1.104,0.896,2,2,2l0,0v17   c0,2.209,1.791,4,4,4h16c2.209,0,4-1.791,4-4v-17l0,0c1.104,0,2-0.896,2-2v-1V6.819H29.98z M10,3.002c0-0.553,0.447-1,1-1h10   c0.553,0,1,0.447,1,1v1H10V3.002z M26,28.002c0,1.102-0.898,2-2,2H8c-1.103,0-2-0.898-2-2v-17h20V28.002z M28,8.001v1H4v-1V7.002   c0-0.553,0.447-1,1-1h22c0.553,0,1,0.447,1,1V8.001z" fill="#333333" fill-rule="evenodd"/>
+                            <path clip-rule="evenodd" d="M9,28.006h2c0.553,0,1-0.447,1-1v-13c0-0.553-0.447-1-1-1H9   c-0.553,0-1,0.447-1,1v13C8,27.559,8.447,28.006,9,28.006z M9,14.005h2v13H9V14.005z" fill="#333333" fill-rule="evenodd"/>
+                            <path clip-rule="evenodd" d="M15,28.006h2c0.553,0,1-0.447,1-1v-13c0-0.553-0.447-1-1-1h-2   c-0.553,0-1,0.447-1,1v13C14,27.559,14.447,28.006,15,28.006z M15,14.005h2v13h-2V14.005z" fill="#333333" fill-rule="evenodd"/>
+                            <path clip-rule="evenodd" d="M21,28.006h2c0.553,0,1-0.447,1-1v-13c0-0.553-0.447-1-1-1h-2   c-0.553,0-1,0.447-1,1v13C20,27.559,20.447,28.006,21,28.006z M21,14.005h2v13h-2V14.005z" fill="#333333" fill-rule="evenodd"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="mr-2" style="cursor: pointer;" (click)="archiveCourse()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 3019 2721" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+                        <title>Kurzus archiválása</title>
+                        <path d="M99 70c-8 0-14 2-20 8s-9 12-9 20v666c0 7 3 13 9 18 5 5 12 7 20 7h2822c8 0 14-2 20-7s9-11 9-18V98c0-7-3-14-9-20-5-6-12-8-20-8H99zm141 721c-6 0-11 2-16 7-4 5-7 10-7 15v1814c0 5 2 11 7 15 5 5 10 7 16 7h2541c6 0 11-2 16-7 4-5 7-10 7-15V813c0-5-2-11-7-15-5-5-10-7-16-7H240zm885 432h770c41 0 76 14 105 43s44 64 44 106c0 41-14 77-44 107-29 30-64 45-105 45h-770c-41 0-76-15-105-45s-44-66-44-107 14-76 44-106c29-29 64-43 105-43z" fill="none" stroke="#000" stroke-width="140.752" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <a [href]="course.teacherFolder.alternateLink" target="classroom" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 36" height="32" class="my-n2">
+                        <title>Kurzus Drive mappája</title>
+                        <g id="Layer_2" data-name="Layer 2"><g id="General"><g id="Folder_2x.png" data-name="Folder@2x.png">
+                            <path d="M40,4H22c-4,0-4-4-8-4H4A4,4,0,0,0,0,4V32a4,4,0,0,0,4,4H40a4,4,0,0,0,4-4V8A4,4,0,0,0,40,4Zm2,28a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V12H42Zm0-22H2V4A2,2,0,0,1,4,2H14c3,0,3,4,8,4H40a2,2,0,0,1,2,2Z"/>
+                        </g></g></g>
+                    </svg>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <div class="card-header font-weight-bold">
+        <div class="row mx-0">
+            <div class="col-sm-4">
+                E-mail minden résztvevőnek:
+            </div>
+            <div class="col-sm-8">
+                <a [href]="'mailto:' + course.courseGroupEmail" class="text-black"><span class="font-weight-bold">{{ course.courseGroupEmail }}</span></a>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-sm-4">
+                <span>E-mail a kurzus tanárainak:</span>
+            </div>
+            <div class="col-sm-8">
+                <a [href]="'mailto:' + course.teacherGroupEmail" class="text-black"><span class="font-weight-bold">{{ course.teacherGroupEmail }}</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <h3 class="card-title text-info mb-0 d-inline">Tanár(ok)</h3>
+        <span class="float-right mr-5" style="cursor: pointer;" (click)="addTeachersDialogVisible=true">
+            <svg height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                <title>Új tanár hozzáadása</title>
+                <g><g transform="translate(0.000000,431.000000) scale(0.100000,-0.100000)">
+                    <path d="M3438.3,3428.2c-488.2-74.7-796.5-187.6-1148.8-419.3C1091,2223.9,771.3,600.4,1579.2-588.6c70.8-103.4,126.4-189.5,122.5-191.4c-78.5-44.1-356.1-271.9-492-404c-317.8-306.3-557.1-635.6-748.6-1033.9C185.4-2784.6,87.8-3280.5,101.2-4046.3l5.7-392.5l59.4-105.3c63.2-114.9,189.5-214.4,310.2-248.9c47.9-11.5,1139.2-19.1,3231.8-19.1c3471.1,0,3272-7.7,3421.3,114.9c38.3,34.5,93.8,101.5,124.4,149.3l51.7,90l5.7,440.4c7.7,463.3-11.5,702.6-76.6,1003.2c-90,423.1-327.4,957.3-585.9,1323c-195.3,275.7-714.1,783.1-917.1,897.9c-23,11.5-7.6,44,76.6,158.9c214.4,300.6,381,700.7,442.3,1066.4c57.4,344.6,32.5,796.5-63.2,1141.1c-183.8,656.7-672,1252.1-1282.8,1568c-382.9,197.2-693.1,277.6-1121.9,289.1C3625.9,3434,3470.8,3432.1,3438.3,3428.2z M4016.5,2375.2c583.9-120.6,1043.4-561,1192.8-1144.9c51.7-204.9,51.7-516.9,0-733.3c-47.9-199.1-143.6-402.1-264.2-561c-118.7-155.1-172.3-206.8-382.9-363.8C4437.7-521.6,4386-575.2,4349.6-646c-61.3-118.7-74.7-281.4-32.5-407.8c55.5-166.6,118.7-222.1,438.4-377.1c358-172.3,572.5-325.5,806-566.7c199.1-206.8,352.3-426.9,471-670.1c141.7-294.8,248.9-718,248.9-987.9v-122.5H3706.3H1131.2v88.1c0,277.6,109.1,716,252.7,1018.5c271.9,574.4,815.6,1077.9,1397.6,1296.2c124.5,46,241.2,151.3,294.8,266.1c80.4,172.3,49.8,425-65.1,553.3c-17.2,21.1-111.1,95.7-208.7,168.5C2402.5-85,2195.7,299.8,2170.8,789.9c-17.2,344.6,63.2,641.4,248.9,920.9c109.1,162.7,327.4,375.2,488.2,472.9c135.9,82.3,384.8,178.1,526.5,201C3597.2,2411.6,3861.4,2407.8,4016.5,2375.2z" fill="#17a2b8"/>
+                    <path d="M7954.8,1335.6c-111.1-67-122.5-124.5-122.5-583.9V338.1h-425c-494,0-522.7-7.7-580.1-158.9c-47.9-126.4-36.4-668.2,17.2-746.7c74.7-109.1,116.8-118.7,572.5-124.5l415.5-5.8v-404c0-605,1.9-608.8,513.1-608.8c369.5,0,417.4,11.5,482.5,120.6c34.5,55.5,38.3,97.7,38.3,476.7v413.5l426.9,7.7c471,5.7,494,11.5,568.6,135.9c34.5,53.6,38.3,97.6,38.3,382.9c0,358-13.4,407.8-120.6,472.9c-55.5,34.5-97.7,38.3-486.3,38.3h-426.9v427c0,610.8,1.9,606.9-520.8,606.9C8054.3,1372,8006.5,1368.1,7954.8,1335.6z" fill="#17a2b8"/>
+                </g></g>
+            </svg>            
+        </span>
+        <hr class="my-2">
+        <div class="row mx-0 mb-4">
+            <div *ngFor="let teacher of teachers" class="col-sm-4" style="cursor: pointer;" (click)="viewTeacherInfo(teacher)">
+                {{teacher.profile.name.familyName}} {{teacher.profile.name.givenName}}
+            </div>
+        </div>
+
+        <h3 class="card-title text-info mb-0 d-inline">Diákok</h3>
+        <span class="float-right mr-5" style="cursor: pointer;" (click)="addStudentsDialogVisible=true">
+            <svg height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                <title>Új diák(ok) hozzáadása</title>
+                <g><g transform="translate(0.000000,431.000000) scale(0.100000,-0.100000)">
+                    <path d="M3438.3,3428.2c-488.2-74.7-796.5-187.6-1148.8-419.3C1091,2223.9,771.3,600.4,1579.2-588.6c70.8-103.4,126.4-189.5,122.5-191.4c-78.5-44.1-356.1-271.9-492-404c-317.8-306.3-557.1-635.6-748.6-1033.9C185.4-2784.6,87.8-3280.5,101.2-4046.3l5.7-392.5l59.4-105.3c63.2-114.9,189.5-214.4,310.2-248.9c47.9-11.5,1139.2-19.1,3231.8-19.1c3471.1,0,3272-7.7,3421.3,114.9c38.3,34.5,93.8,101.5,124.4,149.3l51.7,90l5.7,440.4c7.7,463.3-11.5,702.6-76.6,1003.2c-90,423.1-327.4,957.3-585.9,1323c-195.3,275.7-714.1,783.1-917.1,897.9c-23,11.5-7.6,44,76.6,158.9c214.4,300.6,381,700.7,442.3,1066.4c57.4,344.6,32.5,796.5-63.2,1141.1c-183.8,656.7-672,1252.1-1282.8,1568c-382.9,197.2-693.1,277.6-1121.9,289.1C3625.9,3434,3470.8,3432.1,3438.3,3428.2z M4016.5,2375.2c583.9-120.6,1043.4-561,1192.8-1144.9c51.7-204.9,51.7-516.9,0-733.3c-47.9-199.1-143.6-402.1-264.2-561c-118.7-155.1-172.3-206.8-382.9-363.8C4437.7-521.6,4386-575.2,4349.6-646c-61.3-118.7-74.7-281.4-32.5-407.8c55.5-166.6,118.7-222.1,438.4-377.1c358-172.3,572.5-325.5,806-566.7c199.1-206.8,352.3-426.9,471-670.1c141.7-294.8,248.9-718,248.9-987.9v-122.5H3706.3H1131.2v88.1c0,277.6,109.1,716,252.7,1018.5c271.9,574.4,815.6,1077.9,1397.6,1296.2c124.5,46,241.2,151.3,294.8,266.1c80.4,172.3,49.8,425-65.1,553.3c-17.2,21.1-111.1,95.7-208.7,168.5C2402.5-85,2195.7,299.8,2170.8,789.9c-17.2,344.6,63.2,641.4,248.9,920.9c109.1,162.7,327.4,375.2,488.2,472.9c135.9,82.3,384.8,178.1,526.5,201C3597.2,2411.6,3861.4,2407.8,4016.5,2375.2z" fill="#17a2b8"/>
+                    <path d="M7954.8,1335.6c-111.1-67-122.5-124.5-122.5-583.9V338.1h-425c-494,0-522.7-7.7-580.1-158.9c-47.9-126.4-36.4-668.2,17.2-746.7c74.7-109.1,116.8-118.7,572.5-124.5l415.5-5.8v-404c0-605,1.9-608.8,513.1-608.8c369.5,0,417.4,11.5,482.5,120.6c34.5,55.5,38.3,97.7,38.3,476.7v413.5l426.9,7.7c471,5.7,494,11.5,568.6,135.9c34.5,53.6,38.3,97.6,38.3,382.9c0,358-13.4,407.8-120.6,472.9c-55.5,34.5-97.7,38.3-486.3,38.3h-426.9v427c0,610.8,1.9,606.9-520.8,606.9C8054.3,1372,8006.5,1368.1,7954.8,1335.6z" fill="#17a2b8"/>
+                </g></g>
+            </svg>            
+        </span>
+        <hr class="my-2">
+        <div class="row mx-0">
+            <div *ngFor="let student of students" class="col-sm-4" style="cursor: pointer;" (click)="viewStudentInfo(student)">
+                {{student.profile.name.familyName}} {{student.profile.name.givenName}}
+            </div>
+        </div>
+    </div>
+    <div *ngIf="errorMessage" class="card-footer text-white bg-danger">
+        <span [innerHTML]="errorMessage"></span>
+        <div class="float-right">
+            <button class="px-1 py-0 btn-light rounded-circle" (click)="errorMessage=''">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<g-users-select [(visible)]="addTeachersDialogVisible" (usersSelected)="addTeachers($event)"  [title]="'Tanárok hozzáadása'"></g-users-select>
+
+<g-users-select [(visible)]="addStudentsDialogVisible" (usersSelected)="addStudents($event)"  [title]="'Tanulók hozzáadása'"></g-users-select>
+
+<bp-modal id="newCourseDialog" [(visible)]="teacherInfo.visible" [style]="{width: '650px'}">
+    <bp-modal-header>
+        <h3>{{teacherInfo.name}}</h3>
+    </bp-modal-header>
+
+    <g-user-info [email]="teacherInfo.email"></g-user-info>
+    
+    <bp-modal-footer class="text-right w-100">
+        <button class="btn btn-danger btn-lg mr-3" (click)="deleteTeacher(teacherInfo)">Tanár törlése</button>
+    </bp-modal-footer>
+</bp-modal>
+
+<bp-modal id="newCourseDialog" [(visible)]="studentInfo.visible" [style]="{width: '650px'}">
+    <bp-modal-header>
+        <h3>{{studentInfo.name}}</h3>
+    </bp-modal-header>
+
+    <g-user-info [email]="studentInfo.email"></g-user-info>
+    
+    <bp-modal-footer class="text-right w-100">
+        <button class="btn btn-danger btn-lg mr-3" (click)="deleteStudent(studentInfo)">Diák törlése</button>
+    </bp-modal-footer>
+</bp-modal>

@@ -1,0 +1,15 @@
+{
+  "name": "@jedlik/googleapi",
+  "version": "1.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.0.7",
+    "@angular/core": "^9.0.7",
+    "tslib": "^1.10.0",
+    "bootstrap": "^4.4.1",
+    "@bognarpal/bp-modal": "1.0.4"
+  },
+  "devDependencies": {
+    "@types/gapi": "0.0.35",
+    "@types/gapi.auth2": "0.0.47"
+  }
+}
