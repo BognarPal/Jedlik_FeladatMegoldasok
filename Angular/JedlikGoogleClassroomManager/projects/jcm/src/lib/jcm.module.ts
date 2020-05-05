@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { BPModalModule } from '@bognarpal/bp-modal';
 // import { GoogleApiModule } from 'projects/googleapi/src/public-api';
-import { GoogleApiModule } from 'googleapi';
+import { GoogleApiModule } from '@jedlik/googleapi';
 
 import { JcmNewCourseMassSampleComponent } from './components/jcm-new-course-mass-sample.component';
 import { JcmComponent } from './components/jcm.component';

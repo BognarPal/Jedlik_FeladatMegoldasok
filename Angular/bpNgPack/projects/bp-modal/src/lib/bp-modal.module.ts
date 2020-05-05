@@ -16,6 +16,9 @@ import { BPConfirmComponent } from './components/bp-confirm/bp-confirm.component
   imports: [
     BrowserModule
   ],
+  entryComponents: [
+    BPConfirmComponent
+  ],
   exports: [
     BPModalComponent,
     BPModalHeaderComponent,

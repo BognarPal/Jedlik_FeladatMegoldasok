@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterContentInit, NgZone, Inject, Input } from '@angular/core';
-import { GoogleApiService } from 'googleapi';
+import { GoogleApiService } from '@jedlik/googleapi';
 import { JcmService } from '../jcm.service';
 declare var gapi: any;
 

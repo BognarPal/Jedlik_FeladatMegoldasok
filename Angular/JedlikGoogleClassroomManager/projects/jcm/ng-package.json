@@ -5,7 +5,7 @@
     "entryFile": "src/public-api.ts",
     "umdModuleIds": {
       "@bognarpal/bp-modal": "bpModal",
-      "googleapi": "googleapi"
+      "@jedlik/googleapi": "googleapi"
     }
   }
 }

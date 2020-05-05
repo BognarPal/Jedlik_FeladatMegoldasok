@@ -1,4 +1,4 @@
-<div *ngIf="visible" class="modal" tabindex="-1" [style]="{'z-index': modalSettings.zIndexModal, 'display': 'block'}" >
+<div *ngIf="visible" class="modal" tabindex="-1" [ngStyle]="{'z-index': modalSettings.zIndexModal, 'display': 'block'}" >
     <div class="modal-dialog modal-dialog-scrollable modal-lg m-0 position-fixed" [ngStyle]="style">
       <div class="modal-content">            
         <div class="modal-header disable-text-selection" (mousedown)="initDrag($event)" style="background-color: #f4f4f4;">
@@ -24,4 +24,4 @@
     </div>
   </div>
   
-  <div *ngIf="visible" class="modal-backdrop fade show" [style]="{'z-index': modalSettings.zIndexFade}"></div>
+  <div *ngIf="visible" class="modal-backdrop fade show" [ngStyle]="{'z-index': modalSettings.zIndexFade}"></div>
