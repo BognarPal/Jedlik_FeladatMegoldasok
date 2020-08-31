@@ -16,6 +16,7 @@ export class JcmClassroomCardComponent implements OnInit {
     setTimeout(() => {
       this.getParticipants();
     }, 100);
+    this.nameInEditMode = false;
   }
   get course() {
     return this._course;
@@ -42,6 +43,8 @@ export class JcmClassroomCardComponent implements OnInit {
     email: '',
     teacher: null
   };
+  nameInEditMode = false;
+  courseName = '';
 
   studentInfo = {
     visible: false,
@@ -245,4 +248,15 @@ export class JcmClassroomCardComponent implements OnInit {
       })
       .catch(() => console.log('User dismissed the dialog'));
   }
+
+  renameCourse() {
+    this.courseName = this.course.name;
+    this.nameInEditMode = true;
+  }
+
+  saveSourseName() {
+    this.course.name = this.courseName;
+    this.jcmService.courseRename.emit(this.course);
+  }
+
 }

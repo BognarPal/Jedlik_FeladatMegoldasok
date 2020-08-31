@@ -55,6 +55,7 @@ export class JcmComponent implements OnInit, AfterContentInit {
   ngOnInit(): void {
     this.jcmService.courseDelete.subscribe((course) => this.deleteCourse(course));
     this.jcmService.courseArchive.subscribe((course) => this.archiveCourse(course));
+    this.jcmService.courseRename.subscribe((course) => this.renameCourse(course));
   }
 
   ngAfterContentInit(): void {
@@ -186,5 +187,17 @@ export class JcmComponent implements OnInit, AfterContentInit {
     });
   }
 
+  renameCourse(course) {
+    this.isWaiting = true;
+    gapi.client.classroom.courses.update({
+      id: course.id,
+      name: course.name,
+      courseState: course.courseState,
+    }).then((response: any) => {
+      this.isWaiting = false;
+      const index = this.courses.findIndex(c => c.id === course.id);
+      this.courses[index].courseState = response.result.courseState;
+    });
+  }
 
 }

@@ -9,6 +9,7 @@ export class JcmService {
   public newCourseAdded = new EventEmitter();
   public courseDelete = new EventEmitter();
   public courseArchive = new EventEmitter();
+  public courseRename = new EventEmitter();
   constructor() { }
 
   public newCourse(name, owner): Promise<any> {
