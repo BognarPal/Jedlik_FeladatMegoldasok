@@ -22,9 +22,12 @@ export class JcmComponent implements OnInit, AfterContentInit {
     'https://www.googleapis.com/auth/classroom.profile.emails ' +
     'https://www.googleapis.com/auth/classroom.profile.photos ' +
     'https://www.googleapis.com/auth/classroom.topics ' +
+    'https://www.googleapis.com/auth/classroom.announcements ' +
+    'https://www.googleapis.com/auth/classroom.coursework.students ' +
+    'https://www.googleapis.com/auth/classroom.coursework.me ' +
     'https://www.googleapis.com/auth/admin.directory.user.readonly ' +
     'https://www.googleapis.com/auth/admin.directory.user ' +
-    'https://www.googleapis.com/auth/admin.directory.group.readonly '  +
+    'https://www.googleapis.com/auth/admin.directory.group.readonly ' +
     'https://www.googleapis.com/auth/admin.directory.group ' +
     'https://www.googleapis.com/auth/admin.directory.group.member.readonly ' +
     'https://www.googleapis.com/auth/admin.directory.group.member ' +
@@ -133,7 +136,15 @@ export class JcmComponent implements OnInit, AfterContentInit {
         this.listCourses(response.result.nextPageToken);
       } else {
         this.ngZone.run(() => {
-          this.courses.sort((a, b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1);
+          this.courses.forEach(course => {
+            course.numberOfStudents = null;
+            course.lastTopicTime = null;
+            if (course.courseState === 'ACTIVE') {
+              this.jcmService.getStudents(course.id, [], null).then((students) => {
+                course.numberOfStudents = students.length;
+              });
+            }
+          });
         });
       }
     });
@@ -154,7 +165,7 @@ export class JcmComponent implements OnInit, AfterContentInit {
   saveNewCourse(course) {
     this.newCourse.errorMessage = '';
     this.isWaiting = true;
-    this.jcmService.newCourse(course.name, course.owner).then( (response) => {
+    this.jcmService.newCourse(course.name, course.owner).then((response) => {
       this.isWaiting = false;
       this.newCourse.modalVisible = false;
       this.courses.unshift(response.result);

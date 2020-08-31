@@ -21,7 +21,8 @@ export class JcmClassroomListComponent implements OnInit {
   _courses = [];
   _filter = {
     name: '',
-    state: 'ACTIVE'
+    state: 'ACTIVE',
+    order: 'name'
   };
 
   set filter(value) {
@@ -44,6 +45,23 @@ export class JcmClassroomListComponent implements OnInit {
     if (this.filter.state) {
       courses = courses.filter(c => c.courseState === this.filter.state);
     }
+    if (this.filter.order.substr(0, 4) === 'name') {
+      courses.sort((a, b) => {
+        const value = a.name > b.name ? 1 : -1;
+        return this.filter.order.indexOf('!') === -1 ? value : -value;
+      });
+    } else if (this.filter.order.substr(0, 12) === 'creationTime') {
+      courses.sort((a, b) => {
+        const value = a.creationTime > b.creationTime ? 1 : -1;
+        return this.filter.order.indexOf('!') === -1 ? value : -value;
+      });
+    } else if (this.filter.order.substr(0, 9) === 'ownerName') {
+      courses.sort((a, b) => {
+        const value = a.ownerName > b.ownerName ? 1 : -1;
+        return this.filter.order.indexOf('!') === -1 ? value : -value;
+      });
+    }
+
     return courses;
   }
 
@@ -92,4 +110,14 @@ export class JcmClassroomListComponent implements OnInit {
     });
   }
 
+  orderBy(fieldName) {
+    if (this.filter.order.indexOf(fieldName) === -1) {
+      this.filter.order = fieldName;
+    } else
+      if (this.filter.order.indexOf('!') === -1) {
+        this.filter.order = fieldName + '!';
+      } else {
+        this.filter.order = fieldName;
+      }
+  }
 }

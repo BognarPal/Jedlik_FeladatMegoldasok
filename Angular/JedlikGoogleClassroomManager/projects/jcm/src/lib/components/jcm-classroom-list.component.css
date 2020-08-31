@@ -1,26 +1,43 @@
+.wrapper {
+    overflow-y: auto; 
+    overflow-x: auto;
+}
+.classroomstable {
+    width: unset;
+    min-width: 75rem;
+}
+
 table thead th {
     position: sticky; 
     top: -1px;
 }
 
 table thead th:nth-child(1) {
-    width: 55%;
+    width: 30rem;
 }
 
 table thead th:nth-child(2) {
-    width: 15%;
+    width: 9rem;
 }
 
 table thead th:nth-child(3) {
-    width: 8%;
+    width: 3.5rem;
 }
 
 table thead th:nth-child(4) {
-    width: 22%;
+    width: 15rem;
+}
+
+table thead th:nth-child(5) {
+    width: 8.5rem;
+}
+
+table thead th:nth-child(6) {
+    width: 9rem;
 }
 
 .filter-form input[name="name"] {
-    width: calc(55% - 1rem);
+    width: 32rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     margin-top: 0.5rem;
@@ -29,7 +46,7 @@ table thead th:nth-child(4) {
 }
 
 .filter-form select[name="state"] {
-    width: 15%;
+    width: 9rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     margin-top: 0.5rem;

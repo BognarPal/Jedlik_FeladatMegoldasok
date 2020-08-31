@@ -64,7 +64,9 @@ export class JcmClassroomCardComponent implements OnInit {
 
   getParticipants() {
     this.students = [];
-    this.getStudents(null);
+    this.jcmService.getStudents(this._course.id, [], null).then( (response) => {
+      this.students = response;
+    });
 
     gapi.client.classroom.courses.teachers.list({
       courseId: this._course.id
@@ -74,25 +76,6 @@ export class JcmClassroomCardComponent implements OnInit {
         this.teachers = response.result.teachers.filter(t => t.courseId === this._course.id);
       });
     });
-  }
-
-  getStudents(nextToken) {
-    gapi.client.classroom.courses.students.list({
-      courseId: this._course.id,
-      pageSize: 200,
-      pageToken: nextToken
-    }).then((response: any) => {
-      // console.log(response.result);
-      if (response.result.students) {
-        this.ngZone.run(() => {
-          this.students = this.students.concat(response.result.students.filter(s => s.courseId === this._course.id));
-        });
-        if (response.result.nextPageToken) {
-          this.getStudents(response.result.nextPageToken);
-        }
-      }
-    });
-
   }
 
   deleteCourse() {

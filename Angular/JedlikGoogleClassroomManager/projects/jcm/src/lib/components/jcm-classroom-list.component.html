@@ -1,11 +1,25 @@
-<div style="overflow-y: auto;" [ngStyle]="{'height': height}" class="border border-secondary">
-    <table class="table table-hover table-border">
+<div [ngStyle]="{'height': height}" class="border border-secondary wrapper">
+    <table class="classroomstable table table-hover table-border">
         <thead class="thead-dark">
             <tr>
-                <th>Név</th>
+                <th>
+                    <span style="cursor: pointer;" (click)="orderBy('name')">Név</span>
+                    <span *ngIf="filter.order == 'name'" class="ml-1">&#9650;</span>
+                    <span *ngIf="filter.order == 'name!'" class="ml-1">&#9660;</span>
+                </th>
                 <th class="text-center">Állapot</th>
                 <th>Link</th>
-                <th>Tulajdonos</th>
+                <th>
+                    <span style="cursor: pointer;" (click)="orderBy('ownerName')">Tulajdonos</span>
+                    <span *ngIf="filter.order == 'ownerName'" class="ml-1">&#9650;</span>
+                    <span *ngIf="filter.order == 'ownerName!'" class="ml-1">&#9660;</span>
+                </th>
+                <th>
+                    <span style="cursor: pointer;" (click)="orderBy('creationTime')">Létrehozva</span>
+                    <span *ngIf="filter.order == 'creationTime'" class="ml-1">&#9650;</span>
+                    <span *ngIf="filter.order == 'creationTime!'" class="ml-1">&#9660;</span>
+                </th>
+                <th>Tanulók száma</th>
             </tr>
         </thead>
         <tbody>
@@ -14,7 +28,7 @@
                     {{course.name}}
                 </td>
                 <td class="py-1 text-center">
-                    {{course.courseState}}
+                    <small>{{course.courseState}}</small>
                 </td>
                 <td class="py-1 text-center">
                     <a [href]="course.alternateLink" target="classrooom">
@@ -49,7 +63,13 @@
                 </td>
                 <td class="py-1">
                     <img [src]="course.ownerPhotoUrl" height="24">
-                    <span class="ml-1">{{course.ownerName}}</span>
+                    <small class="ml-1">{{course.ownerName}}</small>
+                </td>
+                <td class="py-1">
+                    <small>{{course.creationTime | date:'yyyy.MM.dd HH:mm'}}</small>
+                </td>
+                <td class="py-1 text-center">
+                    {{course.numberOfStudents}}
                 </td>
             </tr>
         </tbody>
