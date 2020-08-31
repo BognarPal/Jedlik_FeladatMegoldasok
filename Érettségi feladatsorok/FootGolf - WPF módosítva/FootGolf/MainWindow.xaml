@@ -1,0 +1,21 @@
+﻿<Window x:Class="FootGolf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FootGolf"
+        mc:Ignorable="d"
+        Title="Footgolf" Height="222" Width="584">
+    <Grid>
+        <Label Content="4. feladat: Versenyzők száma:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl4" Content="xxx" HorizontalAlignment="Left" Margin="173,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="5. feladat: A női versenyzők aránya:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl5" Content="xxx" HorizontalAlignment="Left" Margin="203,36,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="7. feladat: A bajnok női vezető:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl7" Content="xxx" HorizontalAlignment="Left" Margin="187,67,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="63" Width="179"/>
+        <Label Content="8. feladat: Egyesület:" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbo8" HorizontalAlignment="Left" Height="22" Margin="137,143,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="cbo8_SelectionChanged"/>
+        <ListBox x:Name="lst8" HorizontalAlignment="Left" Height="151" Margin="381,10,0,0" VerticalAlignment="Top" Width="161" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
