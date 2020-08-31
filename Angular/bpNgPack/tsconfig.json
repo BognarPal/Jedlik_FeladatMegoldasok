@@ -22,6 +22,10 @@
       "bp-modal": [
         "dist/bp-modal/bp-modal",
         "dist/bp-modal"
+      ],
+      "ng-pack": [
+        "dist/ng-pack/ng-pack",
+        "dist/ng-pack"
       ]
     }
   },

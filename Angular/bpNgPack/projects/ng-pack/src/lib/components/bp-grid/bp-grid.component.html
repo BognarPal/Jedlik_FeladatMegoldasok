@@ -1,0 +1,23 @@
+<table class="table table-bordered table-hover" [ngClass] ="ngClass" [ngStyle]="ngStyle">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" style="width: 3rem"></th>
+        <th scope="col">Név</th>
+        <th scope="col">Állapot</th>
+        <th scope="col">Email</th>
+        <th scope="col">Partner neve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of list" (click)="row_click(user)" [class]="user.selected ? 'text-primary' : ''"
+        [style.cursor]="user.selected || editMode ? 'default': 'pointer'">
+        <td class="text-center align-middle py-0">
+          <h3 *ngIf="user.selected" class="my-0">&#11208;</h3>
+        </td>
+        <td>{{user.userName}}</td>
+        <td>{{stateName(user)}}</td>
+        <td>{{user.email}}</td>
+        <td>{{partnerNames(user)}}</td>
+      </tr>
+    </tbody>
+  </table>
