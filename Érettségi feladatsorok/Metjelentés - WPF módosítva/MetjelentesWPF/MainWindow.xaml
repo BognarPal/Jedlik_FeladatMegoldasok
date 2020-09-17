@@ -1,0 +1,28 @@
+﻿<Window x:Class="MetjelentesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MetjelentesWPF"
+        mc:Ignorable="d"
+        Title="Távirat" Height="503.326" Width="587.63" FontSize="16">
+    <Grid>
+        <Label Content="2. feladat" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+        <Label Content="Adja meg egy település kódját:" HorizontalAlignment="Left" Margin="39,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="23" Margin="272,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
+        <Button x:Name="btn2" Content="Keres" HorizontalAlignment="Left" Margin="327,44,0,0" VerticalAlignment="Top" Width="75" Click="btn2_Click"/>
+        <Label x:Name="lbl2" Content="Az utolsó mérési adat a megadott településről ..:..-kor érkezett. " HorizontalAlignment="Left" Margin="67,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+
+        <Label Content="3. feladat" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+        <Label x:Name="lbl3Min" Content="A legalacsonyabb hőmérséklet:" HorizontalAlignment="Left" Margin="67,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+        <Label x:Name="lbl3Max" Content="A legmagasabb hőmérséklet:" HorizontalAlignment="Left" Margin="67,180,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+
+        <Label Content="4. feladat" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+        <ListBox x:Name="lst4" HorizontalAlignment="Left" Height="141" Margin="67,252,0,0" VerticalAlignment="Top" Width="214"/>
+        
+        <Label Content="5. feladat" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+        <ComboBox x:Name="cbo5" HorizontalAlignment="Left" Margin="67,434,0,0" VerticalAlignment="Top" Width="46" SelectionChanged="Cbo5_SelectionChanged"/>
+        <Label x:Name="lbl5" Content="Középhőmérséklet: ..; Hőmérséklet-ingadozás: .. " HorizontalAlignment="Left" Margin="123,430,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.99,-0.479"/>
+
+    </Grid>
+</Window>
