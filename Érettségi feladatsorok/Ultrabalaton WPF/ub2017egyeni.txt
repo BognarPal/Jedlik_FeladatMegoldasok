@@ -1,0 +1,187 @@
+Versenyzo;Rajtszam;Kategoria;Versenyido;TavSzazalek
+Acsadi Lajos;1;Ferfi;30:28:42;100
+Andrzej Wereszczak;2;Ferfi;26:55:19;100
+Aristide Necula;4;Ferfi;21:17:47;69
+Babinyecz Tamas;5;Ferfi;28:35:20;100
+Babinyecz Zoltan;6;Ferfi;28:20:34;100
+Badics Attila;7;Ferfi;28:20:50;100
+Bajcsi Sandor;8;Ferfi;29:08:49;100
+Bako Gabor;9;Ferfi;28:42:36;86
+Bakos Gabor;12;Ferfi;14:56:44;48
+Balint Evi;13;Noi;16:37:35;55
+Barath Anette Lora;14;Noi;18:02:21;58
+Barraud Sebastien;15;Ferfi;22:31:09;77
+Blasko Mihaly;16;Ferfi;29:44:34;100
+Bognar Akos;17;Ferfi;23:04:26;100
+Borsos Jozsef;18;Ferfi;31:28:46;100
+Bosznay Diana;19;Noi;12:32:59;52
+Brigita Burja;20;Noi;27:15:19;100
+Bucsak Gyozo;21;Ferfi;17:37:47;56
+Czaltig Zsolt;29;Ferfi;29:12:54;100
+Czunyi Karoly;30;Ferfi;22:15:26;79
+Csakany Krisztina;22;Noi;30:42:06;100
+Csapo Judit;23;Noi;32:17:53;100
+Csati Timea Viktoria;24;Noi;31:39:53;100
+Csuja Gabor;27;Ferfi;17:44:59;65
+Csurgai Adam;28;Ferfi;24:59:10;77
+Damjan Krejac;25;Ferfi;25:22:12;100
+Dan Lawson;31;Ferfi;18:30:20;100
+Darko Vadlja;32;Ferfi;9:16:09;32
+David Fiala;33;Ferfi;10:23:13;36
+Deak Csaba;34;Ferfi;29:02:48;100
+Derivaz;35;Ferfi;30:39:51;100
+Didzis Brauns;36;Ferfi;17:32:47;68
+Dombay Gabor;37;Ferfi;31:17:30;100
+dr. Bocskay arpad;39;Ferfi;19:37:40;58
+dr. Juhasz Mihaly;40;Ferfi;21:40:48;86
+dr. Korosi Koppany;41;Ferfi;6:04:00;27
+dr. Rudolf Jozsef;42;Ferfi;31:09:17;100
+dr. Szudi Laszlo;38;Ferfi;14:02:58;48
+Drevenka Zsolt;43;Ferfi;10:00:03;36
+Enyedine Dobai Henriett;45;Noi;28:11:47;100
+Erdelyi Laszlo;46;Ferfi;21:31:09;69
+Eugeniu Dedov;47;Ferfi;20:38:12;68
+Evetovics Milan;48;Ferfi;23:23:32;73
+Evetovics-Balla Hajnalka;49;Noi;16:22:40;56
+Fazekas Jani;50;Ferfi;17:57:25;58
+Fejer Zsuzsa;51;Noi;30:55:14;100
+Ferge Istvan;53;Ferfi;8:45:31;27
+File Balazs;54;Ferfi;24:44:19;100
+Florin-Sebastian Ionita;55;Ferfi;6:37:22;36
+Foldesi Jozsef;57;Ferfi;15:32:16;56
+Foszto Zsolt;56;Ferfi;30:50:50;100
+Fredrik Engdahl;58;Ferfi;28:29:14;100
+Galos Viktor;59;Ferfi;18:21:19;65
+Gered Laszlo;60;Ferfi;29:44:23;100
+Geszti Peter;61;Ferfi;22:03:56;73
+Gyorfi Janos;63;Ferfi;22:08:08;79
+Gyorvari Viktor;64;Ferfi;27:47:49;89
+Hajas Attila;65;Ferfi;19:31:49;56
+Horvath Tamas;336;Ferfi;33:35:22;100
+Horvath Zsolt;66;Ferfi;18:20:17;58
+Hosko Roland;67;Ferfi;26:54:54;100
+Huszak Katalin;68;Noi;17:05:14;58
+Huzsvay Edit;69;Noi;25:45:16;100
+Iancu David;70;Ferfi;18:27:21;68
+Ihasz Veronika;71;Noi;28:18:22;100
+Ioan Alexandru Strugariu;72;Ferfi;13:12:45;43
+Ivan Bretan;73;Ferfi;24:10:57;100
+Ivan Zaborskiy;74;Ferfi;30:11:52;100
+Jaana Thorstrom;75;Noi;14:05:34;48
+Janowszky Zoltan;76;Ferfi;29:24:44;100
+Jeszenszky Peter;77;Ferfi;29:01:21;100
+Jon Panter;78;Ferfi;22:05:29;84
+Juhasz Peter;79;Ferfi;27:19:57;100
+Kadar-Csoboth Peter;80;Ferfi;24:35:00;100
+Kaldi Peter;81;Ferfi;29:05:45;100
+Kapitanov Vilmos;82;Ferfi;21:20:09;69
+Karol Flejmer;83;Ferfi;28:40:38;100
+Kas Lisa;84;Noi;15:06:30;48
+Kele Attila;85;Ferfi;30:53:50;100
+Keresztesi Tamas;86;Ferfi;9:47:02;32
+Kincse Szabolcs;87;Ferfi;12:29:12;40
+Kishazi Gabor;88;Ferfi;20:28:11;64
+Kisne Forgony Andrea;89;Noi;15:05:17;43
+Kiss Zsolt;90;Ferfi;31:36:00;100
+Kocsy Barnabas;91;Ferfi;22:30:36;69
+Kollar Zoltan;92;Ferfi;28:31:46;100
+Kolluti Margit;93;Noi;28:39:40;100
+Kolonics Tamas;94;Ferfi;28:54:52;95
+Kormany Laszlo;95;Ferfi;15:57:30;58
+Kota Jozsef;96;Ferfi;16:07:01;52
+Kovacs Adam;97;Ferfi;20:34:45;79
+Kovacs Herman;98;Ferfi;13:41:23;48
+Kovacs Janos;99;Ferfi;17:35:25;56
+Kovecses Roland;101;Ferfi;16:18:08;52
+Kozma Zsolt;100;Ferfi;21:58:17;79
+Kreidl Csaba;103;Ferfi;27:34:23;100
+Kulcsar Lajos;104;Ferfi;27:47:17;86
+Laczko Istvan;105;Ferfi;21:39:49;69
+Laker Szucs Lajos;106;Ferfi;31:00:40;100
+Lang Istvan;107;Ferfi;29:24:56;100
+Lengyel Istvan;108;Ferfi;29:43:58;100
+Lorinczi Reka;109;Noi;20:40:57;65
+Luka Videtic;110;Ferfi;19:43:40;74
+Magosi Zoltan;112;Ferfi;16:47:59;58
+Maraz Zsuzsanna;114;Noi;22:31:31;100
+Marianne Kankaanmaki;115;Noi;21:24:00;73
+Marton-Mlecsenkov Eva;117;Noi;30:57:23;100
+Matej Markovic;118;Ferfi;7:17:48;36
+Mathe Zoltan;119;Ferfi;30:04:49;100
+Mathias Jorgensen;120;Ferfi;20:24:19;100
+Medgyessy Gergely;121;Ferfi;18:26:12;73
+Meszaros Csaba;122;Ferfi;15:02:47;58
+Meszaros Zoltan;123;Ferfi;26:48:31;82
+Michal Cinciala;124;Ferfi;26:29:01;100
+Mihalik Norbert;125;Ferfi;20:27:55;100
+Miorin;126;Ferfi;31:06:19;100
+Mirko Bogomir Miklic;127;Ferfi;21:26:54;100
+Moga Laurentiu Daniel;128;Ferfi;20:27:19;77
+Morosan Mara Alexandra;129;Noi;6:22:11;29
+Muller Peter;130;Ferfi;8:14:18;27
+Nagy Zsolt;131;Ferfi;29:58:11;100
+Napast Francisek;132;Ferfi;19:28:55;82
+Nedeczky Laszlo;133;Ferfi;30:38:18;100
+Nenad Stankovic;134;Ferfi;17:07:56;58
+Nenu Mariana;135;Noi;18:18:50;73
+Palasthy Istvan;136;Ferfi;31:39:54;100
+Palfi Laszlo;137;Ferfi;17:15:32;56
+Pall Attila;138;Ferfi;13:02:28;52
+Pallaruelo Gilles;11;Ferfi;29:37:40;100
+Papp Janos;139;Ferfi;28:26:59;100
+Papp Zoltan;140;Ferfi;24:38:49;100
+Pawel Kusnierz;141;Ferfi;29:49:12;100
+Per Ree;142;Ferfi;21:39:32;79
+Peteris Cabulis;143;Ferfi;29:40:52;100
+Peto Zsolt;144;Ferfi;16:35:59;52
+Petri Perttila;145;Ferfi;30:10:49;100
+Peyer Zoltan;146;Ferfi;16:23:25;73
+Preil Jozsef;147;Ferfi;27:53:31;100
+Racz Robert;148;Ferfi;23:37:13;100
+Radim Zapletal;149;Ferfi;30:35:37;100
+Radvanyi Andras;150;Ferfi;16:50:46;52
+Rakonczay Gabor;151;Ferfi;28:02:45;100
+Rasim Junuzovic;152;Ferfi;30:17:44;100
+Rikard Hallgren;153;Ferfi;11:04:07;36
+Rumanko Tibor;154;Ferfi;12:52:16;43
+Sakari Haka;155;Ferfi;27:56:05;100
+Sasa Markoja Popelar;157;Noi;16:25:49;52
+Schulcz Gabor;158;Ferfi;31:12:14;100
+Schulle Zsolt;159;Ferfi;31:46:14;100
+Seres Tibor;160;Ferfi;17:48:36;58
+Simon Peter;161;Ferfi;16:24:24;58
+Som Andras;163;Ferfi;20:25:52;65
+Soren Boserup;164;Ferfi;15:55:30;58
+Surjan Gergely;165;Ferfi;27:59:04;100
+Szabo Bela;166;Ferfi;21:29:34;77
+Szabo Peter;167;Ferfi;28:14:16;100
+Szaszi Tamas;168;Ferfi;30:22:39;100
+Szell Andrei;169;Ferfi;29:55:48;100
+Szilagyi Laszlo;170;Ferfi;17:06:41;56
+Szucs Lajos;173;Ferfi;22:50:21;79
+Taksonyi Szilard;174;Ferfi;28:38:58;100
+Tal Gabor;175;Ferfi;13:30:38;43
+Teglas Istvan;176;Ferfi;19:00:50;56
+Tilibasa Vasile;177;Ferfi;9:53:11;36
+Toldi Peter;178;Ferfi;25:13:23;100
+Toms Krisztian;179;Ferfi;21:23:02;77
+Torok Benjamin;181;Ferfi;28:14:26;100
+Torok Lajos;182;Ferfi;12:58:59;43
+Toth Attila;10;Ferfi;23:01:38;100
+Toth Istvan;180;Ferfi;22:51:32;77
+Tuske Zsolt;183;Ferfi;31:27:45;100
+Ugroczky Barna;184;Ferfi;15:37:52;58
+Urban Zsolt;185;Ferfi;15:17:55;68
+Utasi Akos;186;Ferfi;17:05:19;69
+Vaczko Zsolt;187;Ferfi;18:20:57;79
+Vamos Beata;188;Noi;4:14:48;14
+Varga Adam;189;Ferfi;21:07:09;69
+Varga Mate;190;Ferfi;14:59:28;48
+Vasas Levente;191;Ferfi;30:40:16;100
+Veres Szilard;192;Ferfi;24:40:28;100
+Ville Niemenmaa;193;Ferfi;30:10:46;100
+Vizer Daniel;194;Ferfi;18:56:50;69
+Weinber Ferenc;195;Ferfi;31:29:54;100
+Zarandy Andras;196;Ferfi;16:45:16;52
+Zentai Andrea;197;Noi;10:29:09;40
+Zoran Markovic;198;Ferfi;24:34:15;100
