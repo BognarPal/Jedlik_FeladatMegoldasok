@@ -1,0 +1,118 @@
+Év;Név;Vegyjel;Rendszám;Felfedező
+Ókor;Arany;Au;79;Ismeretlen
+Ókor;Ezüst;Ag;47;Ismeretlen
+Ókor;Réz;Cu;29;Ismeretlen
+Ókor;Ón;Sn;50;Ismeretlen
+Ókor;Ólom;Pb;82;Ismeretlen
+Ókor;Higany;Hg;80;Ismeretlen
+Ókor;Vas;Fe;26;Ismeretlen
+Ókor;Kén;S;16;Ismeretlen
+Ókor;Szén;C;6;Ismeretlen
+1250;Arzén;As;33;Albertus Magnus
+1450;Antimon;Sb;51;B. Valentinius (W. Tölde)
+1520;Cink;Zn;30;Paracelsus
+1669;Foszfor;P;15;H. Brand
+1735;Kobalt;Co;27;G. Brandt
+1740;Bizmut;Bi;83;I.H. Pott
+1741;Platina;Pt;78;Ch. Wood
+1751;Nikkel;Ni;28;A. F. Cronstedt
+1766;Hidrogén;H;1;Henry Cavendish
+1772;Nitrogén;N;7;D. Rutherford
+1774;Oxigén;O;8;J. Priestley
+1774;Klór;Cl;17;C. W. Scheele
+1774;Mangán;Mn;25;J. G. Gahn
+1782;Molibdén;Mo;42;P. J. Hjelm
+1782;Tellúr;Te;52;F.J. Müller
+1783;Volfrám;W;74;J. J. és F. d'Elhuyar
+1789;Urán;U;92;M. H. Klaproth (oxid)
+1790;Stroncium;Sr;38;A. Crawford
+1791;Cirkónium;Zr;40;M. H. Klaproth (oxid)
+1791;Titán;Ti;22;W. Gregor (oxid)
+1794;Ittrium;Y;39;J. Gadolin (oxid)
+1797;Berillium;Be;4;L. N. Vaquelin
+1797;Króm;Cr;24;L. N. Vaquelin
+1801;Nióbium;Nb;41;C. Hatchett
+1802;Tantál;Ta;73;A. G. Ekeberg
+1803;Cérium;Ce;58;M. H. Klaproth (oxid)
+1803;Palládium;Pd;46;W. H. Wollaston
+1803;Ródium;Rh;45;W. H. Wollaston
+1804;Ozmium;Os;76;S. Tennant
+1804;Irídium;Ir;77;S. Tennant
+1807;Kálium;K;19;H. Davy
+1807;Nátrium;Na;11;H. Davy
+1808;Bárium;Ba;56;H. Davy
+1808;Kalcium;Ca;20;H. Davy
+1808;Magnézium;Mg;12;H. Davy
+1808;Bór;B;5;J. L. Gay-Lusac és Thénard
+1811;Jód;I;53;B. Curtois
+1817;Kadmium;Cd;48;F.Stromeyer
+1817;Lítium;Li;3;J. A. Arvedson
+1817;Szelén;Se;34;J. J. Berzelius
+1823;Szilícium;Si;14;J. J. Berzelius 1811 Gay-Lusac
+1825;Alumínium;Al;13;H. C. Oersted
+1826;Bróm;Br;35;A. J. Balard
+1828;Tórium;Th;90;J. J. Berzelius
+1831;Vanádium;V;23;N. G. Sefstr0m
+1839;Lantán;La;57;C. G. Mosander
+1843;Erbium;Er;68;C. G. Mosander
+1843;Terbium;Tb;65;C. G. Mosander
+1844;Ruténium;Ru;44;C. Claus
+1860;Cézium;Cs;55;R. W. Bunsen és G. R. Kirchoff
+1861;Rubídium;Rb;37;R. W. Bunsen és G. R. Kirchoff
+1861;Tallium;Tl;81;W. Crookes
+1863;Indium;In;49;F. Reich és T. Richter
+1868;Hélium;He;2;P.J.C.Jansen 1869 J.N.Locker
+1875;Gallium;Ga;31;L. de Boisbaudran
+1878;Itterbium;Yb;70;J. Ch. G. de Marignac
+1879;Holmium;Ho;67;P. T. Cleve
+1879;Szamárium;Sm;62;L. de Boisbaudran
+1879;Szkandium;Sc;21;L. F. Nilson
+1879;Túlium;Tu;69;P. T. Cleve
+1880;Gadolínium;Gd;64;J. Ch. G. de Marignac
+1885;Neodímium;Nd;60;G. Auer von Welsbach
+1885;Prazeodímium;Pr;59;G. Auer von Welsbach
+1886;Diszprózium;Dy;66;L. de Boisbaudran
+1886;Fluor;F;9;H. Moissan
+1886;Germánium;Ge;32;C. Winkler
+1889;Európium;Eu;63;W. Crookes
+1894;Argon;Ar;18;W.Ramsay és J.W.S.Rayleigh
+1898;Kripton;Kr;36;W.Ramsay és M.W.Travers
+1898;Neon;Ne;10;W.Ramsay és M.W.Travers
+1898;Xenon;Xe;54;W.Ramsay és M.W.Travers
+1898;Polónium;Po;84;Pierre és Marie Curie
+1898;Rádium;Ra;88;Pierre és Marie Curie
+1899;Aktínium;Ac;89;A. Debierne
+1900;Radon;Rn;86;F. E. Dorn
+1907;Lutécium;Lu;71;G. Urbain
+1917;Protaktínium;Pa;91;O. Hahn és L. Meitner
+1923;Hafnium;Hf;72;Dirk Coster és Hevesy György
+1925;Rénium;Re;75;W. és Ida Noddack
+1937;Technécium;Tc;43;E. Segre és G. Perrier
+1939;Francium;Fr;87;Margueritte Perey
+1940;Asztácium;At;85;D.R. Corson, McKenzie és E.Segre
+1940;Neptúnium;Np;93;McMillan és O. Abelson
+1940;Plutónium;Pu;94;G.T.Seaborg és McMillan
+1944;Amerícium;Am;95;G.T.Seaborg, R.A.James, A.Ghiorso és L.O.Morgan
+1944;Kűrium;Cm;96;G.T.Seaborg, R.A.James és A.Ghiorso
+1945;Prométium;Pm;61;I.A.Marinski és L.E.Glendenin
+1949;Berkélium;Bk;97;G.T.Seaborg, G.G.Thompson és A.Ghiorso
+1952;Einsteinium;Es;99;A.Ghiorso, G.T.Seaborg, G.G.Thompson, G.H.Higgins, s.m.
+1953;Fermium;Fm;100;A.Ghiorso, G.T.Seaborg, G.G.Thompson, G.H.Higgins és m.
+1955;Mendelévium;Md;101;A.Ghiorso, G.T.Seaborg, B.G.Harvey és m.
+1958;Nobélium;No;102;A.Ghiorso, G.T.Seaborg, T.Sikkeland és m.
+1961;Laurencium;Lr;103;A.Ghiorso, T.Sikkeland, R.E.Larsh és R.T.Latimer
+1966;Radzerfordium;Rf;104;C.N.Flerov ?
+1967;Dubnium;Db;105;Dubna
+1974;Sziborgium;Sg;106;University of California, Berkeley
+1976;Borium;Bh;107;Y. Oganessian, Dubna
+1982;Meitnerium;Mt;109;Peter Armbruster és Gottfried Münzenberg, GSI
+1984;Hasszium;Hs;108;Peter Armbruster és Gottfried Münzenberg
+1994;Darmstadtium;Ds;110;S. Hofmann, V. Ninov és mások, a GSI-től
+1994;Röntgenium;Rg;111;S. Hofmann, V. Ninov és mások, a GSI-től
+1996;Kopernícium;Cn;112;S. Hofmann, V. Ninov és mások, a GSI-től
+1999;Flerovium;Fl;114;Egyesített Atomkutató Intézet, Dubna
+2001;Livermorium;Lv;116;Egyesített Atomkutató Intézet, Dubna
+2004;Nihonium;Nh;113;Egyesített Atomkutató Intézet, Dubna és Lawrence Livermore National Laboratory
+2004;Moszkovium;Mc;115;Egyesített Atomkutató Intézet, Dubna és Lawrence Livermore National Laboratory
+2006;Oganesszon;Og;118;Egyesített Atomkutató Intézet, Dubna és Lawrence Livermore National Laboratory
+2010;Tennesszin;Ts;117;Egyesített Atomkutató Intézet, Dubna
