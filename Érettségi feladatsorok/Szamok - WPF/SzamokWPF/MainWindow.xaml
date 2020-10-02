@@ -1,0 +1,44 @@
+﻿<Window x:Class="SzamokWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzamokWPF"
+        mc:Ignorable="d"
+        Title="Kérdések" Height="299" Width="481" FontSize="16">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="2. feladat:"/>
+        <Label Name="lbl2" Content="Az állományban ... db kérdés van" Grid.Column="1"/>
+        <Label Content="3. feladat:" Grid.Row="1"/>
+        <Label Name="lbl3" Content="Az adatfajlban ... matematika feladat van, &#xD;&#xA;1 pontot ér ... feladat &#xD;&#xA;2 pontot ér ... feladat &#xD;&#xA;3 pontot ér ... feladat " Grid.Column="1" Grid.Row="1"/>
+        <Label Content="4. feladat:" Grid.Row="2"/>
+        <Label Name="lbl4" Content="A legmagasabb érték a válaszok között: ...&#xD;&#xA;A legalacsonyabb érték a válaszok között: ..." Grid.Column="1" Grid.Row="2"/>
+        <Label Content="6. feladat:" Grid.Row="3"/>
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+            <Label Content="Témakör:"/>
+            <ComboBox Name="cbo6" MinWidth="170" Height="24" SelectionChanged="cbo6_SelectionChanged"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+            <Label Content="Kérdés:"/>
+            <Label Name="lbl6" Content="Mohácsi csata?"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+            <Label Content="Válasz:   "/>
+            <TextBox Name="txt6" MinWidth="170" Height="24"/>
+            <Button Name="btn6" Content="Ellenőrzés" Height="24" Margin="20 0 0 0" Padding="10 0" Click="btn6_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

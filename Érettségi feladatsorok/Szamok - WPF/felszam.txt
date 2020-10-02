@@ -1,0 +1,98 @@
+Mikor volt a mohacsi vesz?
+1526 1 tortenelem
+Melyik evben bomlott fel a Nyugat-Romai Birodalom?
+476 1 tortenelem
+Melyik evben kezdodott a Honfoglalas?
+895 1 tortenelem
+Mikor adtak ki az Aranybullat?
+1222 1 tortenelem
+Melyik evben adtak ki Angliaban a Magna Chartat?
+1215 3 tortenelem
+Mikor vezette be Karoly Robert a kapuadot?
+1336 3 tortenelem
+Melyik evben volt a Budai Nagy Antal-fele parasztfelkeles?
+1437 2 tortenelem
+Melyik evben egettek meg Husz Janost?
+1415 3 tortenelem
+Melyik evben volt a nandorfehervari diadal?
+1456 2 tortenelem
+Melyik evben volt a Dozsa-fele parasztfelkeles?
+1514 1 tortenelem
+Mikor kotottek meg a zsitvatoroki beket?
+1606 2 tortenelem
+Mikor volt a Kiegyezes?
+1867 1 tortenelem
+Melyik evben vezettek be Magyarorszagon a 8 oras munkaidot?
+1937 3 tortenelem
+Mikor volt az Anschluss?
+1938 2 tortenelem
+Melyik evben alakult meg a NATO?
+1949 2 tortenelem
+Milyen magas a Kekesteto
+1014 1 foldrajz
+Hany negyzetkilometer Magyarorszag terulete?
+93030 2 foldrajz
+Mennyi a Fold atlagos sugara (10 km-re kerekitve)?
+6370 3 foldrajz
+Hany orszagon halad at a Duna?
+10 3 foldrajz
+Mikor lett Magyarorszag az Europai Unio tagja?
+2004 1 foldrajz
+Hany km hosszu az Amazonas?
+6437 3 foldrajz
+Hanyadik az orszagok terulet szerinti rangsoraban Kanada?
+2 2 foldrajz
+Hanyadik helyen all India az orszagok nepesseg szerinti rangsoraban?
+2 2 foldrajz
+Hany szomszedja van Magyarorszagnak?
+7 1 foldrajz
+Hany km hosszu a Balaton?
+77 3 foldrajz
+Hany orszag alkotja az eurozonat (2012-ben)
+17 2 foldrajz
+Hany megyeje van Magyarorszagnak?
+19 1 foldrajz
+Kb. hany ezer negyzetkilometer a Tisza vizgyujto terulete?
+157 3 foldrajz
+Hany kerulete van Budapestnek Budan?
+6 2 foldrajz
+Hany lakosa volt Magyarorszag legkisebb telepulesenek, Iborfianak, 2012 januar 1-en?
+9 3 foldrajz
+Hany predikator szerepel Moldova Gyorgy regenyenek cimeben?
+40 3 magyar
+Mennyi az oxigen rendszama?
+8 2 kemia
+Mennyi egy semleges kemhatasu oldat pH-ja?
+7 1 kemia
+Melyik a legkisebb primszam?
+2 1 matematika
+Mennyi 64 kobgyoke?
+4 2 matematika
+Hany atloja van a szabalyos nyolcszognek?
+24 2 matematika
+Hany oldallapja van az oktaedernek?
+8 2 matematika
+Hany fok a szabalyos otszog szogeinek osszege?
+540 1 matematika
+Mennyit kapunk, ha megnoveljuk 120-at 25%-kal?
+150 2 matematika
+Mennyivel tobb 90 fok szinusza -90 fok szinuszanal?
+2 3 matematika
+Mennyi egy 3 egyseg oldalu kocka terulete?
+54 2 matematika
+Mennyi 1000 tizes alapu logaritmusa?
+3 3 matematika
+Mi a Fibonacci-sorozat 6. eleme?
+8 3 matematika
+Mennyi az elso 100 szam osszege?
+5050 2 matematika
+Mennyi 5 faktorialisa?
+120 2 matematika
+Melyik a legkisebb tokeletes szam?
+6 3 matematika
+Mi az 0, 2, 4, 6, … sorozat kovetkezo tagja?
+8 1 matematika
+Mennyi -55 abszoluterteke?
+55 1 matematika
+Mennyi 4 es 6 legkisebb kozos tobbszorose?
+12 1 matematika
