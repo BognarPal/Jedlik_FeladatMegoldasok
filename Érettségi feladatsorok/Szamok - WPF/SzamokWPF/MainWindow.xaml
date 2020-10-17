@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SzamokWPF"
         mc:Ignorable="d"
-        Title="Kérdések" Height="299" Width="481" FontSize="16">
+        Title="Kérdések" Height="320" Width="481" FontSize="16">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -37,7 +37,7 @@
         <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
             <Label Content="Válasz:   "/>
             <TextBox Name="txt6" MinWidth="170" Height="24"/>
-            <Button Name="btn6" Content="Ellenőrzés" Height="24" Margin="20 0 0 0" Padding="10 0" Click="btn6_Click"/>
+            <Button Name="btn6" Content="Ellenőrzés" Height="24" Margin="20 0 0 0" Padding="10 0" Click="btn6_Click" />
         </StackPanel>
 
     </Grid>

@@ -40,66 +40,129 @@ namespace SzamokWPF
         {
             StreamReader sr = new StreamReader("felszam.txt");
             while (!sr.EndOfStream)
+            {
                 kerdesek.Add(new Kerdes(sr.ReadLine(), sr.ReadLine()));
+            }
             sr.Close();
         }
 
         private void Feladat2()
         {
-            lbl2.Content = $"Az állományban {kerdesek.Count} db kérdés van";
+            lbl2.Content = string.Format("Az állományban {0} db kérdés van", kerdesek.Count);
         }
 
         private void Feladat3()
         {
-            int pont1 = kerdesek.Count(k => k.Kategoria == "matematika" && k.Pont == 1);
-            int pont2 = kerdesek.Count(k => k.Kategoria == "matematika" && k.Pont == 2);
-            int pont3 = kerdesek.Count(k => k.Kategoria == "matematika" && k.Pont == 3);
-            lbl3.Content = $"Az adatfajlban {pont1 + pont2 + pont3} matematika feladat van.\n" +
-                           $"1 pontot ér {pont1} feladat\n" +
-                           $"2 pontot ér {pont2} feladat\n" +
-                           $"3 pontot ér {pont3} feladat\n";
+            int pont1 = 0;
+            int pont2 = 0;
+            int pont3 = 0;
+            foreach (Kerdes k in kerdesek)
+            {
+                if (k.Kategoria == "matematika")
+                {
+                    if (k.Pontszam == 1)
+                        pont1++;
+                    else if (k.Pontszam == 2)
+                        pont2++;
+                    else /*if (k.Pontszam == 3)*/
+                        pont3++;
+                }   
+            }
+            lbl3.Content = string.Format("Az adatfájlban {0} matematika kérdés van\n" +
+                                         "1 pontot ér {1} feladat\n" +
+                                         "2 pontot ér {2} feladat\n" +
+                                         "3 pontot ér {3} feladat)", 
+                                         pont1 + pont2 + pont3, pont1, pont2, pont3);
         }
 
         private void Feladat4()
         {
-            lbl4.Content = $"A legmagasabb érték a válaszok között: {kerdesek.Min(k => k.Valasz)}\n" +
-                           $"A legalacsonyabb érték a válaszok között: {kerdesek.Max(k => k.Valasz)}";
+            int minErtek = kerdesek[0].HelyesValasz;
+            int maxErtek = kerdesek[0].HelyesValasz;
+            for (int i = 1; i < kerdesek.Count; i++)
+            {
+                if (minErtek > kerdesek[i].HelyesValasz)
+                {
+                    minErtek = kerdesek[i].HelyesValasz;
+                }
+                if (maxErtek < kerdesek[i].HelyesValasz)
+                {
+                    maxErtek = kerdesek[i].HelyesValasz;
+                }
+            }
+            lbl4.Content = string.Format("A legmagasabb érték a válaszok között: {0}\n" +
+                                         "A legalacsonyabb érték a válaszok között: {1}", maxErtek, minErtek);
         }
 
         private void Feladat5()
         {
-            cbo6.ItemsSource = kerdesek.Select(k => k.Kategoria).Distinct();
-            btn6.IsEnabled = false;
-            lbl6.Content = "";
+            HashSet<string> kategoriak = new HashSet<string>();
+            foreach (Kerdes k in kerdesek)
+            {
+                kategoriak.Add(k.Kategoria);
+            }
+
+            foreach (string k in kategoriak)
+            {
+                cbo6.Items.Add(k);
+            }
+
         }
 
         private void cbo6_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<int> indexek = kerdesek.Where(k => k.Kategoria == cbo6.SelectedItem.ToString()).Select(k => kerdesek.IndexOf(k)).ToList();
             Random rand = new Random();
-            kerdes6 = kerdesek[indexek[rand.Next(indexek.Count)]];
-            lbl6.Content = kerdes6.KerdesSzovege;
-            btn6.IsEnabled = true;
+            List<Kerdes> kategoriaKerdesek = new List<Kerdes>();
+            foreach (Kerdes k in kerdesek)
+            {
+                if (k.Kategoria == cbo6.SelectedItem.ToString())
+                    kategoriaKerdesek.Add(k);
+            }
+            int index = rand.Next(kategoriaKerdesek.Count);  //0 <= index < kategoriaKerdesek.Count
+            this.kerdes6 = kategoriaKerdesek[index];
+            lbl6.Content = this.kerdes6.KerdesSzovege;
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            if (txt6.Text == kerdes6.Valasz.ToString())
-                MessageBox.Show($"Pontszám: {kerdes6.Pont}");
-            else 
-                MessageBox.Show($"Pontszám: 0\nA helyes válasz: {kerdes6.Valasz}");
+            if (txt6.Text == this.kerdes6.HelyesValasz.ToString())
+            {
+                MessageBox.Show(string.Format("Pontszám: {0}", this.kerdes6.Pontszam));
+            }
+            else
+            {
+                MessageBox.Show(string.Format("Pontszám: 0\nA helyes válasz: {0}", this.kerdes6.HelyesValasz));
+            }
         }
 
         private void Feladat7()
         {
-            HashSet<int> indexek = new HashSet<int>();
             Random rand = new Random();
-            while (indexek.Count != 10 && indexek.Count < kerdesek.Count)
+            HashSet<int> indexek = new HashSet<int>();
+            do
+            {
                 indexek.Add(rand.Next(kerdesek.Count));
+            }
+            while (indexek.Count < 10 && indexek.Count < kerdesek.Count);
 
-            List<string> klist = indexek.Select(i => $"{kerdesek[i].Pont} {kerdesek[i].Valasz} {kerdesek[i].KerdesSzovege}").ToList();
-            klist.Add($"A feladatsorra osszesen {indexek.Sum(i => kerdesek[i].Pont)} pont adhato");
-            File.WriteAllLines("tesztfel.txt", klist);
+            int osszPontszam = 0;
+            foreach (int index in indexek)
+            {
+                osszPontszam += kerdesek[index].Pontszam;
+            }
+
+            StreamWriter sw = new StreamWriter("tesztfel.txt");
+            foreach (int index in indexek)
+            {
+                sw.WriteLine("{0} {1} {2}",
+                             kerdesek[index].Pontszam,
+                             kerdesek[index].HelyesValasz,
+                             kerdesek[index].KerdesSzovege);
+            }
+            sw.WriteLine("A feladatsorra összesen {0} pont adható", osszPontszam);
+            sw.Close();
+
         }
+
     }
 }
