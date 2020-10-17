@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvíz</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        input[type="number"] {
+            width: 80px;
+        }
+        #kerdes {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kvíz</h1>
+    <div id="kategoria">
+        <label>Kategória</label>
+        <select oninput="ujkerdes()">
+            
+        </select>
+    </div>
+    <div id="kerdes"></div>
+    <div id="valasz">
+        <label>Válasz:</label>
+        <input type="number">
+        <input type="button" onclick="ellenorzes()" value="Ellenőrzés">
+    </div>
+    <script src="kviz.js"></script>
+    <script>
+        kategoriak();
+    </script>
+</body>
+</html>
