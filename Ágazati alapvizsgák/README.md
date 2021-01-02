@@ -1,1 +1,1 @@
-### [Jedlik próbavizsga 2021 - Weblapszerkesztés és Python]()
+### [Jedlik próbavizsga 2021 - Weblapszerkesztés és Python](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%81gazati%20alapvizsg%C3%A1k/2021%20-%20Jedlik%20pr%C3%B3ba%20feladatsor)
