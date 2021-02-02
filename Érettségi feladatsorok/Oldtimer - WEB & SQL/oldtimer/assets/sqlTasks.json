@@ -1,0 +1,32 @@
+[
+  {
+    "id": 15,
+    "description": "Adatbázis létrehozása",
+    "adminPage": false
+  },
+  {
+    "id": 16,
+    "description": "Sportautók száma a flottában",
+    "adminPage": true
+  },
+  {
+    "id": 17,
+    "description": "Limuzinok",
+    "adminPage": true
+  },
+  {
+    "id": 18,
+    "description": "Új autó hozzáadása",
+    "adminPage": false
+  },
+  {
+    "id": 19,
+    "description": "Az öt legnépszerűbb autó",
+    "adminPage": true
+  },
+  {
+    "id": 20,
+    "description": "Teljes bevétel és a legnagyobb biztosítási arány",
+    "adminPage": true
+  }
+]
