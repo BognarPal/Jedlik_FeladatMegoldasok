@@ -1,0 +1,46 @@
+body{
+  color: #293647;
+}
+
+.bg-fej {
+  background-position: center;
+  height: 250px;
+  padding-top: 75px;
+  background-image: url('drukletters.jpg');
+  margin: 0px auto 16px auto;
+}
+
+.bg-fej h1{
+  color: white;
+  font-size: 500%;
+  text-transform: uppercase;
+  text-decoration: underline overline;
+  font-weight: bold;
+}
+
+.container{
+  margin-bottom: 25px;
+}
+
+.bg-torzs {
+  background-color: #C5C599;
+}
+
+h3{
+  margin: 25px 0px;
+}
+
+a {
+  font-style: italic;
+  font-weight: bold;
+  color: darkblue;
+}
+
+#kalkGomb {
+  margin: 20px auto;
+}
+
+#valasz{
+  visibility:hidden;
+}
+

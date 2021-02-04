@@ -1,0 +1,50 @@
+﻿Hivatkozások:
+-------------
+
+Johannes Gutenberg -> https://hu.wikipedia.org/wiki/Johannes_Gutenberg
+Alois Senefelder -> https://hu.wikipedia.org/wiki/Alois_Senefelder
+William Henry Fox Talbot -> https://hu.wikipedia.org/wiki/William_Henry_Fox_Talbot
+
+
+Képek feliratai:
+---------------
+
+kezi_szedes.jpg -> Kézi szedés
+ofszet_nyomogep.jpg -> Ofset nyomógép
+nyomdagep_pultja.jpg -> Nyomdagép pultja
+
+
+Új tartalmi rész:
+-----------------
+
+<p>Plakátnyomtatás</p>
+
+<p>Egy színes plakát nyomtatásának költségét meghatározó tényezők többek közt a papírlap minősége és a papírlap mérete</p>
+
+<p>A következő űrlapon plakátnyomtatáshoz lehet árat kalkulálni:</p>
+
+<form class="bg-torzs p-3 text-center">
+  <label for="szelesseg">Szélesség (mm):</label>
+  <input type="text" class="form-control" id="szelesseg" min="10" max="1000" />
+  <label for="magassag">Magasság (mm):</label>
+  <input type="text" class="form-control" id="magassag" min="10" max="1400" />
+  <label for="ptip">Papírtípus:</label>
+  <select class="form-control" id="papirtipus">
+    <option value="38">Pauszpapír (115g/m³)</option>
+    <option value="32">Matt, vastag, általános papír (120g/m³)</option>
+    <option value="45">Matt, normál, fotópapír (180g/m³)</option>
+    <option value="45">Fényes, normál, fotópapír (200g/m³)</option>
+    <option value="45">Szatén, normál, fotópapír (190g/m³)</option>
+    <option value="65">Művész, kreatív, kartonpapír (300g/m³)</option>
+  </select>
+  <input type="button" value="Kalkuláció" id="kalkulalGomb" />
+  <div>
+    <p>A kalkuláció alapja:</p>
+    <ul>
+      <li>területe: <span id="terulet"></span> dm<sup>2</sup></li>
+      <li>papírköltség: <span id="papir"></span> Ft/dm<sup>2</sup></li>
+    </ul>
+    <h2><span id="koltseg">?</span> Ft</h2>
+  </div>
+</form>
+
