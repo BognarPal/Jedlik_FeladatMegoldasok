@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playfair", "Playfair\Playfair.csproj", "{9F34FD93-0750-4D7A-8CED-BEFF4BDDE323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "playfairGUI", "playfairGUI\playfairGUI.csproj", "{B4048A66-C65C-45DA-B71B-856BBA5332AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F34FD93-0750-4D7A-8CED-BEFF4BDDE323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F34FD93-0750-4D7A-8CED-BEFF4BDDE323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F34FD93-0750-4D7A-8CED-BEFF4BDDE323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F34FD93-0750-4D7A-8CED-BEFF4BDDE323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4048A66-C65C-45DA-B71B-856BBA5332AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4048A66-C65C-45DA-B71B-856BBA5332AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4048A66-C65C-45DA-B71B-856BBA5332AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4048A66-C65C-45DA-B71B-856BBA5332AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F288964-3D69-4D21-BF4B-1E67423DB60C}
+	EndGlobalSection
+EndGlobal

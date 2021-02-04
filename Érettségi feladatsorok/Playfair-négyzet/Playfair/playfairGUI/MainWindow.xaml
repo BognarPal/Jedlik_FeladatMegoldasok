@@ -1,0 +1,16 @@
+﻿<Window x:Class="playfairGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:playfairGUI"
+        mc:Ignorable="d"
+        Title="playfairGUI" Height="450" Width="800" FontSize="18">
+    <Grid>
+        <Label Name="Label" Content="Előkészített szöveg" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" 
+               Foreground="Green"/>
+        <TextBox Name="TextBox" HorizontalAlignment="Left" Margin="30,82,0,0" Text="HI DE TH EG OL DI NT HE TR EX ES TU MP" TextWrapping="Wrap" VerticalAlignment="Top" Width="736" Height="326" 
+                 TextChanged="TextBox_TextChanged"/>
+
+    </Grid>
+</Window>
