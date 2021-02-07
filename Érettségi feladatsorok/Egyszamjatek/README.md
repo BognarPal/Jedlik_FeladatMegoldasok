@@ -1,5 +1,5 @@
 # Egyszámjáték
-2020-as Informatika ágazati szakmai minta érettségi programozás feladat
+2020-as középszintű Informatika ágazati szakmai minta érettségi programozás feladat
 
 ## Feladat leírás és kiindó állomány
 Feladat leírása: feladat.pdf  
