@@ -1,4 +1,4 @@
-# Iskola
+# Formula-1
 A győri Jedlik 2019/2020-as tanév próbaérettségijének web+adatbázis feladatsorának megoldása
 
 ## Feladat leírás és kiindó állomány
