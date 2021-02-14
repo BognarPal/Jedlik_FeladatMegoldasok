@@ -1,4 +1,4 @@
-# Iskola
+# Formula-1 (emelt)
 A győri Jedlik emelt szintű mintaérettségi web+adatbázis feladatsorának megoldása
 
 ## Feladat leírás és kiindó állomány
