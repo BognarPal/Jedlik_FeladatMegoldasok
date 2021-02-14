@@ -1,0 +1,9 @@
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.fa-trash {
+    font-size: 20px;
+    color: darkred;
+}

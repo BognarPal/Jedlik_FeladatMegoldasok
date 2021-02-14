@@ -1,0 +1,43 @@
+<h2 class="text-center">Dolgozók</h2>
+
+<div class="wrapper">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th style="width: 60px;" class="text-center">
+                    <span *ngIf="isListState" class="cursor-pointer" (click)="new()" title="Új dolgozó">&#10010;</span> 
+                </th>
+                <th>Megnevezés</th>
+                <th>Ad login név</th>
+            </tr>        
+        </thead>
+        <tbody>            
+            <tr *ngFor="let empl of employees">
+                <td class="text-center px-1">
+                    <span *ngIf="isListState" title="Módosítás" class="cursor-pointer" (click)="modify(empl)">&#9998;</span> 
+                    <span *ngIf="isListState" title="Törlés" class="fa fa-trash cursor-pointer" (click)="delete(empl)"></span>               
+
+                    <span *ngIf="!isListState && empl.id === modifyRecord.id" class="cursor-pointer ml-1" title="Mentés" (click)="save()">&#10004;</span>
+                    <span *ngIf="!isListState && empl.id === modifyRecord.id" class="cursor-pointer" title="Mégsem" (click)="cancel()">&#10060;</span>
+                </td>
+                <td *ngIf="isListState || empl.id !== modifyRecord.id">
+                    {{empl.name}}
+                </td>
+                <td *ngIf="!isListState && empl.id === modifyRecord.id">
+                    <input type="text" [value]="empl.name" (change)="changeName($event)">
+                </td>
+
+                <td *ngIf="isListState || empl.id !== modifyRecord.id">
+                    {{empl.adLoginName}}
+                </td>
+                <td *ngIf="!isListState && empl.id === modifyRecord.id">
+                    <input type="text" [value]="empl.adLoginName" (change)="changeAdLoginName($event)">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-confirm [(visible)]="torles.dialog" (confirmed)="confirmedDelete()">
+    <p>Biztosan törli a <b>{{torles.model.name}}</b> nevű dolgozót?</p>
+</app-confirm>

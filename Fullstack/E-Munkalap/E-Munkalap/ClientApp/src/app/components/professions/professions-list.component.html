@@ -1,0 +1,35 @@
+<h2 class="text-center">Szakmák</h2>
+
+<div class="wrapper">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th style="width: 60px;" class="text-center">
+                    <span *ngIf="isListState" class="cursor-pointer" (click)="new()" title="Új szakma">&#10010;</span> 
+                </th>
+                <th>Megnevezés</th>
+            </tr>        
+        </thead>
+        <tbody>            
+            <tr *ngFor="let prof of professions">
+                <td class="text-center px-1">
+                    <span *ngIf="isListState" title="Módosítás" class="cursor-pointer" (click)="modify(prof)">&#9998;</span> 
+                    <span *ngIf="isListState" title="Törlés" class="fa fa-trash cursor-pointer" (click)="delete(prof)"></span>               
+                </td>
+                <td *ngIf="isListState || prof.id !== modifyRecord.id">
+                    {{prof.name}}
+                </td>
+                <td *ngIf="!isListState && prof.id === modifyRecord.id">
+                    <input type="text" style="width: calc(100% - 50px);" [value]="prof.name" 
+                           (change)="change($event)">
+                    <span class="cursor-pointer ml-1" title="Mentés" (click)="save()">&#10004;</span>
+                    <span class="cursor-pointer" title="Mégsem" (click)="cancel()">&#10060;</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-confirm [(visible)]="torles.dialog" (confirmed)="confirmedDelete()">
+    <p>Biztosan törli a <b>{{torles.model.name}}</b> nevű szakmát?</p>
+</app-confirm>

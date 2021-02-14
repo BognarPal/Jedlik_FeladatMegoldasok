@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>E_Munkalap</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210214150414_test.cs" />
+    <Compile Remove="Migrations\20210214150414_test.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="SQL\scripts\authentication\roles_select.sql" />
+    <None Remove="SQL\scripts\authentication\sessionUpdateLastAccess.sql" />
+    <None Remove="SQL\scripts\authentication\userSelectBySessionId.sql" />
+    <None Remove="SQL\scripts\base\employeeprofession_delete.sql" />
+    <None Remove="SQL\scripts\base\employeeprofession_insert.sql" />
+    <None Remove="SQL\scripts\base\employeeprofession_select.sql" />
+    <None Remove="SQL\scripts\base\employees_select.sql" />
+    <None Remove="SQL\scripts\base\employee_delete.sql" />
+    <None Remove="SQL\scripts\base\employee_insert.sql" />
+    <None Remove="SQL\scripts\base\employee_update.sql" />
+    <None Remove="SQL\scripts\base\professions_select.sql" />
+    <None Remove="SQL\scripts\base\profession_delete.sql" />
+    <None Remove="SQL\scripts\base\profession_insert.sql" />
+    <None Remove="SQL\scripts\base\profession_update.sql" />
+    <None Remove="SQL\scripts\work\works_select.sql" />
+    <None Remove="SQL\scripts\work\work_assign.sql" />
+    <None Remove="SQL\scripts\work\work_check.sql" />
+    <None Remove="SQL\scripts\work\work_delete.sql" />
+    <None Remove="SQL\scripts\work\work_finish.sql" />
+    <None Remove="SQL\scripts\work\work_insert.sql" />
+    <None Remove="SQL\scripts\work\work_update.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SQL\scripts\authentication\roles_select.sql" />
+    <EmbeddedResource Include="SQL\scripts\authentication\sessionUpdateLastAccess.sql" />
+    <EmbeddedResource Include="SQL\scripts\authentication\userSelectBySessionId.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\employeeprofession_delete.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\employeeprofession_select.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\employees_select.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\employee_delete.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\employeeprofession_insert.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\profession_delete.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\employee_insert.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\employee_update.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\profession_update.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\professions_select.sql" />
+    <EmbeddedResource Include="SQL\scripts\base\profession_insert.sql" />
+    <EmbeddedResource Include="SQL\scripts\work\works_select.sql" />
+    <EmbeddedResource Include="SQL\scripts\work\work_check.sql" />
+    <EmbeddedResource Include="SQL\scripts\work\work_finish.sql" />
+    <EmbeddedResource Include="SQL\scripts\work\work_assign.sql" />
+    <EmbeddedResource Include="SQL\scripts\work\work_delete.sql" />
+    <EmbeddedResource Include="SQL\scripts\work\work_update.sql" />
+    <EmbeddedResource Include="SQL\scripts\work\work_insert.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
+  </ItemGroup>
+
+</Project>
