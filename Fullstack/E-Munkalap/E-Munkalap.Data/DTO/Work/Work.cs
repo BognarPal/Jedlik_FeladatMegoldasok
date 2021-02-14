@@ -21,8 +21,12 @@ namespace E_Munkalap.DTO.Work
 
         public int? EmployeeId { get; set; }
         public Employee Employee { get; set; }
+        [NotMapped]
+        public string EmployeeName { get; set; }
         public int? ProfessionId { get; set; }
         public Profession Profession { get; set; }
+        [NotMapped]
+        public string ProfessionName { get; set; }
 
         public DateTime? DeadLine { get; set; }
         public DateTime? AssignDate { get; set; }

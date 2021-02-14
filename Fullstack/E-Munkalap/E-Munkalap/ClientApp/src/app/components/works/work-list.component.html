@@ -1,0 +1,37 @@
+<h2 class="text-center">Igények/munkák listázása</h2>
+
+<div class="container">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th style="width: 60px;" class="text-center">
+                    
+                </th>
+                <th>Bejelentő neve</th>
+                <th>Bejelentés dátuma</th>
+                <th>Dolgozó neve</th>
+                <th>Igény leírása</th>
+                <th>Határidő</th>
+                <th>Elvégezve</th>
+                <th>Ellenőrizve</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let work of works">
+                <td class="text-center px-1">
+                    <span class="fa fa-user"></span>
+                    <span class="fa fa-check-circle"></span> 
+                    <span class="fa fa-eye"></span> 
+                </td>
+                <td>{{work.requesterName}}</td>
+                <td>{{work.requestDate.replace('T', ' ')}}</td>
+                <td>{{work.employeeName}}</td>
+                <td>{{work.description}}</td>
+                <td>{{work.deadLine ? work.deadLine.substr(0, 10) : ''}}</td>
+                <td>{{work.finishDate ? 'Igen': 'Nem'}}</td>                
+                <td>{{work.finishDate ? 'Igen': 'Nem'}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

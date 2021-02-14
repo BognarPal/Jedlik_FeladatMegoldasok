@@ -1,0 +1,15 @@
+<h2 class="text-center">Új probléma rögzítése</h2>
+
+<div class="container">
+    <div class="form-group">
+        <label for="user">Bejelentő neve</label>
+        <input type="text" class="form-control" id="user" [(ngModel)]="work.requesterName" name="requesterName" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Hiba leírása:</label>
+        <textarea class="form-control" id="description" rows="3" [(ngModel)]="work.description" name="description" required></textarea>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-primary" (click)="save()">Mentés</button>
+    </div>
+</div>

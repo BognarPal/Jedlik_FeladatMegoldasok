@@ -1,0 +1,19 @@
+export class WorkModel {
+    id?: Number = undefined;
+    requesterName: string = '';
+    description: string = '';
+    requestDate: string = '';
+    employeeId?: Number = undefined;
+    employeeName: string = '';
+    professionId?: Number = undefined;
+    professionName: string = '';
+    deadLine: string = '';
+    assignDate: string = '';
+    assignDetails: string = '';
+    assignerName: string = '';
+    finishDate: string = '';
+    finishComment: string = '';
+    checkDate: string = '';
+    checkerUser: string = '';
+    checkComment: string = '';
+}

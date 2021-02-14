@@ -1,3 +1,4 @@
+import { WorkModel } from './../models/work.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
@@ -79,6 +80,23 @@ export class HttpService {
         catchError(this.handleError<boolean>('deleteEmployee', false))
       )
   }
+
+
+  workList(): Observable<WorkModel[]> {
+    return this.http.get<WorkModel[]>('http://munkalap.myddns.me/works/list')
+      .pipe (
+        catchError(this.handleError<WorkModel[]>('workList', []))
+      )
+  }
+  
+  newWork(work: WorkModel): Observable<WorkModel> {
+    return this.http.post<WorkModel>('http://munkalap.myddns.me/works/new', work)
+      .pipe (
+        catchError(this.handleError<WorkModel>('newWork', undefined))
+      )
+  }
+
+
 
 
   private handleError<T>(operation = 'operation', result?: T) {

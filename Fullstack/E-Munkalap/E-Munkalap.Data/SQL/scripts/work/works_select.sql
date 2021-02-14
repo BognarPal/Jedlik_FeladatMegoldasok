@@ -12,7 +12,9 @@
        munkalap_works.FinishComment, 
        munkalap_works.CheckDate, 
        munkalap_works.CheckerUser, 
-       munkalap_works.CheckComment
+       munkalap_works.CheckComment,
+       munkalap_professions.Name as ProfessionName,
+       munkalap_employees.Name as EmployeeName
 from munkalap_works left join
      munkalap_professions on munkalap_works.ProfessionId = munkalap_professions.Id left join
      munkalap_employees on munkalap_works.EmployeeId = munkalap_employees.Id
