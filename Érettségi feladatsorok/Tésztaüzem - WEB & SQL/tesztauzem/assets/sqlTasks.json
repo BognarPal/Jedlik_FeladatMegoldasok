@@ -1,0 +1,32 @@
+[
+  {
+    "id": 14,
+    "description": "Adatbázis létrehozása",
+    "adminPage": false
+  },
+  {
+    "id": 16,
+    "description": "Félkilós tészták száma ",
+    "adminPage": true
+  },
+  {
+    "id": 17,
+    "description": "Juhász Zsombor rendelései",
+    "adminPage": true
+  },
+  {
+    "id": 18,
+    "description": "Új rekord beszúrása ",
+    "adminPage": false
+  },
+  {
+    "id": 19,
+    "description": "Legnagyobb mennyiségben rendelt tészta",
+    "adminPage": true
+  },
+  {
+    "id": 20,
+    "description": "Legnagyobb értékben rendelő vevő",
+    "adminPage": true
+  }
+]
