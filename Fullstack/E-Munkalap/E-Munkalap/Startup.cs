@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace E_Munkalap
@@ -23,10 +24,12 @@ namespace E_Munkalap
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLogging(builder => builder.AddConsole());
             if (string.IsNullOrWhiteSpace(Configuration["DBHOST"]))
             {
                 services.Configure<DatabaseProvider>(Configuration.GetSection("ConnectionStrings"));
                 DatabaseProvider.SetDbContext(services, Configuration.GetConnectionString("Munkalap"));
+                System.Console.WriteLine("Connection string = " + Configuration.GetConnectionString("Munkalap"));
             }
             else
             {
@@ -41,6 +44,7 @@ namespace E_Munkalap
                     options.Munkalap = constr;
                 });
                 DatabaseProvider.SetDbContext(services, constr);
+                System.Console.WriteLine("Connection string = " + constr);
             }
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

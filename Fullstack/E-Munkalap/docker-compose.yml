@@ -1,0 +1,29 @@
+﻿version: '3'
+
+volumes:
+  datafiles:
+
+services:
+  munkalap-db:
+    image: mysql:latest
+    volumes:
+      - datafiles:/var/lib/mysql
+    restart: always    
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+
+  munkalap:
+    build: .
+    
+    depends_on:
+      - munkalap-db
+    ports:
+      - "89:80"
+      - "443:443"
+    restart: always
+    environment:
+      - DBHOST=munkalap-db
+      - DBUSER=root
+      - DBPASSWORD=secret
+      - ASPNETCORE_ENVIRONMENT=Develepoment
+      
