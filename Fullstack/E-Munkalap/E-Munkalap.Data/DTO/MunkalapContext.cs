@@ -19,18 +19,7 @@ namespace E_Munkalap.DTO
         public DbSet<Work.Work> Works { get; set; }
 
         public MunkalapContext(DbContextOptions<MunkalapContext> options) : base(options)
-        {
-        }
-
-#if DEBUG
-        public MunkalapContext()
-        { }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseMySQL("Server=localhost;Database=munkalap;Uid=root;Pwd=;");
-        }
-#endif
+        {}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
