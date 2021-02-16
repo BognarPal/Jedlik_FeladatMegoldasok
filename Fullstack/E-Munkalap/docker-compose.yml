@@ -18,7 +18,7 @@ services:
     depends_on:
       - munkalap-db
     ports:
-      - "89:80"
+      - "80:80"
       - "443:443"
     restart: always
     environment:
