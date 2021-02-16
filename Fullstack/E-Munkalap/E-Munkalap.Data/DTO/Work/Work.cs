@@ -7,7 +7,7 @@ using System.Text;
 
 namespace E_Munkalap.DTO.Work
 {
-    [Table("Munkalap_Works")]
+    [Table("munkalap_works")]
     public class Work
     {
         public int Id { get; set; }

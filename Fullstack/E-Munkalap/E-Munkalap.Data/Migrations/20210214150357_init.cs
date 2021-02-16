@@ -92,7 +92,7 @@ namespace E_Munkalap.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Munkalap_Works",
+                name: "munkalap_works",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -114,15 +114,15 @@ namespace E_Munkalap.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Munkalap_Works", x => x.Id);
+                    table.PrimaryKey("PK_munkalap_works", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Munkalap_Works_munkalap_employees_EmployeeId",
+                        name: "FK_munkalap_works_munkalap_employees_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "munkalap_employees",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Munkalap_Works_munkalap_professions_ProfessionId",
+                        name: "FK_munkalap_works_munkalap_professions_ProfessionId",
                         column: x => x.ProfessionId,
                         principalTable: "munkalap_professions",
                         principalColumn: "Id",
@@ -230,13 +230,13 @@ namespace E_Munkalap.Migrations
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Munkalap_Works_EmployeeId",
-                table: "Munkalap_Works",
+                name: "IX_munkalap_works_EmployeeId",
+                table: "munkalap_works",
                 column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Munkalap_Works_ProfessionId",
-                table: "Munkalap_Works",
+                name: "IX_munkalap_works_ProfessionId",
+                table: "munkalap_works",
                 column: "ProfessionId");
         }
 
@@ -252,7 +252,7 @@ namespace E_Munkalap.Migrations
                 name: "munkalap_userRoles");
 
             migrationBuilder.DropTable(
-                name: "Munkalap_Works");
+                name: "munkalap_works");
 
             migrationBuilder.DropTable(
                 name: "munkalap_roles");

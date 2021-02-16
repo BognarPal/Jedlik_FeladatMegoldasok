@@ -36,6 +36,7 @@ namespace E_Munkalap.Controllers
 #endif
             {
 #if DEBUG
+                Console.WriteLine(ex.StackTrace);
                 return controller.StatusCode(500, new { error = ex.Message });
 #else
                 return controller.StatusCode(500, new { error = "Váratlan hiba" });
