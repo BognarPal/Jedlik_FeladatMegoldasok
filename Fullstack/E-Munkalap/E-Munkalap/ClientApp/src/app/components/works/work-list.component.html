@@ -7,6 +7,7 @@
                 <th style="width: 60px;" class="text-center">
                     
                 </th>
+                <th>Azonosító</th>
                 <th>Bejelentő neve</th>
                 <th>Bejelentés dátuma</th>
                 <th>Dolgozó neve</th>
@@ -19,17 +20,18 @@
         <tbody>
             <tr *ngFor="let work of works">
                 <td class="text-center px-1">
-                    <span class="fa fa-user"></span>
-                    <span class="fa fa-check-circle"></span> 
-                    <span class="fa fa-eye"></span> 
+                    <span *ngIf="!work.employeeId" class="fa fa-user cursor-pointer"></span>
+                    <span *ngIf="work.employeeId && !work.finishDate" class="fa fa-check-circle cursor-pointer"></span> 
+                    <span *ngIf="work.finishDate && !work.checkDate" class="fa fa-eye cursor-pointer"></span> 
                 </td>
+                <td class="text-center">{{work.id}}</td>
                 <td>{{work.requesterName}}</td>
                 <td>{{work.requestDate.replace('T', ' ')}}</td>
                 <td>{{work.employeeName}}</td>
                 <td>{{work.description}}</td>
-                <td>{{work.deadLine ? work.deadLine.substr(0, 10) : ''}}</td>
-                <td>{{work.finishDate ? 'Igen': 'Nem'}}</td>                
-                <td>{{work.finishDate ? 'Igen': 'Nem'}}</td>
+                <td class="text-center">{{work.deadLine ? work.deadLine.substr(0, 10) : ''}}</td>
+                <td class="text-center">{{work.finishDate ? 'Igen': 'Nem'}}</td>                
+                <td class="text-center">{{work.checkDate ? 'Igen': 'Nem'}}</td>
             </tr>
         </tbody>
     </table>

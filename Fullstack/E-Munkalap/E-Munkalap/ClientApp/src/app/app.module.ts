@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfessionsListComponent } from './components/professions/professions-list.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
-import { EmployeeListComponent } from './components/employees/employee-list.component';
-import { NewWorkComponent } from './components/works/new-work.component';
-import { WorkListComponent } from './components/works/work-list.component';
+import {
+  ProfessionsListComponent,
+  EmployeeListComponent,
+  NewWorkComponent,
+  WorkListComponent
+} from './components';
 
 @NgModule({
   declarations: [

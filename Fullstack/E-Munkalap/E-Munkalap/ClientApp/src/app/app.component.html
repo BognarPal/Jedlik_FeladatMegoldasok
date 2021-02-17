@@ -1,6 +1,27 @@
-<h1 class="text-center" >{{title}}</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">{{title}}</a>
+    <button class="navbar-toggler" type="button" (click)="menuCollapsed = !menuCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngClass]="menuCollapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show'">
+        <div class="navbar-nav">
+            <a class="nav-link" routerLink="/newwork" routerLinkActive="font-weight-bold">
+                Új hiba rögzítése
+            </a>
+            <a class="nav-link" routerLink="/works" routerLinkActive="font-weight-bold">
+                Munkák listázása
+            </a>
+            <a class="nav-link" routerLink="/employees" routerLinkActive="font-weight-bold">
+                Dolgozók
+            </a>
+            <a class="nav-link" routerLink="/professions" routerLinkActive="font-weight-bold">
+                Szakmák
+            </a>
+        </div>
+    </div>
+</nav>
 
-<!-- <app-professions-list></app-professions-list> -->
-<!-- <app-employee-list></app-employee-list> -->
-<!-- <app-new-work></app-new-work> -->
-<app-work-list></app-work-list>
+
+
+
+<router-outlet></router-outlet>
