@@ -1,4 +1,6 @@
-﻿using E_Munkalap.DTO.Work;
+﻿using DinkToPdf;
+using DinkToPdf.Contracts;
+using E_Munkalap.DTO.Work;
 using E_Munkalap.SQL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,10 +16,12 @@ namespace E_Munkalap.Controllers
     public class WorkController : ControllerBase
     {
         private readonly DatabaseProvider databaseProvider;
+        private readonly IConverter converter;
 
-        public WorkController(IOptions<DatabaseProvider> dbProvider)
+        public WorkController(IOptions<DatabaseProvider> dbProvider, IConverter converter)
         {
             databaseProvider = dbProvider.Value;
+            this.converter = converter;
         }
 
         [HttpGet]
@@ -69,7 +73,7 @@ namespace E_Munkalap.Controllers
                 databaseProvider.Execute("work.work_finish", work);
                 return Ok
                 (
-                    databaseProvider.Query<Work>("work.works_select", new { work.Id }).FirstOrDefault()
+                    databaseProvider.Query<Work>("work.works_select", new { id = work.Id }).FirstOrDefault()
                 );
             });
         }
@@ -83,7 +87,7 @@ namespace E_Munkalap.Controllers
                 databaseProvider.Execute("work.work_check", work);
                 return Ok
                 (
-                    databaseProvider.Query<Work>("work.works_select", new { work.Id }).FirstOrDefault()
+                    databaseProvider.Query<Work>("work.works_select", new { id = work.Id }).FirstOrDefault()
                 );
             });
         }
@@ -97,7 +101,7 @@ namespace E_Munkalap.Controllers
                 databaseProvider.Execute("work.work_update", work);
                 return Ok
                 (
-                    databaseProvider.Query<Work>("work.works_select", new { work.Id }).FirstOrDefault()
+                    databaseProvider.Query<Work>("work.works_select", new { id = work.Id }).FirstOrDefault()
                 );
             });
         }
@@ -119,7 +123,7 @@ namespace E_Munkalap.Controllers
         {
             return this.RunWithErrorHandling(() =>
             {
-                var work = databaseProvider.Query<Work>("work.works_select", new { Id = id }).FirstOrDefault();
+                var work = databaseProvider.Query<Work>("work.works_select", new { id }).FirstOrDefault();
                 if (work != null)
                 {
                     return File(createReport(work), "application/pdf", $"munkalap_{work.Id}.pdf");
@@ -155,13 +159,13 @@ namespace E_Munkalap.Controllers
                        "      }" +
                        "      fieldset p {" +
                        "          font-weight: normal;" +
-                       "          padding-left: 7rem;" +
+                       "          padding-left: 10rem;" +
                        "      }" +
                        "      .label {" +
                        "          font-weight: bold;" +
                        "          display: inline-block;" +
-                       "          margin-left: -7rem;" +
-                       "          width: 6.75rem;" +
+                       "          margin-left: -10rem;" +
+                       "          width: 9.75rem;" +
                        "      }" +
                        "      .alairas {" +
                        "          text-align: center;" +
@@ -239,11 +243,23 @@ namespace E_Munkalap.Controllers
                        "   </fieldset>" +
                        "</body>";
 
-            var converter = new SelectPdf.HtmlToPdf();
-            converter.Options.PdfPageSize = SelectPdf.PdfPageSize.A4;
-            converter.Options.PdfPageOrientation = SelectPdf.PdfPageOrientation.Portrait;
-            var doc = converter.ConvertHtmlString(html);
-            return doc.Save();            
+            var doc = new HtmlToPdfDocument()
+            {
+                GlobalSettings = {
+                    PaperSize = PaperKind.A4,
+                    Orientation = Orientation.Portrait,
+                },
+
+                Objects = {
+                    new ObjectSettings()
+                    {
+                        HtmlContent = html
+                    }
+                }
+            };
+
+            return converter.Convert(doc);
+
         }
     }
 }

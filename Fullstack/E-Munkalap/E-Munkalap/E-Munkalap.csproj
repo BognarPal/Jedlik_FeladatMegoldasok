@@ -11,12 +11,13 @@
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
     <RootNamespace>E_Munkalap</RootNamespace>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.11" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
-    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="20.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,18 @@
   
   <ItemGroup>
     <ProjectReference Include="..\E-Munkalap.Data\E-Munkalap.Data.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="libwkhtmltox.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="libwkhtmltox.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="libwkhtmltox.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition="1==0 And '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
