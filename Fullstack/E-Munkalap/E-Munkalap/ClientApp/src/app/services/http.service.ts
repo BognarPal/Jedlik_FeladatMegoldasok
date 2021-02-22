@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ProfessionModel } from './../models/profession.model';
 import { EmployeeModel } from './../models/employee.model';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,21 +15,21 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   getProfessions(): Observable<ProfessionModel[]> {
-    return this.http.get<ProfessionModel[]>('http://munkalap.myddns.me/base/professions')
+    return this.http.get<ProfessionModel[]>(`${environment.apiURL}/base/professions`)
       .pipe (
         catchError(this.handleError<ProfessionModel[]>('getProfessions', []))
       )
   }
 
   modifyProfessions(profession: ProfessionModel): Observable<ProfessionModel> {
-    return this.http.put<ProfessionModel>('http://munkalap.myddns.me/base/professions', profession)
+    return this.http.put<ProfessionModel>(`${environment.apiURL}/base/professions`, profession)
       .pipe (
         catchError(this.handleError<ProfessionModel>('modifyProfessions', undefined))
       )
   }
 
   newProfessions(profession: ProfessionModel): Observable<ProfessionModel> {
-    return this.http.post<ProfessionModel>('http://munkalap.myddns.me/base/professions', profession)
+    return this.http.post<ProfessionModel>(`${environment.apiURL}/base/professions`, profession)
       .pipe (
         catchError(this.handleError<ProfessionModel>('newProfessions', undefined))
       )
@@ -40,7 +41,7 @@ export class HttpService {
       body: profession
     };
 
-    return this.http.delete<boolean>('http://munkalap.myddns.me/base/professions', httpOptions)
+    return this.http.delete<boolean>(`${environment.apiURL}/base/professions`, httpOptions)
       .pipe (
         catchError(this.handleError<boolean>('deleteProfessions', false))
       )
@@ -49,21 +50,21 @@ export class HttpService {
 
 
   getEmployees(): Observable<EmployeeModel[]> {
-    return this.http.get<EmployeeModel[]>('http://munkalap.myddns.me/base/employees')
+    return this.http.get<EmployeeModel[]>(`${environment.apiURL}/base/employees`)
       .pipe (
         catchError(this.handleError<EmployeeModel[]>('getEmployees', []))
       )
   }
 
   modifyEmployee(employee: EmployeeModel): Observable<EmployeeModel> {
-    return this.http.put<EmployeeModel>('http://munkalap.myddns.me/base/employees', employee)
+    return this.http.put<EmployeeModel>(`${environment.apiURL}/base/employees`, employee)
       .pipe (
         catchError(this.handleError<EmployeeModel>('modifyEmployee', undefined))
       )
   }
 
   newEmployee(employee: EmployeeModel): Observable<EmployeeModel> {
-    return this.http.post<EmployeeModel>('http://munkalap.myddns.me/base/employees', employee)
+    return this.http.post<EmployeeModel>(`${environment.apiURL}/base/employees`, employee)
       .pipe (
         catchError(this.handleError<EmployeeModel>('newEmployee', undefined))
       )
@@ -75,7 +76,7 @@ export class HttpService {
       body: employee
     };
 
-    return this.http.delete<boolean>('http://munkalap.myddns.me/base/employees', httpOptions)
+    return this.http.delete<boolean>(`${environment.apiURL}/base/employees`, httpOptions)
       .pipe (
         catchError(this.handleError<boolean>('deleteEmployee', false))
       )
@@ -83,35 +84,35 @@ export class HttpService {
 
 
   workList(): Observable<WorkModel[]> {
-    return this.http.get<WorkModel[]>('http://munkalap.myddns.me/works/list')
+    return this.http.get<WorkModel[]>(`${environment.apiURL}/works/list`)
       .pipe (
         catchError(this.handleError<WorkModel[]>('workList', []))
       )
   }
   
   newWork(work: any): Observable<WorkModel> {
-    return this.http.post<WorkModel>('http://munkalap.myddns.me/works/new', work)
+    return this.http.post<WorkModel>(`${environment.apiURL}/works/new`, work)
       .pipe (
         catchError(this.handleError<WorkModel>('newWork', undefined))
       )
   }
 
   workSetEmployee(work: any): Observable<WorkModel> {
-    return this.http.put<WorkModel>('http://munkalap.myddns.me/works/assign', work)
+    return this.http.put<WorkModel>(`${environment.apiURL}/works/assign`, work)
       .pipe (
         catchError(this.handleError<WorkModel>('workSetEmployee', undefined))
       )
   }
 
   workFinished(work: any): Observable<WorkModel> {
-    return this.http.put<WorkModel>('http://munkalap.myddns.me/works/finish', work)
+    return this.http.put<WorkModel>(`${environment.apiURL}/works/finish`, work)
       .pipe (
         catchError(this.handleError<WorkModel>('workFinished', undefined))
       )
   }
 
   workChecked(work: any): Observable<WorkModel> {
-    return this.http.put<WorkModel>('http://munkalap.myddns.me/works/check', work)
+    return this.http.put<WorkModel>(`${environment.apiURL}/works/check`, work)
       .pipe (
         catchError(this.handleError<WorkModel>('workChecked', undefined))
       )
