@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>E_Munkalap.Data</RootNamespace>
+    <RootNamespace>E_Munkalap</RootNamespace>
     <Platforms>x64</Platforms>
   </PropertyGroup>
 
