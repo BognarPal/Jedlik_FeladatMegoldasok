@@ -188,7 +188,7 @@ namespace E_Munkalap.Controllers
                        "       </p>" +
                        "       <p>" +
                        "           <span class=\"label\">Időpont:</span>" +
-                      $"           {work.RequestDate:yyyy.MM.dd hh:mm}" +
+                      $"           {work.RequestDate:yyyy.MM.dd HH:mm}" +
                        "       </p>" +
                        "       <p>" +
                        "           <span class=\"label\">Probléma:</span>" +
@@ -217,7 +217,7 @@ namespace E_Munkalap.Controllers
                        "       <legend>Feladat elvégzése</legend>" +
                        "       <p>" +
                        "           <span class=\"label\">Dátum:</span>" +
-                      $"           {work.FinishDate:yyyy.MM.dd hh:mm}" +
+                      $"           {work.FinishDate:yyyy.MM.dd}" +
                        "       </p>" +
                        "       <p style=\"min-height: 5rem;\">" +
                        "           <span class=\"label\">Megjegyzés:</span>" +
@@ -231,7 +231,7 @@ namespace E_Munkalap.Controllers
                        "       <legend>Ellenőrzés</legend>" +
                        "       <p>" +
                        "           <span class=\"label\">Dátum:</span>" +
-                      $"           {work.CheckDate:yyyy.MM.dd hh:mm}" +
+                      $"           {work.CheckDate:yyyy.MM.dd}" +
                        "       </p>" +
                        "       <p style=\"min-height: 5rem;\">" +
                        "           <span class=\"label\">Megjegyzés:</span>" +
