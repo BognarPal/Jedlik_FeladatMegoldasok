@@ -40,3 +40,7 @@ th:nth-child(8), td:nth-child(8)  {
 th:nth-child(9), td:nth-child(9)  {
     width: 120px;
 }
+
+label.missing {
+    color: red;
+}

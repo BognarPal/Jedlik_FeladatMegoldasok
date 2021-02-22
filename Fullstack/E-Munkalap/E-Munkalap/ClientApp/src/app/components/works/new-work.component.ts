@@ -18,7 +18,11 @@ export class NewWorkComponent implements OnInit {
 
   save(): void {
     if (this.work.requesterName && this.work.description) {
-      this.httpService.newWork(this.work).subscribe(
+      const data = {
+        description: this.work.description,
+        requesterName: this.work.requesterName
+      }
+      this.httpService.newWork(data).subscribe(
         (data: WorkModel) => {
           this.work = new WorkModel();
           alert(`Az ön által rögzített igény száma: ${data.id}`);

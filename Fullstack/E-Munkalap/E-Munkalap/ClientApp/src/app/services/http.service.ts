@@ -89,15 +89,33 @@ export class HttpService {
       )
   }
   
-  newWork(work: WorkModel): Observable<WorkModel> {
+  newWork(work: any): Observable<WorkModel> {
     return this.http.post<WorkModel>('http://munkalap.myddns.me/works/new', work)
       .pipe (
         catchError(this.handleError<WorkModel>('newWork', undefined))
       )
   }
 
+  workSetEmployee(work: any): Observable<WorkModel> {
+    return this.http.put<WorkModel>('http://munkalap.myddns.me/works/assign', work)
+      .pipe (
+        catchError(this.handleError<WorkModel>('workSetEmployee', undefined))
+      )
+  }
 
+  workFinished(work: any): Observable<WorkModel> {
+    return this.http.put<WorkModel>('http://munkalap.myddns.me/works/finish', work)
+      .pipe (
+        catchError(this.handleError<WorkModel>('workFinished', undefined))
+      )
+  }
 
+  workChecked(work: any): Observable<WorkModel> {
+    return this.http.put<WorkModel>('http://munkalap.myddns.me/works/check', work)
+      .pipe (
+        catchError(this.handleError<WorkModel>('workChecked', undefined))
+      )
+  }
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

@@ -20,11 +20,20 @@
         <tbody>
             <tr *ngFor="let work of works">
                 <td class="text-center px-1">
-                    <span *ngIf="!work.employeeId" class="fa fa-user cursor-pointer"></span>
-                    <span *ngIf="work.employeeId && !work.finishDate" class="fa fa-check-circle cursor-pointer"></span> 
-                    <span *ngIf="work.finishDate && !work.checkDate" class="fa fa-eye cursor-pointer"></span> 
+                    <span *ngIf="!work.employeeId" title="Munka kiosztása" 
+                           class="fa fa-user cursor-pointer"
+                           (click)="workSetEmployee(work.id)">                           
+                    </span>
+                    <span *ngIf="work.employeeId && !work.finishDate" title="Munka készre jelentése" 
+                           class="fa fa-check-circle cursor-pointer"
+                           (click)="workSetFinished(work.id)">
+                    </span> 
+                    <span *ngIf="work.finishDate && !work.checkDate" title="Munka ellenőrzése" 
+                          class="fa fa-eye cursor-pointer"
+                          (click)="workSetChecked(work.id)">
+                    </span> 
                 </td>
-                <td class="text-center">{{work.id}}</td>
+                <td class="text-center"><a [href]="'http://munkalap.myddns.me/works/pdf/' + work.id" target="pdf">{{work.id}}</a></td>
                 <td>{{work.requesterName}}</td>
                 <td>{{work.requestDate.replace('T', ' ')}}</td>
                 <td>{{work.employeeName}}</td>
@@ -35,5 +44,147 @@
             </tr>
         </tbody>
     </table>
+</div>
 
+<div class="modal" tabindex="-1" [style]="{ 'display': setEmployee.visible ? 'block' : 'none' }">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Munka kiosztása</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
+                        (click)="setEmployee.visible = false">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="profession" [class]="setEmployee.missing.profession ? 'missing': ''">
+                        Szakma:
+                    </label>
+                    <select class="form-control" id="profession" [(ngModel)]="setEmployee.model.professionId" 
+                            name="professionId" required>
+                        <option value=""></option>
+                        <option *ngFor="let prof of professions" [value]="prof.id">{{prof.name}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="employee" [class]="setEmployee.missing.employee ? 'missing': ''">
+                        Dolgozó:
+                    </label>
+                    <select class="form-control" id="employee" [(ngModel)]="setEmployee.model.employeeId" 
+                            name="employeeId" required>
+                        <option value=""></option>
+                        <option *ngFor="let empl of employees" [value]="empl.id">{{empl.name}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="deadline" [class]="setEmployee.missing.deadline ? 'missing': ''">
+                        Határidő:
+                    </label>
+                    <input type="date" class="form-control" id="deadline" 
+                           [(ngModel)]="setEmployee.model.deadLine" name="deadLine" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Megjegyzés:</label>
+                    <textarea class="form-control" id="description" rows="3" 
+                              [(ngModel)]="setEmployee.model.assignDetails" name="assignDetails">
+                    </textarea>
+                </div>   
+
+                <div class="form-group">
+                    <label for="user" [class]="setEmployee.missing.name ? 'missing': ''">
+                        Név:
+                    </label>
+                    <input type="text" class="form-control" id="user" 
+                           [(ngModel)]="setEmployee.model.assignerName" name="assignerName" required>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="setEmployee.visible = false">
+                    Mégsem
+                </button>
+                <button type="button" class="btn btn-primary" (click)="workSetEmployeeSave()">Mentés</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" [style]="{ 'display': workFinished.visible ? 'block' : 'none' }">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Munka elvégzése</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
+                        (click)="workFinished.visible = false">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="finishDate" [class]="workFinished.missing.date? 'missing': ''">
+                        Dátum (munka elvégzésének dátuma):
+                    </label>
+                    <input type="date" class="form-control" id="finishDate" 
+                           [(ngModel)]="workFinished.model.finishDate" name="finishDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="finishComment">Megjegyzés:</label>
+                    <textarea class="form-control" id="finishComment" rows="3" 
+                              [(ngModel)]="workFinished.model.finishComment" name="finishComment">
+                    </textarea>
+                </div>   
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="workFinished.visible = false">
+                    Mégsem
+                </button>
+                <button type="button" class="btn btn-primary" (click)="workSetFinishedSave()">Mentés</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" [style]="{ 'display': workChecked.visible ? 'block' : 'none' }">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Munka ellenőrzése</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
+                        (click)="workChecked.visible = false">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="checkerUser" [class]="workChecked.missing.user? 'missing': ''">
+                        Ellenőrző neve:
+                    </label>
+                    <input type="text" class="form-control" id="checkerUser" 
+                           [(ngModel)]="workChecked.model.checkerUser" name="checkerUser" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkComment">Megjegyzés:</label>
+                    <textarea class="form-control" id="checkComment" rows="3" 
+                              [(ngModel)]="workChecked.model.checkComment" name="checkComment">
+                    </textarea>
+                </div>   
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="workChecked.visible = false">
+                    Mégsem
+                </button>
+                <button type="button" class="btn btn-primary" (click)="workCheckedSave()">Mentés</button>
+            </div>
+        </div>
+    </div>
 </div>
