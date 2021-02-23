@@ -17,7 +17,7 @@ services:
       - "3306:3306"
       
   munkalap:
-    image: bognarpal/munkalap
+    build: .
     
     depends_on:
       - munkalap-db

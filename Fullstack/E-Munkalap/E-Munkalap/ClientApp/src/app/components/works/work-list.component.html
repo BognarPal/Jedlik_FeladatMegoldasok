@@ -33,7 +33,7 @@
                           (click)="workSetChecked(work.id)">
                     </span> 
                 </td>
-                <td class="text-center"><a [href]="'http://munkalap.myddns.me/works/pdf/' + work.id" target="pdf">{{work.id}}</a></td>
+                <td class="text-center"><a [href]="'/works/pdf/' + work.id" target="pdf">{{work.id}}</a></td>
                 <td>{{work.requesterName}}</td>
                 <td>{{work.requestDate.replace('T', ' ')}}</td>
                 <td>{{work.employeeName}}</td>
