@@ -11,7 +11,11 @@ services:
     restart: always    
     environment:
       MYSQL_ROOT_PASSWORD: secret
-
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+    ports:
+      - "3306:3306"
+      
   munkalap:
     build: .
     
