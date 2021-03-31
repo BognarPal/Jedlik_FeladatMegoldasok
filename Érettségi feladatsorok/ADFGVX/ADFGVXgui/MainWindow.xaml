@@ -1,0 +1,17 @@
+﻿<Window x:Class="ADFGVXgui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADFGVXgui"
+        mc:Ignorable="d"
+        Title="ADFGVX gui" Height="600" Width="305">
+    <Grid>
+        <Label Content="Az ellenőrzés eredménye:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="A betöltött kódtábla:" HorizontalAlignment="Left" Margin="0,321,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.514,7.436"/>
+        <ListBox Name="lstEredmeny" Margin="10,36,11,263"/>
+        <Button Name="btnBetoltes"  Content="Kódtábla betöltése" HorizontalAlignment="Left" Margin="175,13,0,0" VerticalAlignment="Top" Width="119" Click="btnBetoltes_Click"/>
+        <Label Name="lblKodtabla" Content="" HorizontalAlignment="Center" Margin="0,352,0,0" VerticalAlignment="Top" Width="285" Height="192" FontSize="24" FontFamily="Courier New"/>
+
+    </Grid>
+</Window>
