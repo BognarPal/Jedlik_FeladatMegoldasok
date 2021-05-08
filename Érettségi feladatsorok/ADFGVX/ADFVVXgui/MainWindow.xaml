@@ -1,0 +1,17 @@
+﻿<Window x:Class="ADFVVXgui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADFVVXgui"
+        mc:Ignorable="d"
+        Title="ADFGVX gui" Height="573" Width="426" FontSize="16">
+    <Grid>
+        <Label Content="Az ellenőrzés eredménye:" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Content="A betöltött kódtábla:" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnBetoltes" Content="Kódtábla betöltése" HorizontalAlignment="Left" Margin="253,24,0,0" VerticalAlignment="Top" Width="156" Click="btnBetoltes_Click"/>
+        <ListBox Name="lstEredmeny" HorizontalAlignment="Left" Height="268" Margin="10,57,0,0" VerticalAlignment="Top" Width="399" Grid.ColumnSpan="3"/>
+        <Label Name="lblKodtabla" Content="" HorizontalAlignment="Left" Margin="10,361,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.338,-0.862" Height="180" Width="399" FontSize="24" FontFamily="Courier New" Grid.ColumnSpan="3"/>
+
+    </Grid>
+</Window>
