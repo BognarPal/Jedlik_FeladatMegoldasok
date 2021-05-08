@@ -1,0 +1,23 @@
+﻿<Window x:Class="ValasztasGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValasztasGUI"
+        mc:Ignorable="d"
+        Title="Szavazatok rögzítése" Height="200" Width="600" FontSize="16">
+    <Grid>
+        <Label Content="Körzet:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Jelölt neve:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="Párt:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Szavazatok száma:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="154,14,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        <TextBox HorizontalAlignment="Left" Margin="154,54,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="246"/>
+        <ComboBox Name="cboPart" HorizontalAlignment="Left" Margin="154,92,0,0" VerticalAlignment="Top" Width="246">
+            <ComboBoxItem Content="Független"/>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Margin="154,134,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        <Button Content="Ellenőrzés" HorizontalAlignment="Left" Margin="424,60,0,0" VerticalAlignment="Top" Height="51" Width="155" FontSize="24" FontWeight="Bold" Click="Button_Click"/>
+
+    </Grid>
+</Window>
