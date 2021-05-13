@@ -1,0 +1,27 @@
+﻿<Window x:Class="Pars2012GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pars2012GUI"
+        mc:Ignorable="d"
+        Title="London 2012 - Férfi kalapácsvetés selejtező" Height="476" Width="425">
+    <Grid>
+        <Label Content="Válasszon versenyzőt:" HorizontalAlignment="Left" Margin="61,41,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cboVersenyzo" HorizontalAlignment="Left" Margin="63,72,0,0" VerticalAlignment="Top" Width="230" SelectionChanged="cboVersenyzo_SelectionChanged"/>
+        <Label Content="Csoport:" HorizontalAlignment="Left" Margin="61,99,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nemzet:" HorizontalAlignment="Left" Margin="61,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nemzet kód:" HorizontalAlignment="Left" Margin="61,161,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sorozat:" HorizontalAlignment="Left" Margin="61,192,0,0" VerticalAlignment="Top"/>
+        <Label Content="Eredmény:" HorizontalAlignment="Left" Margin="63,223,0,0" VerticalAlignment="Top"/>
+        <Label Content="Zászló:" HorizontalAlignment="Left" Margin="61,254,0,0" VerticalAlignment="Top"/>
+        <Image Name="ImageZászló" HorizontalAlignment="Left" Height="47" Margin="100,285,0,0" VerticalAlignment="Top" Width="106" />
+
+        <Label Name="lblCsoport" Content="B" HorizontalAlignment="Left" Margin="123,99,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblNemzet" Content="Magyarország" HorizontalAlignment="Left" Margin="120,130,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblKod" Content="HUN" HorizontalAlignment="Left" Margin="139,161,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblSorozat" Content="77,11;79,37;-" HorizontalAlignment="Left" Margin="119,192,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblEredmeny" Content="79,37" HorizontalAlignment="Left" Margin="128,223,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

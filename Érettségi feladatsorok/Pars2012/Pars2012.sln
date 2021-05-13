@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pars2012", "Pars2012\Pars2012.csproj", "{71AA58F5-D2D1-4A95-9409-04B97971F91D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pars2012GUI", "Pars2012GUI\Pars2012GUI.csproj", "{A5B9006B-A500-4F85-A137-57F40BB02DF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71AA58F5-D2D1-4A95-9409-04B97971F91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71AA58F5-D2D1-4A95-9409-04B97971F91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71AA58F5-D2D1-4A95-9409-04B97971F91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71AA58F5-D2D1-4A95-9409-04B97971F91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B9006B-A500-4F85-A137-57F40BB02DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B9006B-A500-4F85-A137-57F40BB02DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B9006B-A500-4F85-A137-57F40BB02DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B9006B-A500-4F85-A137-57F40BB02DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6775007-D5D6-4DF4-A6D2-E0B7964CEB2C}
+	EndGlobalSection
+EndGlobal

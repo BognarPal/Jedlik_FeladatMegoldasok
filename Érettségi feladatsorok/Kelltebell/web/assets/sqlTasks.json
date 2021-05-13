@@ -1,0 +1,32 @@
+[
+  {
+    "id": 14,
+    "description": "Adatbázis létrehozása",
+    "adminPage": false
+  },
+  {
+    "id": 16,
+    "description": "20 kilós felszerelések darabszáma ",
+    "adminPage": true
+  },
+  {
+    "id": 17,
+    "description": "Tóth Levente bérletei",
+    "adminPage": true
+  },
+  {
+    "id": 18,
+    "description": "Kategória átnevezése",
+    "adminPage": false
+  },
+  {
+    "id": 19,
+    "description": "Legtöbbet kikölcsönzött eszközök",
+    "adminPage": true
+  },
+  {
+    "id": 20,
+    "description": "Legtöbb visszahozandó eszközzel rendelkező felhasználó",
+    "adminPage": true
+  }
+]

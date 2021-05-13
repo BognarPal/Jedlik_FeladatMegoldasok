@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <!-- Szükséges meta elemek -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Kettlebell edzés otthon"> 
+    <meta name="keywords" content="kettlebell, gym, edzés"> 
+
+    <title>Kettlebell edzés otthon</title>
+
+    <!-- Bootstrap CSS helye -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/premade.min.css" />
+    <link rel="stylesheet" href="kettlebell.css">
+  </head>
+
+  <body onload="arak()">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kettlebell otthon</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li><a class="nav-link" href="#ismerteto">Mi is ez?</a></li>
+            <li><a class="nav-link" href="#vasarlas">Vásárlás</a></li>
+            <li><a class="nav-link" href="#generator">Gyakorlatot kérek!</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Kettlebell edzés otthon</h1>
+          <h2 class="masthead-subheading mb-0">
+            Teljes konditerem egyetlen súlyzóval!
+          </h2>
+          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5"
+            >Többet akarok tudni</a
+          >
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <div id="kedvcsinalo">
+      <a class="anchor" id="ismerteto"></a>
+      <section>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <div class="p-5">
+                <!-- kép helye: "kettlebell_in_sand"-->
+                <img class="img-fluid rounded-circle" src="assets/kepek/kettlebell_in_sand.jpg">
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="p-5">
+                <h2 class="display-4">Erő, technika, fejlődés</h2>
+                <p>
+                  A kettlebell egy egyszerű súlyzó, amivel dinamikus- és
+                  statikus gyakorlatokat lehet végezni.
+                </p>
+                <p>
+                  A kettlebell a tökéletes edzőtárs ahhoz, hogy állóképességünk
+                  fejlesztése közben általános erőt is növeljünk.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="p-5">
+                <!-- kép helye: "pavel"-->
+                <img class="img-fluid rounded-circle" src="assets/kepek/pavel.jpg">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="p-5">
+                <h2 class="display-4">Pavel Tsatsouline</h2>
+                <p>
+                  A gömbsúlyzóval végzett gyakorlatok hagyományos orosz
+                  edzésformának számítanak, amit már a legendás orosz cirkuszi
+                  súlyemelők és titkosalakulatok is hasznosítottak az évek
+                  során. Pavel Tsatsouline a 90'-es évek elején mutatta meg a
+                  világnak ezt az egyszerű, de nagyszerű sporteszközt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <div class="p-5">
+                <!-- kép helye: "kettlebell_at_home"-->
+                <img class="img-fluid rounded-circle" src="assets/kepek/kettlebell_at_home.jpg">
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="p-5">
+                <h2 class="display-4">Edzés bárhol, bármikor</h2>
+                <p>
+                  Egy teljesértékű kettlebell edzéshez nincs másra szükségünk,
+                  mint két négyzetméter szabad helyre, és egy darab, megfelelő
+                  súlyú gömbsúlyzóra. No és persze megfelelő technikára is.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Áraink -->
+    <section id="arak" class="pricing p-5">
+      <a class="anchor" id="vasarlas"></a>
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center">Mennyibe kerül belevágni?</h2>
+        </div>
+        <div class="row">
+          <div class="card mb-5 col-md-4">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">
+                Egyszerű fém kettlebell
+              </h5>
+              <h6 class="card-price text-center">
+                <span id="kiloar">1 000 Ft</span>
+                <span class="period">/KG</span>
+              </h6>
+              <hr />
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span
+                  ><strong>Férfi kezdősúly: 16-20 kg</strong>
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span>Női
+                  kezdősúly: 8-12 kg
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span>Nem
+                  igényel karbantartást, de egy gumiszőnyeg segít vigyázni a
+                  padlóra
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span>Ha
+                  tudunk, eddzünk a szabadban!
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span>Ha
+                  tőlünk vásárol, 10% kedvezményt biztosítunk!
+                </li>
+              </ul>
+              <a href="#" class="btn btn-block btn-primary text-uppercase"
+                >Kedvezményes vásárlás</a
+              >
+            </div>
+          </div>
+          <div class="card mb-5 col-md-4">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">
+                Személyre szabott edzőterv
+              </h5>
+              <h6 class="card-price text-center">
+                <span id="edzoterv">20 000 Ft</span>
+                <span class="period">/hónap</span>
+              </h6>
+              <hr />
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span
+                  ><strong>Professzionális videós coach-olás</strong>
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span
+                  >Személyre szabott edzésterv
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span
+                  >Segítünk a megfelelő technika elsajátításában
+                </li>
+                <li id="kedvezmenyListaElem">
+                  <span class="fa-li"><i class="fas fa-check"></i></span><span id="kedvezmeny">50</span>%-os
+                  kedvezmény a terem belépő árából
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span>Online
+                  edzésterv kialakítása
+                </li>
+              </ul>
+              <a href="#" class="btn btn-block btn-primary text-uppercase"
+                >Szabad edzők</a
+              >
+            </div>
+          </div>
+
+
+          <div class="card mb-5 col-md-4">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">
+                Tankönyv
+              </h5>
+              <h6 class="card-price text-center">                
+                <span id="tankonyv">4 999 Ft</span>
+                <span class="period">/db</span>
+              </h6>
+              <hr />
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span
+                  ><strong>A mester leghíresebb könyve</strong>
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span
+                  >Kifejezetten kezdők számára íródott
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span
+                  >Teljes edzéstervet tartalmaz, amely megalapozza a későbbi fejlődést
+                </li>
+                <li id="kedvezmenyListaElem">
+                  <span class="fa-li"><i class="fas fa-check"></i></span>Segít elsajátítani az alapokat
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check"></i></span>Remek kiegészítő edzés más sporttevékenységek mellé is
+                </li>
+              </ul>
+              <a href="#" class="btn btn-block btn-primary text-uppercase"
+                >Megrendelem</a
+              >
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <a class="anchor" id="generator"></a>
+      <div class="container p-5">
+        <div class="card grey lighten-3 chat-room card">
+          <div class="card-body column d-flex justify-content-center">
+            <div class="chat-box p-3">
+              <h4>Kérek egy gyakorlatot!</h4>
+              <p>
+                Nem tudja hogy, mit eddzen otthon? Az alábbi gomb megnyomásával
+                kérjen egy véletlenszerűen generált feladatsort!
+              </p>
+
+              <button
+                id="gyakorlatGeneralas"
+                type="button"
+                onclick="gyakorlatGeneralas()"
+                class="btn btn-block btn-primary"
+              >
+                Kérem a gyakorlatot!
+              </button>
+
+              <div class="row justify-content-center">
+                <h3 id="generaltGyakorlat"></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Kettlebell Gym</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap kötelező elemek sorrendben -->
+    <script src="assets/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="kettlebell.js"></script>
+  </body>
+</html>

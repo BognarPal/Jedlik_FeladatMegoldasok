@@ -1,0 +1,9 @@
+Cím: Tankönyv
+Ár: 4 999 Ft
+Leírás:
+- A mester leghíresebb könyve
+- Kifejezetten kezdők számára íródott
+- Teljes edzéstervet tartalmaz, amely megalapozza a későbbi fejlődést
+- Segít elsajátítani az alapokat
+- Remek kiegészítő edzés más sporttevékenységek mellé is
+Akciógomb: Megrendelem
