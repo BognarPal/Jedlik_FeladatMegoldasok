@@ -1,8 +1,7 @@
 ﻿namespace pizzeria.data.interfaces.models
 {
-    public interface IPizzaTag
+    public interface IPizzaTag: IEntity
     {
-        int Id { get; set; }
         string Name { get; set; }
     }
 }

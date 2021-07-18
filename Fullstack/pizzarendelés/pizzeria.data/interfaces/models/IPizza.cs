@@ -2,9 +2,8 @@
 
 namespace pizzeria.data.interfaces.models
 {
-    public interface IPizza
+    public interface IPizza: IEntity
     {
-        int Id { get; set; }
         string Name { get; set; }
         string Description { get; set; }
         IEnumerable<byte[]> Pictures { get; set; }
