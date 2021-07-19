@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace pizzeria.data.interfaces.models
 {
-    public interface ICustomer: IEntity
+    public interface ICustomer: IUser
     {
-        string Name { get; set; }
-        string Email { get; set; }
-        string PasswordHash { get; set; }
-        string Phone { get; set; }
         IAddress PrimaryAddress { get; set; }
         IEnumerable<IAddress> Addresses { get; set; }
     }
