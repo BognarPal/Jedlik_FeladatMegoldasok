@@ -1,4 +1,4 @@
-A ide felkerülő forráskódok mindegyikének a megoldása is megtalálható videó formában. A linkek az egyes feladatsorok alatti leírásban (README.md) fájlban találhatók.
+A ide felkerülő forráskódok többségének a megoldása megtalálható videó formában is. A linkek az egyes feladatsorok alatti leírásban (README.md) fájlban találhatók.
 
 
 # Érettségi (szintű) feladatsorok  
