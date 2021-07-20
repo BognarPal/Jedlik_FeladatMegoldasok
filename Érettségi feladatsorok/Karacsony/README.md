@@ -7,4 +7,4 @@ Induló állományok: https://www.oktatas.hu/bin/content/dload/erettsegi/feladat
 Javítási útmutató: https://www.oktatas.hu/bin/content/dload/erettsegi/feladatok_2021tavasz_kozep/k_infoism_21maj_ut.pdf  
 
 ## Kapcsolódó videók
-Feladat megoldása: https://www.youtube.com/watch?v=lu4V6qBbSXI
+Feladat megoldása: https://www.youtube.com/watch?v=RgYdPxksyMg
