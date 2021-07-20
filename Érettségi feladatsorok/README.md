@@ -7,6 +7,7 @@
 - [Forgoracs2020 emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Forgoracs2020)
 - [Playfair-négyzet emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Playfair-n%C3%A9gyzet)
 - [Szúdoku középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Szudoku)
+- [ADFGVX rejtjel emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/ADFGVX)
 
 ## Weblap szerkesztés és Adatbázis-kezelés (összevont)
 - [Oldtimer emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Oldtimer%20-%20WEB%20&%20SQL) (web és SQL)
