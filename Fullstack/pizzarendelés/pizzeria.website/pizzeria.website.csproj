@@ -20,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\pizzeria.data\pizzeria.data.csproj" />
     <ProjectReference Include="..\pizzeria.service\pizzeria.service.csproj" />
   </ItemGroup>
