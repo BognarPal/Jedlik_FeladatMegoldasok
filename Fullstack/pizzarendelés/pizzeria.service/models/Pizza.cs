@@ -17,7 +17,14 @@ namespace pizzeria.service.models
         public string Name { get; set; }
         [StringLength(1500)]
         public string Description { get; set; }
-        public IEnumerable<byte[]> Pictures { get; set; }
+
+        public IEnumerable<PizzaPicture> Pictures { get; set; }
+
+        IEnumerable<byte[]> IPizza.Pictures 
+        {
+            get { return Pictures.Select(p => p.Picture).ToArray();  }
+            set { throw new NotImplementedException(); }
+        }
 
         private IEnumerable<PizzaTag> tags;
 

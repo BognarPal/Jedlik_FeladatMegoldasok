@@ -31,18 +31,12 @@ namespace pizzeria.service.models
         public DateTime? DeliveringTimeStamp { get; set; }
         public DateTime? DeliveredTimeStamp { get; set; }
 
-        private IDictionary<Pizza, int> pizzas;
-
-        public IDictionary<Pizza, int> Pizzas
-        {
-            get { return pizzas; }
-            set { pizzas = value; }
-        }
+        public IEnumerable<OrderDetails> OrderDetails { get; set; }
 
         IDictionary<IPizza, int> IOrder.Pizzas
         {
-            get { return pizzas.ToDictionary(v => (IPizza)v.Key, v => v.Value); }
-            set { pizzas = value.ToDictionary(v => (Pizza)v.Key, v => v.Value); }
+            get { return OrderDetails.ToDictionary(v => (IPizza)v.Pizza, v => v.Count); }
+            set { throw new NotImplementedException(); }
         }
 
         [StringLength(1500)]
