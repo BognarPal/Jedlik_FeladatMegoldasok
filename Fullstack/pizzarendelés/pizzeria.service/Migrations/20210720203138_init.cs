@@ -29,6 +29,21 @@ namespace pizzeria.service.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "PizzaTag",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PizzaTag", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "PizzaPicture",
                 columns: table => new
                 {
@@ -73,24 +88,27 @@ namespace pizzeria.service.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "PizzaTag",
+                name: "PizzaPizzaTag",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    PizzaId = table.Column<int>(type: "int", nullable: true)
+                    PizzasId = table.Column<int>(type: "int", nullable: false),
+                    TagsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PizzaTag", x => x.Id);
+                    table.PrimaryKey("PK_PizzaPizzaTag", x => new { x.PizzasId, x.TagsId });
                     table.ForeignKey(
-                        name: "FK_PizzaTag_Pizzas_PizzaId",
-                        column: x => x.PizzaId,
+                        name: "FK_PizzaPizzaTag_Pizzas_PizzasId",
+                        column: x => x.PizzasId,
                         principalTable: "Pizzas",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PizzaPizzaTag_PizzaTag_TagsId",
+                        column: x => x.TagsId,
+                        principalTable: "PizzaTag",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -259,6 +277,11 @@ namespace pizzeria.service.Migrations
                 column: "PizzaId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_PizzaPizzaTag_TagsId",
+                table: "PizzaPizzaTag",
+                column: "TagsId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PizzaPrice_PizzaId",
                 table: "PizzaPrice",
                 column: "PizzaId");
@@ -268,11 +291,6 @@ namespace pizzeria.service.Migrations
                 table: "PizzaTag",
                 column: "Name",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PizzaTag_PizzaId",
-                table: "PizzaTag",
-                column: "PizzaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Role_Name",
@@ -334,16 +352,19 @@ namespace pizzeria.service.Migrations
                 name: "PizzaPicture");
 
             migrationBuilder.DropTable(
-                name: "PizzaPrice");
+                name: "PizzaPizzaTag");
 
             migrationBuilder.DropTable(
-                name: "PizzaTag");
+                name: "PizzaPrice");
 
             migrationBuilder.DropTable(
                 name: "Role");
 
             migrationBuilder.DropTable(
                 name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "PizzaTag");
 
             migrationBuilder.DropTable(
                 name: "Pizzas");
