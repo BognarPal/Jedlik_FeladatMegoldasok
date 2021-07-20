@@ -14,8 +14,8 @@
 ## Weblap szerkesztés és Adatbázis-kezelés (összevont)
 - [Oldtimer emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Oldtimer%20-%20WEB%20&%20SQL) (web és SQL)
 - [Nyomtatás középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Nyomtat%C3%A1s%20-%20WEB%20%26%20SQL) (web és SQL)
-- [Trolibusz középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Trolibusz)  
-- [Kettlebell emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Kelltebell)  
+- [Trolibusz középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Trolibusz) (web és SQL) 
+- [Kettlebell emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Kelltebell) (web és SQL) 
 
 ## Adatbázis-kezelés  
 - [Napelemek középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Napelemek%20-%20SQL)  
