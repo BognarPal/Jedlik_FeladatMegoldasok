@@ -5,4 +5,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\pizzeria.data\pizzeria.data.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -2,8 +2,8 @@
 
 namespace pizzeria.data.interfaces.operations
 {
-    public interface IAuthRepository : IGenericRepository<IUser>
+    public interface IAuthRepository<T> : IGenericRepository<T> where T : class, IUser
     {
-        IUser AuthenticateUser(IUser user);
+        T AuthenticateUser(T user);
     }
 }
