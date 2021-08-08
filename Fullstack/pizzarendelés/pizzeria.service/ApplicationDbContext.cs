@@ -20,7 +20,7 @@ namespace pizzeria.service
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(
-                "Server=localhost; Database=pizzeria2; Uid=root; Pwd=;",
+                "Server=localhost; Database=pizzeria; Uid=root; Pwd=;",
                 new MariaDbServerVersion(new Version("10.4.20")));
                 
         }
