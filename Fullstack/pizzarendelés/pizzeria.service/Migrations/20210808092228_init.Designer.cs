@@ -9,7 +9,7 @@ using pizzeria.service;
 namespace pizzeria.service.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210720203138_init")]
+    [Migration("20210808092228_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
