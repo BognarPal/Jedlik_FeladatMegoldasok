@@ -24,20 +24,12 @@ namespace pizzeria.service.models
         [Required]
         [StringLength(50)]
         public string Phone { get; set; }
-
-        private IEnumerable<Role> roles;
-
-        public IEnumerable<Role> Roles
-        {
-            get { return roles; }
-            set { roles = value; }
-        }
-
+        
+        public IEnumerable<Role> Roles { get; set; }
         IEnumerable<IRole> IUser.Roles
         {
-            get { return roles; }
-            set { roles = value.Select(v => (Role)v); }
+            get => Roles;
+            set => Roles = value.Select(v => (Role)v);
         }
-
     }
 }

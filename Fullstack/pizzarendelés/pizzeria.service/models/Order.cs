@@ -12,18 +12,11 @@ namespace pizzeria.service.models
     {
         [Key]
         public int Id { get; set; }
-        private Customer customer;
-
-        public Customer Customer
-        {
-            get { return customer; }
-            set { customer = value; }
-        }
-
+        public Customer Customer { get; set; }
         ICustomer IOrder.Customer
         {
-            get { return customer; }
-            set { customer = (Customer)value; }
+            get => Customer; 
+            set => Customer = (Customer)value; 
         }
 
         public DateTime OrderTimeStamp { get; set; }
@@ -32,28 +25,20 @@ namespace pizzeria.service.models
         public DateTime? DeliveredTimeStamp { get; set; }
 
         public IEnumerable<OrderDetails> OrderDetails { get; set; }
-
         IDictionary<IPizza, int> IOrder.Pizzas
         {
-            get { return OrderDetails.ToDictionary(v => (IPizza)v.Pizza, v => v.Count); }
-            set { throw new NotImplementedException(); }
+            get => OrderDetails.ToDictionary(v => (IPizza)v.Pizza, v => v.Count);
+            set => OrderDetails = value.Select(v => new OrderDetails() { Id = 0, Pizza = (Pizza)v.Key, Count = v.Value });
         }
 
         [StringLength(1500)]
         public string CustomerComment { get; set; }
 
-        private Address address;
-
-        public Address Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
-
+        public Address Address { get; set; }
         IAddress IOrder.Address
         {
-            get { return address; }
-            set { address = (Address)value; }
+            get => Address;
+            set => Address = (Address)value;
         }
 
     }

@@ -19,39 +19,24 @@ namespace pizzeria.service.models
         public string Description { get; set; }
 
         public IEnumerable<PizzaPicture> Pictures { get; set; }
-
         IEnumerable<byte[]> IPizza.Pictures 
         {
-            get { return Pictures.Select(p => p.Picture).ToArray();  }
-            set { throw new NotImplementedException(); }
+            get => Pictures.Select(p => p.Picture).ToArray();
+            set => Pictures = value.Select(v => new PizzaPicture() { Id = 0, Picture = v });
         }
 
-        private IEnumerable<PizzaTag> tags;
-
-        public IEnumerable<PizzaTag> Tags
-        {
-            get { return tags; }
-            set { tags = value; }
-        }
-
+        public IEnumerable<PizzaTag> Tags { get; set; }
         IEnumerable<IPizzaTag> IPizza.Tags
         {
-            get { return tags; }
-            set { tags = value.Select(v => (PizzaTag)v); }
+            get => Tags;
+            set => Tags = value.Select(v => (PizzaTag)v);
         }
 
-        private IEnumerable<PizzaPrice> prices;
-
-        public IEnumerable<PizzaPrice> Prices
-        {
-            get { return prices; }
-            set { prices = value; }
-        }
-
+        public IEnumerable<PizzaPrice> Prices { get; set; }
         IEnumerable<IPizzaPrice> IPizza.Prices
         {
-            get { return prices; }
-            set { prices = value.Select(v => (PizzaPrice)v); }
+            get => Prices;
+            set => Prices = value.Select(v => (PizzaPrice)v);
         }
 
     }

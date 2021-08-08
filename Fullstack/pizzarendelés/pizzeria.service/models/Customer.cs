@@ -9,32 +9,18 @@ namespace pizzeria.service.models
 {
     public class Customer : User, ICustomer
     {
-        private Address primaryAddress;
-
-        public Address PrimaryAddress
-        {
-            get { return primaryAddress; }
-            set { primaryAddress = value; }
-        }
-
+        public Address PrimaryAddress { get; set; }
         IAddress ICustomer.PrimaryAddress
         {
-            get { return primaryAddress; }
-            set { primaryAddress = (Address)value; }
+            get => PrimaryAddress;
+            set => PrimaryAddress = (Address)value;
         }
 
-        private IEnumerable<Address> addresses;
-
-        public IEnumerable<Address> Addresses
-        {
-            get { return addresses; }
-            set { addresses = value; }
-        }
-
+        public IEnumerable<Address> Addresses { get; set; }
         IEnumerable<IAddress> ICustomer.Addresses
         {
-            get { return addresses; }
-            set { addresses = value.Select(v => (Address)v); }
+            get => Addresses; 
+            set => Addresses = value.Select(v => (Address)v); 
         }
 
     }
