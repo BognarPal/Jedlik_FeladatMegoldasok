@@ -1,4 +1,4 @@
-A ide felkerülő forráskódok mindegyikének a megoldása is megtalálható videó formában. A linkek az egyes feladatsorok alatti leírásban (README.md) fájlban találhatók.
+A ide felkerülő forráskódok többségének a megoldása megtalálható videó formában is. A linkek az egyes feladatsorok alatti leírásban (README.md) fájlban találhatók.
 
 
 # Érettségi (szintű) feladatsorok  
@@ -11,10 +11,15 @@ A ide felkerülő forráskódok mindegyikének a megoldása is megtalálható vi
 - [Forgoracs2020 emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Forgoracs2020)
 - [Playfair-négyzet emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Playfair-n%C3%A9gyzet)
 - [Szúdoku középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Szudoku)
+- [ADFGVX rejtjel emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/ADFGVX)
+- [Karácsonyi díszek középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Karacsony)  
+- [Kalapácsvetés emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Pars2012)  
 
 ## Weblap szerkesztés és Adatbázis-kezelés (összevont)
 - [Oldtimer emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Oldtimer%20-%20WEB%20&%20SQL) (web és SQL)
 - [Nyomtatás középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Nyomtat%C3%A1s%20-%20WEB%20%26%20SQL) (web és SQL)
+- [Trolibusz középszint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Trolibusz) (web és SQL) 
+- [Kettlebell emelt szint](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Kelltebell) (web és SQL) 
 
 ### Adatbázis-kezelés  
 - [Napelemek középszin](https://github.com/BognarPal/Jedlik_FeladatMegoldasok/tree/master/%C3%89retts%C3%A9gi%20feladatsorok/Napelemek%20-%20SQL)  
