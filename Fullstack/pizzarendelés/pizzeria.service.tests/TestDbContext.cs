@@ -54,6 +54,7 @@ namespace pizzeria.service.tests
                new { Id = 1, PizzaId = 2, Picture = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 } }
             );
 
+            //TODO: teszt projektben admin felhasználó kezdő jelszavához tartozó hash létrehozása
             modelBuilder.Entity<Employee>().HasData(
                 new { Id = 1, Name = "admin", Email = "admin@localhost.com", Phone = "+36 90 123456", PasswordHash = "TODO !!!" });
 
