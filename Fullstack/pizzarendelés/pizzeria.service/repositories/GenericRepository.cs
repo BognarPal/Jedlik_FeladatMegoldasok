@@ -8,6 +8,13 @@ namespace pizzeria.service.repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
     {
+        private ApplicationDbContext dbContext;
+
+        public GenericRepository(ApplicationDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
         public T Add(T entity)
         {
             throw new NotImplementedException();
