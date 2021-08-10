@@ -2,69 +2,55 @@
 using pizzeria.data.interfaces.operations;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace pizzeria.service.repositories
 {
-    public abstract class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
+    public class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
     {
-        protected readonly ApplicationDbContext dbContext;
-
-        public GenericRepository(ApplicationDbContext dbContext)
+        public T Add(T entity)
         {
-            this.dbContext = dbContext;
+            throw new NotImplementedException();
         }
 
-        public virtual T Add(T entity)
+        public IEnumerable<T> AddRange(IEnumerable<T> entities)
         {
-            var entityEntry = dbContext.Set<T>().Add(entity);
-            return entityEntry.Entity;
+            throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> AddRange(IEnumerable<T> entities)
+        public IEnumerable<T> GetAll()
         {
-            dbContext.Set<T>().AddRange(entities);
-            return entities.ToList();
+            throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public T GetById(int id)
         {
-            return dbContext.Set<T>().ToList();
+            throw new NotImplementedException();
         }
 
-        public virtual T GetById(int id)
+        public void Remove(T entity)
         {
-#pragma warning disable CS8603 // Possible null reference return.
-            return dbContext.Set<T>().Find(id);
-#pragma warning restore CS8603 // Possible null reference return.
+            throw new NotImplementedException();
         }
 
-        public virtual void Remove(T entity)
+        public void RemoveRange(IEnumerable<T> entities)
         {
-            dbContext.Set<T>().Remove(entity);
+            throw new NotImplementedException();
         }
 
-        public virtual void RemoveRange(IEnumerable<T> entities)
+        public void Save()
         {
-            dbContext.Set<T>().RemoveRange(entities);
+            throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> Search(Expression<Func<T, bool>> predicate)
+        public IEnumerable<T> Search(Expression<Func<T, bool>> predicate)
         {
-            return dbContext.Set<T>().Where(predicate).ToList();
+            throw new NotImplementedException();
         }
 
-        public virtual T Update(T entity)
+        public T Update(T entity)
         {
-            dbContext.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-
-            return entity;
-        }
-
-        public virtual void Save()
-        {
-            dbContext.SaveChanges();
+            throw new NotImplementedException();
         }
     }
 }
