@@ -2,6 +2,7 @@
 using pizzeria.data.interfaces.operations;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace pizzeria.service.repositories
@@ -17,47 +18,53 @@ namespace pizzeria.service.repositories
 
         public T Add(T entity)
         {
-            throw new NotImplementedException();
+            var entityEntry = dbContext.Set<T>().Add(entity);
+            return entityEntry.Entity;
         }
 
         public IEnumerable<T> AddRange(IEnumerable<T> entities)
         {
-            throw new NotImplementedException();
+            dbContext.Set<T>().AddRange(entities);
+            return entities.ToList();
         }
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return dbContext.Set<T>().ToList();
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+#pragma warning disable CS8603 // Possible null reference return.
+            return dbContext.Set<T>().Find(id);
+#pragma warning restore CS8603 // Possible null reference return.
         }
 
         public void Remove(T entity)
         {
-            throw new NotImplementedException();
+            dbContext.Set<T>().Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<T> entities)
         {
-            throw new NotImplementedException();
+            dbContext.Set<T>().RemoveRange(entities);
         }
 
-        public void Save()
+        public virtual IEnumerable<T> Search(Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return dbContext.Set<T>().Where(predicate).ToList();
         }
 
-        public IEnumerable<T> Search(Expression<Func<T, bool>> predicate)
+        public virtual T Update(T entity)
         {
-            throw new NotImplementedException();
+            dbContext.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+
+            return entity;
         }
 
-        public T Update(T entity)
+        public virtual void Save()
         {
-            throw new NotImplementedException();
+            dbContext.SaveChanges();
         }
     }
 }
