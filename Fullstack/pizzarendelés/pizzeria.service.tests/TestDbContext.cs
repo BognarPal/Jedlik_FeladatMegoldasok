@@ -35,8 +35,8 @@ namespace pizzeria.service.tests
 
             modelBuilder.Entity("PizzaPizzaTag").HasData(
                 new { PizzasId = 2, TagsId = 1 },
-                new { PizzasId = 3, TagsId = 4 },
-                new { PizzasId = 3, TagsId = 5 }
+                new { PizzasId = 3, TagsId = 3 },
+                new { PizzasId = 3, TagsId = 4 }
             );
 
             modelBuilder.Entity<PizzaPrice>().HasData(

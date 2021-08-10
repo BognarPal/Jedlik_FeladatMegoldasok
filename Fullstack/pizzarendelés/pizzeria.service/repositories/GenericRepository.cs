@@ -9,7 +9,7 @@ namespace pizzeria.service.repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
     {
-        private ApplicationDbContext dbContext;
+        protected ApplicationDbContext dbContext;
 
         public GenericRepository(ApplicationDbContext dbContext)
         {
@@ -33,7 +33,7 @@ namespace pizzeria.service.repositories
             return dbContext.Set<T>().ToList();
         }
 
-        public T GetById(int id)
+        public virtual T GetById(int id)
         {
 #pragma warning disable CS8603 // Possible null reference return.
             return dbContext.Set<T>().Find(id);
