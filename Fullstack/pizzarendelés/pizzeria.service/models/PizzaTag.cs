@@ -16,6 +16,6 @@ namespace pizzeria.service.models
         [StringLength(50)]
         public string Name { get; set; }
 
-        public IEnumerable<Pizza> Pizzas { get; set; }
+        public List<Pizza> Pizzas { get; set; }
     }
 }

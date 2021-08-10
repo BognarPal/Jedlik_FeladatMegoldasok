@@ -16,19 +16,19 @@ namespace pizzeria.service.repositories
             this.dbContext = dbContext;
         }
 
-        public T Add(T entity)
+        public virtual T Add(T entity)
         {
             var entityEntry = dbContext.Set<T>().Add(entity);
             return entityEntry.Entity;
         }
 
-        public IEnumerable<T> AddRange(IEnumerable<T> entities)
+        public virtual IEnumerable<T> AddRange(IEnumerable<T> entities)
         {
             dbContext.Set<T>().AddRange(entities);
             return entities.ToList();
         }
 
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return dbContext.Set<T>().ToList();
         }
@@ -45,7 +45,7 @@ namespace pizzeria.service.repositories
             dbContext.Set<T>().Remove(entity);
         }
 
-        public void RemoveRange(IEnumerable<T> entities)
+        public virtual void RemoveRange(IEnumerable<T> entities)
         {
             dbContext.Set<T>().RemoveRange(entities);
         }
