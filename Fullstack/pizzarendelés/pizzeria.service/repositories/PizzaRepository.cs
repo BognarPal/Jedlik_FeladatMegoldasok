@@ -36,27 +36,58 @@ namespace pizzeria.service.repositories
 
         public override IEnumerable<Pizza> GetAll()
         {
-            throw new NotImplementedException();
+            var pizzas = dbContext.Set<Pizza>()
+                                  .Include(p => p.Pictures)
+                                  .Include(p => p.Prices)
+                                  .ToList();
+            var tags = dbContext.Set<PizzaTag>().ToList();
+            foreach (var pizza in pizzas)
+            {
+                pizza.Tags = dbContext.Set<PizzaTag>()
+                                      .Where(t => t.Pizzas.Contains(pizza))
+                                      .ToList();
+            }
+            return pizzas;
         }
 
         public override IEnumerable<Pizza> AddRange(IEnumerable<Pizza> entities)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
 
         public override void RemoveRange(IEnumerable<Pizza> entities)
         {
-            throw new NotImplementedException();
+            throw new NotSupportedException();
         }
 
         public override Pizza Update(Pizza entity)
         {
-            throw new NotImplementedException();
+            var pizza = base.Update(entity);
+            var removedTags = dbContext.Set<PizzaTag>()
+                                       .Where(t => t.Pizzas.Contains(pizza) && !pizza.Tags.Select(i => i.Id).Contains(t.Id))
+                                       .Include(t => t.Pizzas);
+            foreach (var removedTag in removedTags)
+                removedTag.Pizzas.Remove(pizza);
+
+            return pizza;
         }
 
         public override List<Pizza> Search(Expression<Func<Pizza, bool>> predicate)
         {
-            throw new NotImplementedException();
+            var pizzas = dbContext.Set<Pizza>()
+                                  .Include(p => p.Pictures)
+                                  .Include(p => p.Prices)
+                                  .Where(predicate)
+                                  .ToList();
+
+            var tags = dbContext.Set<PizzaTag>().ToList();
+            foreach (var pizza in pizzas)
+            {
+                pizza.Tags = dbContext.Set<PizzaTag>()
+                                      .Where(t => t.Pizzas.Contains(pizza))
+                                      .ToList();
+            }
+            return pizzas;
         }
 
         public IEnumerable<Pizza> GetByTags(IEnumerable<string> tags)
