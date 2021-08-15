@@ -36,72 +36,30 @@ namespace pizzeria.service.repositories
 
         public override IEnumerable<Pizza> GetAll()
         {
-            var pizzas = dbContext.Set<Pizza>()
-                                  .Include(p => p.Pictures)
-                                  .Include(p => p.Prices)
-                                  .ToList();
-            var tags = dbContext.Set<PizzaTag>().ToList();
-            foreach (var pizza in pizzas)
-            {
-                pizza.Tags = dbContext.Set<PizzaTag>()
-                                      .Where(t => t.Pizzas.Contains(pizza))
-                                      .ToList();
-            }
-            return pizzas;
+            throw new NotImplementedException();
         }
 
         public override IEnumerable<Pizza> AddRange(IEnumerable<Pizza> entities)
         {
-            throw new NotSupportedException();
+            throw new NotImplementedException();
         }
 
         public override void RemoveRange(IEnumerable<Pizza> entities)
         {
-            throw new NotSupportedException();
+            throw new NotImplementedException();
         }
 
         public override Pizza Update(Pizza entity)
         {
-            var pizza = base.Update(entity);
-            var removedTags = dbContext.Set<PizzaTag>()
-                                       .Where(t => t.Pizzas.Contains(pizza) && !pizza.Tags.Select(i => i.Id).Contains(t.Id))
-                                       .Include(t => t.Pizzas);
-            foreach (var removedTag in removedTags)
-                removedTag.Pizzas.Remove(pizza);
-
-            return pizza;
-
+            throw new NotImplementedException();
         }
 
         public override List<Pizza> Search(Expression<Func<Pizza, bool>> predicate)
         {
-            var pizzas = dbContext.Set<Pizza>()
-                                  .Include(p => p.Pictures)
-                                  .Include(p => p.Prices)
-                                  .Where(predicate)
-                                  .ToList();
-
-            var tags = dbContext.Set<PizzaTag>().ToList();
-            foreach (var pizza in pizzas)
-            {
-                pizza.Tags = dbContext.Set<PizzaTag>()
-                                      .Where(t => t.Pizzas.Contains(pizza))
-                                      .ToList();
-            }
-            return pizzas;
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Pizza> GetByTags(IEnumerable<string> tags)
-        {
-            throw new NotImplementedException();
-        }
-
-        public decimal? GetPrice(int pizzaId, DateTime date)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<IPizzaPrice> GetPrices(int pizzaId)
         {
             throw new NotImplementedException();
         }
@@ -112,6 +70,16 @@ namespace pizzeria.service.repositories
         }
 
         public Pizza UpdatePrice(int pizzaId, DateTime fromDate, decimal newPrice)
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal? CurrentPrice(int pizzaId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal? CurrentPrice(IPizza pizza)
         {
             throw new NotImplementedException();
         }

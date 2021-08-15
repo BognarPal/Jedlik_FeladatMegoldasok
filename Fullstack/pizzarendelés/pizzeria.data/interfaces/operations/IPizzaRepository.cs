@@ -9,7 +9,7 @@ namespace pizzeria.data.interfaces.operations
         IEnumerable<T> GetByTags(IEnumerable<string> tags);
         T UpdatePrice(int pizzaId, DateTime fromDate, decimal newPrice);
         T RemoveLastPrice(int pizzaId);
-        IEnumerable<IPizzaPrice> GetPrices(int pizzaId);
-        decimal? GetPrice(int pizzaId, DateTime date);
+        decimal? CurrentPrice(int pizzaId);
+        decimal? CurrentPrice(IPizza pizza);
     }
 }
