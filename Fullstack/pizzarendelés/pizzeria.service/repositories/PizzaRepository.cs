@@ -16,13 +16,11 @@ namespace pizzeria.service.repositories
 
         public override Pizza GetById(int id)
         {
-            //var pizza = base.GetById(id);
             var pizza = dbContext.Set<Pizza>()
-                                 .Include(p => p.Pictures)
-                                 .Include(p => p.Prices )
-                                 .Include(p => p.PizzaPizzaTags).ThenInclude(t => t.PizzaTag)
-                                 .Where(p => p.Id == id)
-                                 .FirstOrDefault();
+                                  .Include(p => p.Pictures)
+                                  .Include(p => p.Prices)
+                                  .Include(p => p.PizzaPizzaTags).ThenInclude(p => p.PizzaTag)
+                                  .FirstOrDefault(p => p.Id == id);
 #pragma warning disable CS8603 // Possible null reference return.
             return pizza;
 #pragma warning restore CS8603 // Possible null reference return.
