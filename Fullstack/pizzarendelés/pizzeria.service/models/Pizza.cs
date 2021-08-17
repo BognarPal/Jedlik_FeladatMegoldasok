@@ -18,28 +18,27 @@ namespace pizzeria.service.models
         [StringLength(1500)]
         public string Description { get; set; }
 
-        public List<PizzaPicture> Pictures { get; set; }
-        IEnumerable<byte[]> IPizza.Pictures 
+        public IEnumerable<PizzaPicture> Pictures { get; set; }
+        IEnumerable<byte[]> IPizza.Pictures
         {
             get => Pictures.Select(p => p.Picture).ToArray();
-            set => Pictures = value.Select(v => new PizzaPicture() { Id = 0, Picture = v }).ToList();
+            set => Pictures = value.Select(v => new PizzaPicture() { Id = 0, Picture = v });
         }
 
-        public List<PizzaTag> Tags { get; set; }
+        public IEnumerable<PizzaTag> Tags { get; set; }
         IEnumerable<IPizzaTag> IPizza.Tags
         {
             get => Tags;
-            set => Tags = value.Select(v => (PizzaTag)v).ToList();
+            set => Tags = value.Select(v => (PizzaTag)v);
         }
 
-        public List<PizzaPrice> Prices { get; set; }
+        public IEnumerable<PizzaPrice> Prices { get; set; }
         IEnumerable<IPizzaPrice> IPizza.Prices
         {
             get => Prices;
-            set => Prices = value.Select(v => (PizzaPrice)v).ToList();
+            set => Prices = value.Select(v => (PizzaPrice)v);
         }
 
         public List<PizzaPizzaTag> PizzaPizzaTags { get; set; }
-
     }
 }
