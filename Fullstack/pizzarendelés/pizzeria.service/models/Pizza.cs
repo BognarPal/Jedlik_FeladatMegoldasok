@@ -27,7 +27,13 @@ namespace pizzeria.service.models
         }
 
         [NotMapped]
-        public IEnumerable<PizzaTag> Tags { get; }
+        public List<PizzaTag> Tags
+        {
+#pragma warning disable CS8603 // Possible null reference return.
+            get => PizzaPizzaTags == null ? null : PizzaPizzaTags.Select(p => p.PizzaTag).ToList();
+#pragma warning restore CS8603 // Possible null reference return.
+            set => throw new NotSupportedException();
+        }
         IEnumerable<IPizzaTag> IPizza.Tags
         {
 #pragma warning disable CS8603 // Possible null reference return.
