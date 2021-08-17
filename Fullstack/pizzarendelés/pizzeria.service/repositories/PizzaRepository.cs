@@ -72,7 +72,7 @@ namespace pizzeria.service.repositories
             return pizza;
         }
 
-        public override List<Pizza> Search(Expression<Func<Pizza, bool>> predicate)
+        public override IEnumerable<Pizza> Search(Expression<Func<Pizza, bool>> predicate)
         {
             var pizzas = dbContext.Set<Pizza>()
                                   .Include(p => p.Pictures)
@@ -90,9 +90,11 @@ namespace pizzeria.service.repositories
             return pizzas;
         }
 
-        public IEnumerable<Pizza> GetByTags(IEnumerable<string> tags)
+        public IEnumerable<Pizza> GetByTags(IEnumerable<string> tagNames)
         {
-            throw new NotImplementedException();
+            var pizzaTags = dbContext.Set<PizzaTag>()
+                                     .Where(t => tagNames.Any(n => n == t.Name));
+            return Search(p => p.Tags.Intersect(pizzaTags).Count() == pizzaTags.Count());
         }
 
         public Pizza RemoveLastPrice(int pizzaId)
@@ -107,12 +109,24 @@ namespace pizzeria.service.repositories
 
         public decimal? CurrentPrice(int pizzaId)
         {
-            throw new NotImplementedException();
+            var pizza = dbContext.Set<Pizza>()
+                                 .Include(p => p.Prices)
+                                 .FirstOrDefault(p => p.Id == pizzaId);
+
+            return pizza == null || pizza.Prices == null ? null : CurrentPrice(pizza);
         }
 
         public decimal? CurrentPrice(IPizza pizza)
         {
-            throw new NotImplementedException();
+            if (pizza == null)
+                return null;
+
+            if (pizza.Prices == null)
+                return CurrentPrice(pizza.Id);
+
+            var currentPizzaPrice = pizza.Prices.FirstOrDefault(p => p.ToDate == null);
+
+            return currentPizzaPrice == null ? null : currentPizzaPrice.Price;
         }
     }
 }

@@ -234,5 +234,61 @@ namespace pizzeria.service.tests
                 Assert.Equal(10, pizza2.Pictures[0].Picture[9]);
             }
         }
+
+        [Fact]
+        public void PizzasWithLaktozmentesAndVegaTags()
+        {
+            using (var dbContext = TestDbContext.CreateDbContext())
+            {
+                var sut = new PizzaRepository(dbContext);
+
+                var pizzas = sut.GetByTags(new string[] { "Laktózmentes", "Vegetariánus" }).ToList();
+
+                Assert.Single(pizzas);
+                Assert.Equal("Gombás", pizzas[0].Name);
+            }
+        }
+
+        [Fact]
+        public void PizzasWithVegaTags()
+        {
+            using (var dbContext = TestDbContext.CreateDbContext())
+            {
+                var sut = new PizzaRepository(dbContext);
+
+                var pizzas = sut.GetByTags(new string[] { "Vegetariánus" }).ToList();
+
+                Assert.Single(pizzas);
+                Assert.Equal("Gombás", pizzas[0].Name);
+            }
+        }
+
+        [Fact]
+        public void CurrentPriceFromPizzaId()
+        {
+            using (var dbContext = TestDbContext.CreateDbContext())
+            {
+                var sut = new PizzaRepository(dbContext);
+
+                var currentPrice = sut.CurrentPrice(2);
+
+                Assert.Equal(1290, currentPrice);
+            }
+        }
+
+        [Fact]
+        public void CurrentPriceFromPizzaInstance()
+        {
+            using (var dbContext = TestDbContext.CreateDbContext())
+            {
+                var sut = new PizzaRepository(dbContext);
+                var pizza = sut.GetById(3);
+
+                var currentPrice = sut.CurrentPrice(pizza);
+
+                Assert.Equal(1240, currentPrice);
+            }
+        }
+
     }
 }
