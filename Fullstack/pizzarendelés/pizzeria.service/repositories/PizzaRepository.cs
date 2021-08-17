@@ -20,15 +20,9 @@ namespace pizzeria.service.repositories
             var pizza = dbContext.Set<Pizza>()
                                  .Include(p => p.Pictures)
                                  .Include(p => p.Prices )
+                                 .Include(p => p.PizzaPizzaTags).ThenInclude(t => t.PizzaTag)
                                  .Where(p => p.Id == id)
                                  .FirstOrDefault();
-            if (pizza != null)
-            {
-                pizza.Tags = dbContext.Set<PizzaTag>()
-                                      .Where(t => t.Pizzas.Contains(pizza))
-                                      .ToList();
-                
-            }
 #pragma warning disable CS8603 // Possible null reference return.
             return pizza;
 #pragma warning restore CS8603 // Possible null reference return.
@@ -36,18 +30,11 @@ namespace pizzeria.service.repositories
 
         public override IEnumerable<Pizza> GetAll()
         {
-            var pizzas = dbContext.Set<Pizza>()
-                                  .Include(p => p.Pictures)
-                                  .Include(p => p.Prices)
-                                  .ToList();
-            var tags = dbContext.Set<PizzaTag>().ToList();
-            foreach (var pizza in pizzas)
-            {
-                pizza.Tags = dbContext.Set<PizzaTag>()
-                                      .Where(t => t.Pizzas.Contains(pizza))
-                                      .ToList();
-            }
-            return pizzas;
+            return dbContext.Set<Pizza>()
+                            .Include(p => p.Pictures)
+                            .Include(p => p.Prices)
+                            .Include(p => p.PizzaPizzaTags).ThenInclude(t => t.PizzaTag)
+                            .ToList();
         }
 
         public override IEnumerable<Pizza> AddRange(IEnumerable<Pizza> entities)
@@ -62,49 +49,109 @@ namespace pizzeria.service.repositories
 
         public override Pizza Update(Pizza entity)
         {
-            var pizza = base.Update(entity);
-            var removedTags = dbContext.Set<PizzaTag>()
-                                       .Where(t => t.Pizzas.Contains(pizza) && !pizza.Tags.Select(i => i.Id).Contains(t.Id))
-                                       .Include(t => t.Pizzas);
-            foreach (var removedTag in removedTags)
-                removedTag.Pizzas.Remove(pizza);
+            var originalPizza = dbContext.Set<Pizza>()
+                                         .Include(p => p.Prices)
+                                         .FirstOrDefault(p => p.Id == entity.Id);
+            if (originalPizza == null)
+                throw new Exception("A pizza nem létezik");
 
-            return pizza;
+            foreach (var price in entity.Prices)
+            {
+                if (!originalPizza.Prices.Contains(price))
+                    throw new NotSupportedException("A pizza módosítása során az ár módosítása nem támogatott");
+            }
+            if (originalPizza.Prices.Count != entity.Prices.Count)
+                throw new NotSupportedException("A pizza módosítása során az ár módosítása nem támogatott");
+
+            return base.Update(entity);
         }
 
         public override IEnumerable<Pizza> Search(Expression<Func<Pizza, bool>> predicate)
         {
-            var pizzas = dbContext.Set<Pizza>()
-                                  .Include(p => p.Pictures)
-                                  .Include(p => p.Prices)
-                                  .Where(predicate)
-                                  .ToList();
-
-            var tags = dbContext.Set<PizzaTag>().ToList();
-            foreach (var pizza in pizzas)
-            {
-                pizza.Tags = dbContext.Set<PizzaTag>()
-                                      .Where(t => t.Pizzas.Contains(pizza))
-                                      .ToList();
-            }
-            return pizzas;
+            return dbContext.Set<Pizza>()
+                            .Include(p => p.Pictures)
+                            .Include(p => p.Prices)
+                            .Include(p => p.PizzaPizzaTags).ThenInclude(t => t.PizzaTag)
+                            .Where(predicate)
+                            .ToList();
         }
 
         public IEnumerable<Pizza> GetByTags(IEnumerable<string> tagNames)
         {
             var pizzaTags = dbContext.Set<PizzaTag>()
                                      .Where(t => tagNames.Any(n => n == t.Name));
-            return Search(p => p.Tags.Intersect(pizzaTags).Count() == pizzaTags.Count());
+
+            return Search(p => p.PizzaPizzaTags.Select(t => t.PizzaTag).Intersect(pizzaTags).Count() == pizzaTags.Count());
         }
 
         public Pizza RemoveLastPrice(int pizzaId)
         {
-            throw new NotImplementedException();
+            var pizza = GetById(pizzaId);
+            if (pizza == null || pizza.Prices == null)
+                throw new InvalidDataException();
+            return RemoveLastPrice(pizza);
+        }
+
+        public Pizza RemoveLastPrice(Pizza pizza)
+        {
+            if (pizza == null)
+                throw new ArgumentNullException();
+
+            if (pizza.Prices == null)
+                return RemoveLastPrice(pizza.Id);
+
+            if (pizza.Prices.Count < 2)
+                throw new Exception("Az utolsó ár nem törölhető");
+
+            if (pizza.Prices.Where(p => p.ToDate == null).Count() != 1)
+                throw new Exception("Az utolsó ár nem meghatározható");
+
+            var lastPrice = pizza.Prices.First(p => p.ToDate == null);
+
+            if (pizza.Prices.Where(p => p.ToDate == lastPrice.FromDate.AddDays(-1)).Count() != 1)
+                throw new Exception("Az utolsó előtti ár nem meghatározható");
+
+            var newLastPrice = pizza.Prices.First(p => p.ToDate == lastPrice.FromDate.AddDays(-1));
+            
+            dbContext.Set<PizzaPrice>().Remove(lastPrice);
+
+            newLastPrice.ToDate = null;
+            dbContext.Entry(newLastPrice).State = EntityState.Modified;
+
+            return pizza;
         }
 
         public Pizza UpdatePrice(int pizzaId, DateTime fromDate, decimal newPrice)
         {
-            throw new NotImplementedException();
+            var pizza = GetById(pizzaId);
+            if (pizza == null || pizza.Prices == null)
+                throw new InvalidDataException();
+            return UpdatePrice(pizza, fromDate, newPrice);
+        }
+
+        private Pizza UpdatePrice(Pizza pizza, DateTime fromDate, decimal newPrice)
+        {
+            if (pizza == null)
+                throw new ArgumentNullException();
+
+            if (pizza.Prices == null)
+                return UpdatePrice(pizza.Id, fromDate, newPrice);
+
+            if (pizza.Prices.Count() != 0)
+            {
+                var lastFromDate = pizza.Prices.Where(p => p.ToDate == null).Max(p => p.FromDate);
+                if (lastFromDate >= fromDate)
+                    throw new ArgumentException($"A {fromDate:yyyy.MM.dd}-ai dátumnál későbbi ár már szerepel a nyilvántartásban");
+
+                foreach (var price in pizza.Prices.Where(p => p.ToDate == null))
+                {
+                    price.ToDate = fromDate.AddDays(-1);
+                    dbContext.Entry(price).State = EntityState.Modified;
+                }
+            }
+            pizza.Prices.Add(new PizzaPrice() { FromDate = fromDate, ToDate = null, Price = newPrice });
+
+            return pizza;
         }
 
         public decimal? CurrentPrice(int pizzaId)
@@ -124,7 +171,7 @@ namespace pizzeria.service.repositories
             if (pizza.Prices == null)
                 return CurrentPrice(pizza.Id);
 
-            var currentPizzaPrice = pizza.Prices.FirstOrDefault(p => p.ToDate == null);
+            var currentPizzaPrice = pizza.Prices.Where(p => p.FromDate <= DateTime.Today).FirstOrDefault(p => p.ToDate == null || p.ToDate > DateTime.Today);
 
             return currentPizzaPrice == null ? null : currentPizzaPrice.Price;
         }

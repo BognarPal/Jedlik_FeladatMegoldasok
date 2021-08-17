@@ -42,6 +42,7 @@ namespace pizzeria.service.tests
                 Assert.Null(pizza5);
                 Assert.Single(pizza2.Tags);
                 Assert.Equal(2, pizza3.Tags.Count());
+                Assert.Equal("Csípős", pizza2.Tags[0].Name);
                 Assert.Equal(1190, pizza1.Prices.First(p => p.ToDate == null).Price);
                 Assert.Equal(1290, pizza2.Prices.First(p => p.ToDate == null).Price);
                 Assert.Equal(1240, pizza3.Prices.First(p => p.ToDate == null).Price);
@@ -77,10 +78,6 @@ namespace pizzeria.service.tests
                 {
                     Name = "Salami sensitive",
                     Description = "Paradicsom, szalámi, hagyma, laktózmentes sajt",
-                    Tags = new List<PizzaTag>()
-                    {
-                        pizzaTagRepository.GetById(3)
-                    },
                     Pictures = new List<PizzaPicture>()
                     {
                         new PizzaPicture() { Picture = new byte[] { 0, 0, 0, 0, 0 } },
@@ -92,18 +89,23 @@ namespace pizzeria.service.tests
                         new PizzaPrice() { FromDate= new DateTime(2021, 01, 01), ToDate = null, Price = 1240m }
                     }
                 };
+                newPizza.PizzaPizzaTags = new List<PizzaPizzaTag>()
+                {
+                    new PizzaPizzaTag() {Pizza = newPizza, PizzaTag =  pizzaTagRepository.GetById(3) }
+                };
 
                 var savedPizza = sut.Add(newPizza);
                 sut.Save();
+                var pizza5 = sut.GetById(5);
 
                 Assert.Equal(5, savedPizza.Id);
-                Assert.Equal("Salami sensitive", sut.GetById(5).Name);
-                Assert.Single(sut.GetById(5).Tags);
-                Assert.Equal(3, sut.GetById(5).Tags[0].Id);
-                Assert.Equal(2, sut.GetById(5).Pictures.Count());
-                Assert.Equal(0, sut.GetById(5).Pictures[0].Picture[0]);
-                Assert.Equal(1, sut.GetById(5).Pictures[1].Picture[0]);
-                Assert.Equal(1240, sut.GetById(5).Prices.FirstOrDefault(p => p.ToDate == null).Price);
+                Assert.Equal("Salami sensitive", pizza5.Name);
+                Assert.Single(pizza5.Tags);
+                Assert.Equal(3, pizza5.Tags[0].Id);
+                Assert.Equal(2, pizza5.Pictures.Count());
+                Assert.Equal(0, pizza5.Pictures[0].Picture[0]);
+                Assert.Equal(1, pizza5.Pictures[1].Picture[0]);
+                Assert.Equal(1240, pizza5.Prices.FirstOrDefault(p => p.ToDate == null).Price);
             }
         }
 
@@ -157,21 +159,14 @@ namespace pizzeria.service.tests
 
                 pizza.Name = "Salami, pepperoni";
                 pizza.Description = "Paradicsom, sajt, szalámi, csípős pepperóni";
-                pizza.Tags.Clear();
-                pizza.Tags.Add(pizzaTagRepository.GetById(2));
-                pizza.Tags.Add(pizzaTagRepository.GetById(3));
-                pizza.Pictures.Clear();                
+                pizza.PizzaPizzaTags.Clear();
+                pizza.PizzaPizzaTags.Add(new PizzaPizzaTag() { Pizza = pizza, PizzaTag = pizzaTagRepository.GetById(2) });
+                pizza.PizzaPizzaTags.Add(new PizzaPizzaTag() { Pizza = pizza, PizzaTag = pizzaTagRepository.GetById(3) });
+                while (pizza.Pictures.Count > 0)
+                    pizza.Pictures.RemoveAt(0);
                 pizza.Pictures.Add(new PizzaPicture() { Picture = new byte[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 } });
                 pizza.Pictures.Add(new PizzaPicture() { Picture = new byte[] { 18, 17, 16, 15, 14, 13, 12, 11 } });
                 
-                pizza.Prices.FirstOrDefault(p => p.ToDate == null).ToDate = DateTime.Today.AddDays(-1);
-                pizza.Prices.Add(new PizzaPrice()
-                {
-                    FromDate = DateTime.Today,
-                    ToDate = null,
-                    Price = 1399
-                });
-
                 var updatedPizza = sut.Update(pizza);
                 sut.Save();
 
@@ -185,8 +180,6 @@ namespace pizzeria.service.tests
                 Assert.Equal(2, pizzaWithId2.Tags.Count);
                 Assert.Equal(2, pizzaWithId2.Tags[0].Id);
                 Assert.Equal(3, pizzaWithId2.Tags[1].Id);
-                Assert.Equal(3, pizzaWithId2.Prices.Count);
-                Assert.Equal(1399, pizzaWithId2.Prices.FirstOrDefault(p => p.ToDate == null).Price);
             }
         }
 
@@ -287,6 +280,48 @@ namespace pizzeria.service.tests
                 var currentPrice = sut.CurrentPrice(pizza);
 
                 Assert.Equal(1240, currentPrice);
+            }
+        }
+
+        [Fact]
+        public void UpdatePrices()
+        {
+            using (var dbContext = TestDbContext.CreateDbContext())
+            {
+                var sut = new PizzaRepository(dbContext);
+
+                sut.UpdatePrice(2, DateTime.Today.AddDays(3), 1320);
+                sut.Save();
+                sut.UpdatePrice(1, DateTime.Today, 1230);
+                sut.Save();
+
+                var price1 = sut.CurrentPrice(1);
+                var price2 = sut.CurrentPrice(2);
+
+                Assert.Equal(1230, price1);
+                Assert.Equal(1290, price2);
+                Assert.Throws<ArgumentException>(() => sut.UpdatePrice(3, new DateTime(2020, 10, 30), 2000));
+            }
+        }
+
+        [Fact]
+        public void RemoveLastPrice()
+        {
+            using (var dbContext = TestDbContext.CreateDbContext())
+            {
+                var sut = new PizzaRepository(dbContext);
+
+                sut.RemoveLastPrice(1);
+                sut.Save();
+                sut.RemoveLastPrice(3);
+                sut.Save();
+
+                var price1 = sut.CurrentPrice(1);
+                var price3 = sut.CurrentPrice(3);
+
+                Assert.Equal(1090, price1);
+                Assert.Equal(1140, price3);
+                Assert.Throws<Exception>(() => sut.RemoveLastPrice(1));
             }
         }
 

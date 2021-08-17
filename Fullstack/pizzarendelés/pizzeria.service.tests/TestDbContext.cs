@@ -33,10 +33,10 @@ namespace pizzeria.service.tests
                 new Pizza() { Id = 4, Name = "Sonkás", Description = "Paradicsom, sajt, szárított sonka" }
             );
 
-            modelBuilder.Entity("PizzaPizzaTag").HasData(
-                new { PizzasId = 2, TagsId = 1 },
-                new { PizzasId = 3, TagsId = 3 },
-                new { PizzasId = 3, TagsId = 4 }
+            modelBuilder.Entity<PizzaPizzaTag>().HasData(
+                new { Id = 1, PizzaId = 2, PizzaTagId = 1 },
+                new { Id = 2, PizzaId = 3, PizzaTagId = 3 },
+                new { Id = 3, PizzaId = 3, PizzaTagId = 4 }
             );
 
             modelBuilder.Entity<PizzaPrice>().HasData(
