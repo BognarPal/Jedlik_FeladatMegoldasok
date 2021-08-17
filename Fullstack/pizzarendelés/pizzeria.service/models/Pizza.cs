@@ -19,11 +19,11 @@ namespace pizzeria.service.models
         [StringLength(1500)]
         public string Description { get; set; }
 
-        public IEnumerable<PizzaPicture> Pictures { get; set; }
-        IEnumerable<byte[]> IPizza.Pictures
+        public List<PizzaPicture> Pictures { get; set; }
+        IEnumerable<byte[]> IPizza.Pictures 
         {
             get => Pictures.Select(p => p.Picture).ToArray();
-            set => Pictures = value.Select(v => new PizzaPicture() { Id = 0, Picture = v });
+            set => Pictures = value.Select(v => new PizzaPicture() { Id = 0, Picture = v }).ToList();
         }
 
         [NotMapped]
@@ -36,11 +36,11 @@ namespace pizzeria.service.models
             set => throw new NotSupportedException();
         }
 
-        public IEnumerable<PizzaPrice> Prices { get; set; }
+        public List<PizzaPrice> Prices { get; set; }
         IEnumerable<IPizzaPrice> IPizza.Prices
         {
             get => Prices;
-            set => Prices = value.Select(v => (PizzaPrice)v);
+            set => Prices = value.Select(v => (PizzaPrice)v).ToList();
         }
 
         public List<PizzaPizzaTag> PizzaPizzaTags { get; set; }
