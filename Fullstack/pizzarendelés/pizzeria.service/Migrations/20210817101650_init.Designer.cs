@@ -9,7 +9,7 @@ using pizzeria.service;
 namespace pizzeria.service.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210808092228_init")]
+    [Migration("20210817101650_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,21 +18,6 @@ namespace pizzeria.service.Migrations
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "6.0.0-preview.5.21301.9");
-
-            modelBuilder.Entity("PizzaPizzaTag", b =>
-                {
-                    b.Property<int>("PizzasId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TagsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("PizzasId", "TagsId");
-
-                    b.HasIndex("TagsId");
-
-                    b.ToTable("PizzaPizzaTag");
-                });
 
             modelBuilder.Entity("pizzeria.service.models.Address", b =>
                 {
@@ -173,6 +158,27 @@ namespace pizzeria.service.Migrations
                     b.ToTable("PizzaPicture");
                 });
 
+            modelBuilder.Entity("pizzeria.service.models.PizzaPizzaTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("PizzaId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PizzaTagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PizzaId");
+
+                    b.HasIndex("PizzaTagId");
+
+                    b.ToTable("PizzaPizzaTag");
+                });
+
             modelBuilder.Entity("pizzeria.service.models.PizzaPrice", b =>
                 {
                     b.Property<int>("Id")
@@ -209,10 +215,15 @@ namespace pizzeria.service.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
+                    b.Property<int?>("PizzaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Name")
                         .IsUnique();
+
+                    b.HasIndex("PizzaId");
 
                     b.ToTable("PizzaTag");
                 });
@@ -322,21 +333,6 @@ namespace pizzeria.service.Migrations
                     b.HasDiscriminator().HasValue("Employee");
                 });
 
-            modelBuilder.Entity("PizzaPizzaTag", b =>
-                {
-                    b.HasOne("pizzeria.service.models.Pizza", null)
-                        .WithMany()
-                        .HasForeignKey("PizzasId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("pizzeria.service.models.PizzaTag", null)
-                        .WithMany()
-                        .HasForeignKey("TagsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("pizzeria.service.models.Address", b =>
                 {
                     b.HasOne("pizzeria.service.models.Customer", null)
@@ -379,10 +375,34 @@ namespace pizzeria.service.Migrations
                         .HasForeignKey("PizzaId");
                 });
 
+            modelBuilder.Entity("pizzeria.service.models.PizzaPizzaTag", b =>
+                {
+                    b.HasOne("pizzeria.service.models.Pizza", "Pizza")
+                        .WithMany("PizzaPizzaTags")
+                        .HasForeignKey("PizzaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("pizzeria.service.models.PizzaTag", "PizzaTag")
+                        .WithMany()
+                        .HasForeignKey("PizzaTagId");
+
+                    b.Navigation("Pizza");
+
+                    b.Navigation("PizzaTag");
+                });
+
             modelBuilder.Entity("pizzeria.service.models.PizzaPrice", b =>
                 {
                     b.HasOne("pizzeria.service.models.Pizza", null)
                         .WithMany("Prices")
+                        .HasForeignKey("PizzaId");
+                });
+
+            modelBuilder.Entity("pizzeria.service.models.PizzaTag", b =>
+                {
+                    b.HasOne("pizzeria.service.models.Pizza", null)
+                        .WithMany("Tags")
                         .HasForeignKey("PizzaId");
                 });
 
@@ -411,7 +431,11 @@ namespace pizzeria.service.Migrations
                 {
                     b.Navigation("Pictures");
 
+                    b.Navigation("PizzaPizzaTags");
+
                     b.Navigation("Prices");
+
+                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("pizzeria.service.models.User", b =>

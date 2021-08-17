@@ -39,5 +39,7 @@ namespace pizzeria.service.models
             set => Prices = value.Select(v => (PizzaPrice)v).ToList();
         }
 
+        public List<PizzaPizzaTag> PizzaPizzaTags { get; set; }
+
     }
 }
