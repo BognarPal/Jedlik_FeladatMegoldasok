@@ -29,6 +29,21 @@ namespace pizzeria.service.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "PizzaTag",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PizzaTag", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "PizzaPicture",
                 columns: table => new
                 {
@@ -65,28 +80,6 @@ namespace pizzeria.service.Migrations
                     table.PrimaryKey("PK_PizzaPrice", x => x.Id);
                     table.ForeignKey(
                         name: "FK_PizzaPrice_Pizzas_PizzaId",
-                        column: x => x.PizzaId,
-                        principalTable: "Pizzas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "PizzaTag",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    PizzaId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PizzaTag", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PizzaTag_Pizzas_PizzaId",
                         column: x => x.PizzaId,
                         principalTable: "Pizzas",
                         principalColumn: "Id",
@@ -305,11 +298,6 @@ namespace pizzeria.service.Migrations
                 table: "PizzaTag",
                 column: "Name",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PizzaTag_PizzaId",
-                table: "PizzaTag",
-                column: "PizzaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Role_Name",

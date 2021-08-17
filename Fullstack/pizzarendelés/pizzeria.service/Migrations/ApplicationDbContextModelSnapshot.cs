@@ -213,15 +213,10 @@ namespace pizzeria.service.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<int?>("PizzaId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("Name")
                         .IsUnique();
-
-                    b.HasIndex("PizzaId");
 
                     b.ToTable("PizzaTag");
                 });
@@ -397,13 +392,6 @@ namespace pizzeria.service.Migrations
                         .HasForeignKey("PizzaId");
                 });
 
-            modelBuilder.Entity("pizzeria.service.models.PizzaTag", b =>
-                {
-                    b.HasOne("pizzeria.service.models.Pizza", null)
-                        .WithMany("Tags")
-                        .HasForeignKey("PizzaId");
-                });
-
             modelBuilder.Entity("pizzeria.service.models.Role", b =>
                 {
                     b.HasOne("pizzeria.service.models.User", null)
@@ -432,8 +420,6 @@ namespace pizzeria.service.Migrations
                     b.Navigation("PizzaPizzaTags");
 
                     b.Navigation("Prices");
-
-                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("pizzeria.service.models.User", b =>
