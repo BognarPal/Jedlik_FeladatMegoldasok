@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace pizzeria.data.interfaces.operations
 {
-    public interface IPizzaRepositry<T> : IGenericRepository<T> where T : class, IPizza
+    public interface IPizzaRepository<T> : IGenericRepository<T> where T : class, IPizza
     {
-        IEnumerable<T> GetByTags(IEnumerable<T> tags);
+        IEnumerable<T> GetByTags(IEnumerable<string> tags);
         T UpdatePrice(int pizzaId, DateTime fromDate, decimal newPrice);
         T RemoveLastPrice(int pizzaId);
-        IEnumerable<IPizzaPrice> GetPrices(int pizzaId);
-        decimal? GetPrice(int pizzaId, DateTime date);
+        decimal? CurrentPrice(int pizzaId);
+        decimal? CurrentPrice(IPizza pizza);
     }
 }
