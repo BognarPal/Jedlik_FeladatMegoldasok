@@ -138,13 +138,39 @@ export class JcmComponent implements OnInit, AfterContentInit {
             course.lastTopicTime = null;
             if (course.courseState === 'ACTIVE') {
               this.jcmService.getStudents(course.id, [], null).then((students) => {
-                course.numberOfStudents = students.length;
+                if (students != null) {
+                  course.numberOfStudents = students.length;
+                } else {
+                  course.numberOfStudents = undefined;
+                }
               });
             }
           });
         });
       }
+      setTimeout(() => {
+        this.ngZone.run(() => this.readMissingNumberOfStudents(this.ngZone));
+      }, 30000);
     });
+  }
+
+  readMissingNumberOfStudents(ngZone: NgZone) {
+    let any = false;
+    this.courses.filter(c => c.numberOfStudents === undefined && c.courseState === 'ACTIVE').forEach(course => {
+      this.jcmService.getStudents(course.id, [], null).then((students) => {
+        if (students != null) {
+          course.numberOfStudents = students.length;
+        } else {
+          course.numberOfStudents = undefined;
+        }
+      });
+      any = true;
+    });
+    if (any) {
+      setTimeout(() => {
+        ngZone.run(() => this.readMissingNumberOfStudents(ngZone));
+      }, 30000);
+    }
   }
 
   selectCourse(course: any) {
