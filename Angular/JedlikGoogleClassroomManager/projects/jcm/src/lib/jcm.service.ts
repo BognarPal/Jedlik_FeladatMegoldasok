@@ -50,7 +50,7 @@ export class JcmService {
         return [];
       }
     }).catch((error) => {
-      return [];
+      return null;
     });
   }
 
