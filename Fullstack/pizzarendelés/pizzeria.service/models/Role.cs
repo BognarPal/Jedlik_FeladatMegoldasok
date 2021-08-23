@@ -15,5 +15,7 @@ namespace pizzeria.service.models
         [Required]  
         [StringLength(30)]
         public string Name { get; set; }
+
+        public IEnumerable<User> Users { get; set; }
     }
 }
