@@ -44,6 +44,21 @@ namespace pizzeria.service.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Role",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Role", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "PizzaPicture",
                 columns: table => new
                 {
@@ -216,36 +231,41 @@ namespace pizzeria.service.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Role",
+                name: "UserRole",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    RoleId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Role", x => x.Id);
+                    table.PrimaryKey("PK_UserRole", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Role_User_UserId",
+                        name: "FK_UserRole_Role_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Role",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_UserRole_User_UserId",
                         column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.InsertData(
                 table: "Role",
-                columns: new[] { "Id", "Name", "UserId" },
+                columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { 1, "admin", null },
-                    { 2, "customer", null },
-                    { 3, "kitchen", null },
-                    { 4, "courier", null }
+                    { 1, "admin" },
+                    { 2, "customer" },
+                    { 3, "kitchen" },
+                    { 4, "courier" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -306,11 +326,6 @@ namespace pizzeria.service.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Role_UserId",
-                table: "Role",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_User_Email",
                 table: "User",
                 column: "Email",
@@ -320,6 +335,16 @@ namespace pizzeria.service.Migrations
                 name: "IX_User_PrimaryAddressId",
                 table: "User",
                 column: "PrimaryAddressId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserRole_RoleId",
+                table: "UserRole",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserRole_UserId",
+                table: "UserRole",
+                column: "UserId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Orders_Address_AddressId",
@@ -365,7 +390,7 @@ namespace pizzeria.service.Migrations
                 name: "PizzaPrice");
 
             migrationBuilder.DropTable(
-                name: "Role");
+                name: "UserRole");
 
             migrationBuilder.DropTable(
                 name: "Orders");
@@ -375,6 +400,9 @@ namespace pizzeria.service.Migrations
 
             migrationBuilder.DropTable(
                 name: "Pizzas");
+
+            migrationBuilder.DropTable(
+                name: "Role");
 
             migrationBuilder.DropTable(
                 name: "User");

@@ -26,12 +26,17 @@ namespace pizzeria.service.models
         [Required]
         [StringLength(50)]
         public string Phone { get; set; }
-        
+
+        [NotMapped]
         public IEnumerable<Role> Roles { get; set; }
         IEnumerable<IRole> IUser.Roles
         {
-            get => Roles;
-            set => Roles = value.Select(v => (Role)v);
+#pragma warning disable CS8603 // Possible null reference return.
+            get => UserRoles == null ? null : UserRoles.Select(u => u.Role);
+#pragma warning restore CS8603 // Possible null reference return.
+            set => throw new NotSupportedException();
         }
+
+        public IEnumerable<UserRole> UserRoles { get; set; }
     }
 }

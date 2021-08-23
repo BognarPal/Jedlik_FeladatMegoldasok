@@ -9,7 +9,7 @@ using pizzeria.service;
 namespace pizzeria.service.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210817122154_init")]
+    [Migration("20210823105156_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -234,15 +234,10 @@ namespace pizzeria.service.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("varchar(30)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("Name")
                         .IsUnique();
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Role");
 
@@ -309,6 +304,27 @@ namespace pizzeria.service.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("User");
                 });
 
+            modelBuilder.Entity("pizzeria.service.models.UserRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserRole");
+                });
+
             modelBuilder.Entity("pizzeria.service.models.Customer", b =>
                 {
                     b.HasBaseType("pizzeria.service.models.User");
@@ -318,12 +334,16 @@ namespace pizzeria.service.Migrations
 
                     b.HasIndex("PrimaryAddressId");
 
+                    b.ToTable("User");
+
                     b.HasDiscriminator().HasValue("Customer");
                 });
 
             modelBuilder.Entity("pizzeria.service.models.Employee", b =>
                 {
                     b.HasBaseType("pizzeria.service.models.User");
+
+                    b.ToTable("User");
 
                     b.HasDiscriminator().HasValue("Employee");
                 });
@@ -394,11 +414,21 @@ namespace pizzeria.service.Migrations
                         .HasForeignKey("PizzaId");
                 });
 
-            modelBuilder.Entity("pizzeria.service.models.Role", b =>
+            modelBuilder.Entity("pizzeria.service.models.UserRole", b =>
                 {
-                    b.HasOne("pizzeria.service.models.User", null)
-                        .WithMany("Roles")
-                        .HasForeignKey("UserId");
+                    b.HasOne("pizzeria.service.models.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
+
+                    b.HasOne("pizzeria.service.models.User", "User")
+                        .WithMany("UserRoles")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("pizzeria.service.models.Customer", b =>
@@ -426,7 +456,7 @@ namespace pizzeria.service.Migrations
 
             modelBuilder.Entity("pizzeria.service.models.User", b =>
                 {
-                    b.Navigation("Roles");
+                    b.Navigation("UserRoles");
                 });
 
             modelBuilder.Entity("pizzeria.service.models.Customer", b =>
