@@ -2,7 +2,7 @@
 
 namespace pizzeria.data.interfaces.operations
 {
-    public interface ICustomerRepository : IGenericRepository<ICustomer>
+    public interface ICustomerRepository<T> : IGenericRepository<T> where T: class, ICustomer
     {
 
     }

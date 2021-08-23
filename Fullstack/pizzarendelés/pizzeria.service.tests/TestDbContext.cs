@@ -56,7 +56,17 @@ namespace pizzeria.service.tests
 
             //TODO: teszt projektben admin felhasználó kezdő jelszavához tartozó hash létrehozása
             modelBuilder.Entity<Employee>().HasData(
-                new { Id = 1, Name = "admin", Email = "admin@localhost.com", Phone = "+36 90 123456", PasswordHash = "TODO !!!" });
+                new User() { Id = 1, Name = "admin", Email = "admin@localhost.com", Phone = "+36 90 123456", PasswordHash = "TODO !!!" },
+                new User() { Id = 2, Name = "Szakács Béla", Email = "bela@localhost.com", Phone = "06 90 654321", PasswordHash = "TODO !!!" },
+                new User() { Id = 3, Name = "Futár Kálmán", Email = "kalman@localhost.com", Phone = "06 90 987654", PasswordHash = "TODO !!!" }
+            );
+
+            modelBuilder.Entity<UserRole>().HasData(
+                new { Id = 1, UserId = 1, RoleId = 1 },
+                new { Id = 2, UserId = 2, RoleId = 3 },
+                new { Id = 3, UserId = 3, RoleId = 4 }
+            );
+
 
         }
 

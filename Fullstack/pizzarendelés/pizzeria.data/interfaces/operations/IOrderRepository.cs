@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace pizzeria.data.interfaces.operations
 {
-    public interface IOrderRepository : IGenericRepository<IOrder>
+    public interface IOrderRepository<T> : IGenericRepository<T> where T : class, IOrder
     {
-        IEnumerable<IOrder> OrdersToBeCooked();
-        void StartCooking(IOrder order);
-        void StartOfDelivery(IOrder order);
-        void Delivered(IOrder order);
+        IEnumerable<T> OrdersToBeCooked();
+        void StartCooking(T order);
+        void StartOfDelivery(T order);
+        void Delivered(T order);
     }
 }
