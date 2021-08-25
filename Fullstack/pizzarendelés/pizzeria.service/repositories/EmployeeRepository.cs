@@ -12,6 +12,9 @@ namespace pizzeria.service.repositories
 {
     public class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository<Employee>
     {
+        public EmployeeRepository(ApplicationDbContext dbContext) : base(dbContext)
+        { }
+
         public override Employee GetById(int id)
         {
             var employee = dbContext.Set<Employee>()
@@ -36,9 +39,6 @@ namespace pizzeria.service.repositories
                             .Where(predicate)
                             .ToList();
         }
-
-        public EmployeeRepository(ApplicationDbContext dbContext) : base(dbContext)
-        { }
 
         public override IEnumerable<Employee> AddRange(IEnumerable<Employee> entities)
         {

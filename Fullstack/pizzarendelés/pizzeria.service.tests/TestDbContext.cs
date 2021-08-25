@@ -67,6 +67,16 @@ namespace pizzeria.service.tests
                 new { Id = 3, UserId = 3, RoleId = 4 }
             );
 
+            modelBuilder.Entity<Address>().HasData(
+                new { Id = 1, City = "Győr", StreetAndHouseNumber = "Futrinka u. 10", FloorAndDoor = "2 em. 5", Comment = "Nyomd a kapucsengőt", CustomerId = 4 },
+                new { Id = 2, City = "Győr", StreetAndHouseNumber = "Szent István út 7", FloorAndDoor = "", Comment = "Jedlik", CustomerId = 4 }
+            );
+            modelBuilder.Entity<Customer>().HasData(
+                new { Id = 4, Name = "Rend Elek", Email = "elek@email.com", Phone = "06 55 1234567", PasswordHash = "TODO !!!", PrimaryAddressId = 1}
+            );          
+            modelBuilder.Entity<UserRole>().HasData(
+                new { Id = 4, UserId = 4, RoleId = 2 }
+            );
 
         }
 
