@@ -140,8 +140,6 @@ namespace pizzeria.service.tests
         [Fact]
         public void TimeStampCheck()
         {
-
-
             using (var dbContext = TestDbContext.CreateDbContext())
             {
                 var sut = new OrderRepository(dbContext);
@@ -157,6 +155,5 @@ namespace pizzeria.service.tests
                 Assert.True(savedOrder.CookingStartTimeStamp <= DateTime.Now);
             }
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using pizzeria.data.interfaces.models;
+﻿using Microsoft.AspNetCore.Identity;
+using pizzeria.data.interfaces.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -41,5 +42,19 @@ namespace pizzeria.service.models
         }
 
         public IEnumerable<UserRole> UserRoles { get; set; }
+
+        private string password;
+        [NotMapped]
+        public string Password
+        {
+            get => password;
+            set
+            {
+                password = value;
+
+                var hasher = new PasswordHasher<User>();
+                PasswordHash = hasher.HashPassword(this, password);
+            }
+        }
     }
 }

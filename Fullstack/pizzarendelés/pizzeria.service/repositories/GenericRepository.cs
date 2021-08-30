@@ -9,7 +9,7 @@ namespace pizzeria.service.repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class, IEntity
     {
-        protected ApplicationDbContext dbContext;
+        protected readonly ApplicationDbContext dbContext;
 
         public GenericRepository(ApplicationDbContext dbContext)
         {

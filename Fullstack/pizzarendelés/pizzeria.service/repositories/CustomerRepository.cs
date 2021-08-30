@@ -12,6 +12,9 @@ namespace pizzeria.service.repositories
 {
     public class CustomerRepository : GenericRepository<Customer>, ICustomerRepository<Customer>
     {
+        public CustomerRepository(ApplicationDbContext dbContext) : base(dbContext)
+        { }
+
         public override Customer GetById(int id)
         {
             var customer = dbContext.Set<Customer>()
@@ -23,9 +26,6 @@ namespace pizzeria.service.repositories
             return customer;
 #pragma warning restore CS8603 // Possible null reference return.
         }
-
-        public CustomerRepository(ApplicationDbContext dbContext) : base(dbContext)
-        { }
 
         public override IEnumerable<Customer> GetAll()
         {
