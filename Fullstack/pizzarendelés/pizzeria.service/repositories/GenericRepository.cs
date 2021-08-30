@@ -40,7 +40,7 @@ namespace pizzeria.service.repositories
 #pragma warning restore CS8603 // Possible null reference return.
         }
 
-        public void Remove(T entity)
+        public virtual void Remove(T entity)
         {
             dbContext.Set<T>().Remove(entity);
         }

@@ -78,6 +78,14 @@ namespace pizzeria.service.tests
                 new { Id = 4, UserId = 4, RoleId = 2 }
             );
 
+            modelBuilder.Entity<Order>().HasData(
+                new { Id = 1, AddressId = 2, CustomerId = 4, OrderTimeStamp = DateTime.Now, CustomerComment = "nincs"}
+            );
+
+            modelBuilder.Entity<OrderDetails>().HasData (
+                new { Id = 1, OrderId = 1, PizzaId = 1, Count = 1 },
+                new { Id = 2, OrderId = 1, PizzaId = 3, Count = 2 }
+            );
         }
 
         public static ApplicationDbContext CreateDbContext()
