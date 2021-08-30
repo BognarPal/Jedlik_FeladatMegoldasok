@@ -55,13 +55,13 @@ namespace pizzeria.service.tests
             );
 
             modelBuilder.Entity<Employee>().HasData(
-                new User() { Id = 1, Name = "admin", Email = "admin@localhost.com", Phone = "+36 90 123456", Password = "admin" },
+                //new User() { Id = 1, Name = "admin", Email = "admin@localhost.com", Phone = "+36 90 123456", Password = "admin" },
                 new User() { Id = 2, Name = "Szakács Béla", Email = "bela@localhost.com", Phone = "06 90 654321", Password = "123456" },
                 new User() { Id = 3, Name = "Futár Kálmán", Email = "kalman@localhost.com", Phone = "06 90 987654", Password = "qwerty" }
             );
 
             modelBuilder.Entity<UserRole>().HasData(
-                new { Id = 1, UserId = 1, RoleId = 1 },
+                //new { Id = 1, UserId = 1, RoleId = 1 },
                 new { Id = 2, UserId = 2, RoleId = 3 },
                 new { Id = 3, UserId = 3, RoleId = 4 }
             );

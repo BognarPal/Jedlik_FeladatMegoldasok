@@ -1,9 +1,17 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using pizzeria.data.interfaces.operations;
+using pizzeria.service;
+using pizzeria.service.models;
+using pizzeria.service.repositories;
+using System.Text;
 
 namespace pizzeria.website
 {
@@ -19,23 +27,37 @@ namespace pizzeria.website
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseMySql(
+                    Configuration.GetConnectionString("DefaultConnection"),
+                    new MariaDbServerVersion(new Version("10.4.20"))
+                ));
+
             services.AddControllersWithViews();
 
-#if DEBUG
-            //CORS engedélyezése
-            services.AddCors(options =>
+            // configure jwt authentication
+            var jwtConfigSection = Configuration.GetSection("Jwt");
+            var key = Encoding.ASCII.GetBytes(jwtConfigSection["secret"]);
+            services.AddAuthentication(x =>
             {
-                options.AddPolicy("EnableCORS", builder =>
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
                 {
-                    builder.SetIsOriginAllowed(origin => origin.StartsWith("http://localhost:4200"))
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials()
-                        .WithExposedHeaders("Content-Disposition")
-                        .Build();
-                });
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
             });
-#endif
+
+            // configure DI for application services
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,12 +73,13 @@ namespace pizzeria.website
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-#if DEBUG
-            app.UseCors("EnableCORS");
-#endif 
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

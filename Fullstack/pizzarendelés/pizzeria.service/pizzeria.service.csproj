@@ -12,6 +12,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.0-preview.7.21378.6" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.0-preview.5" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.2" />
   </ItemGroup>
 
   <ItemGroup>

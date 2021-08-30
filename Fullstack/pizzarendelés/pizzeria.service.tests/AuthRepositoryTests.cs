@@ -17,10 +17,12 @@ namespace pizzeria.service.tests
             {
                 var sut = new AuthRepository(dbContext);
 
-                var user = new User() { Email = "admin@localhost.com", Password = "admin" };
+                var user = new Authenticate() { Email = "admin@localhost.com", Password = "admin" };
                 var foundUser = sut.AuthenticateUser(user);
 
                 Assert.Equal(1, foundUser.Id);
+                Assert.Single(foundUser.Roles);
+                Assert.Equal("admin", foundUser.Roles.First().Name);
             }
         }
 
@@ -31,8 +33,8 @@ namespace pizzeria.service.tests
             {
                 var sut = new AuthRepository(dbContext);
 
-                var user = new User() { Email = "admin@localhost.com", Password = "valami" };
-                var user2 = new User() { Email = "senki@localhost.com", Password = "valami" };
+                var user = new Authenticate() { Email = "admin@localhost.com", Password = "valami" };
+                var user2 = new Authenticate() { Email = "senki@localhost.com", Password = "valami" };
 
                 Assert.Throws<AuthenticationException>(() => sut.AuthenticateUser(user));
                 Assert.Throws<AuthenticationException>(() => sut.AuthenticateUser(user2));

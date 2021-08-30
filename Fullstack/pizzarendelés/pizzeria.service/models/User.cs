@@ -56,5 +56,8 @@ namespace pizzeria.service.models
                 PasswordHash = hasher.HashPassword(this, password);
             }
         }
+
+        [NotMapped]
+        public string Token { get; set; }
     }
 }

@@ -2,8 +2,9 @@
 
 namespace pizzeria.data.interfaces.operations
 {
-    public interface IAuthRepository<T> where T : class, IUser
+    public interface IAuthRepository
     {
-        T AuthenticateUser(T user);
+        IUser AuthenticateUser(IAuthenticate model);
+        IUser AuthenticateUser(IAuthenticate model, string jwtSecretString, int jwtValidityMinute);
     }
 }
