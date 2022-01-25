@@ -1,0 +1,18 @@
+<div style="height: calc(100vh-300px)">
+  <catch-me-meet
+    [roomName]="roomName"
+    [userName]="userName"
+    id="meet"
+  ></catch-me-meet>
+  <catch-me-map-container
+    id="map"
+    (moveError)="moveError($event)"
+  ></catch-me-map-container>
+  <div *ngIf="errorText" style="font-size: 2rem;" class="info bg-danger text-white fw-bold pt-4">
+    {{ errorText }}
+  </div>
+
+  <div *ngIf="!errorText" class="info bg-secondary text-white pt-5">
+    A játékállás helye
+  </div>
+</div>

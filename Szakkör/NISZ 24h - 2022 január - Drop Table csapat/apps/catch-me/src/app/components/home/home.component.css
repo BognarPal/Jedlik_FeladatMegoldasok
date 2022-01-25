@@ -1,0 +1,31 @@
+#fold {
+  background-image: url('../../../assets/img/152469542globe-earth-animation-15-2.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+#mainn {
+  font-size: larger;
+}
+#outer-div {
+  width: 100%;
+  text-align: center;
+}
+
+#inner-div {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px;
+}
+#blue {
+  color: blue;
+}
+
+#red {
+  color: red;
+}
+
+#green {
+  color: green;
+}

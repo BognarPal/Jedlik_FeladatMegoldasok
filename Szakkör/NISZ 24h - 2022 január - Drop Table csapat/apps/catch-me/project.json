@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/catch-me",
+  "sourceRoot": "apps/catch-me/src",
+  "prefix": "catch-me",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/catch-me",
+        "index": "apps/catch-me/src/index.html",
+        "main": "apps/catch-me/src/main.ts",
+        "polyfills": "apps/catch-me/src/polyfills.ts",
+        "tsConfig": "apps/catch-me/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/catch-me/src/favicon.ico", "apps/catch-me/src/assets"],
+        "styles": ["apps/catch-me/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/catch-me/src/environments/environment.ts",
+              "with": "apps/catch-me/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "catch-me:build:production"
+        },
+        "development": {
+          "browserTarget": "catch-me:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/catch-me/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "catch-me:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/catch-me/src/**/*.ts",
+          "apps/catch-me/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/catch-me"],
+      "options": {
+        "jestConfig": "apps/catch-me/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

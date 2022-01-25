@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ws_test.gd" type="Script" id=1]
+
+[node name="Canvas" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Center" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+margin_left = 405.0
+margin_top = 167.0
+margin_right = 619.0
+margin_bottom = 433.0
+
+[node name="Box" type="VBoxContainer" parent="Center/Panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 207.0
+margin_bottom = 259.0
+
+[node name="Address" type="LineEdit" parent="Center/Panel/Box"]
+margin_right = 200.0
+margin_bottom = 24.0
+text = "ws://localhost:3000"
+
+[node name="Button" type="Button" parent="Center/Panel/Box"]
+margin_top = 28.0
+margin_right = 200.0
+margin_bottom = 48.0
+text = "Connect"
+
+[node name="Log" type="ItemList" parent="Center/Panel/Box"]
+margin_top = 52.0
+margin_right = 200.0
+margin_bottom = 252.0
+rect_min_size = Vector2( 200, 200 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Center/Panel/Box/Button" to="." method="_on_Button_pressed"]

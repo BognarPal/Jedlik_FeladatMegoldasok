@@ -1,0 +1,11 @@
+#meet {
+    float: left;
+}
+
+.info {
+    width: 400px;
+    position: relative;
+    top: -150px;
+    height: 150px;
+    text-align: center;
+}

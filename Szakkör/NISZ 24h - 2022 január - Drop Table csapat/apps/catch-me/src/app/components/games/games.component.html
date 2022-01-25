@@ -1,0 +1,36 @@
+<div>
+  <div class="row justify-content-md-center flex">
+<div class="col-lg-2">    </div>
+    <div class="col-lg-8 text-center">
+      <h1>Hello {{ userName }}!<br> Mit szólnál egy jó hangulatú játékhoz?<br> Az alábbi szerverek elérhetőek:</h1>
+    </div>
+<div class="col-lg-2">    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-xl-3" *ngFor="let game of games">
+      <catch-me-lobby
+        [gamee]="game"
+        [userName]="userName"
+        (deleteGame)="deleteGame($event)"
+        (connectIn)="connectIn($event)"
+      ></catch-me-lobby>
+    </div>
+    <div class="col-xl-3">
+      <div *ngIf="userName !== 'dummy'" class="row m-5">
+        <div class="col text-center">
+          <button class="mr-5 btn btn-primary" (click)="CreateLobby()">
+            Csinálok egy szobát!
+          </button>
+        </div>
+      </div>
+      <div class="row m-5">
+        <div class="col text-center">
+          <button class="mr-5 btn btn-success" (click)="refresh()">
+            Frissítés.
+          </button>
+        </div>
+      </div>
+
+    </div>
+</div>

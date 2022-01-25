@@ -1,0 +1,31 @@
+<div class="login-div">
+    <form class="form-signin px-4" (submit)="submit()" #loginForm="ngForm">
+
+        <h1 class="h3 mb-3 font-weight-normal text-center mb-4">Regisztráció</h1>
+        <input type="text" class="form-control" placeholder="Név" required="" autofocus=""
+            [(ngModel)]="formdata.name" name="email">
+
+        <input type="email" class="form-control" placeholder="Email cím" required="" autofocus=""
+            [(ngModel)]="formdata.email" name="email">
+
+        <input type="password" class="form-control" placeholder="Jelszó" required="" [(ngModel)]="formdata.password"
+            name="password">
+
+        <input type="password" class="form-control" placeholder="Jelszó ismét" required="" [(ngModel)]="formdata.passwordAgain"
+            name="password">
+
+        <div class="text-center my-3">
+            <button class="btn btn-lg btn-primary" type="submit" [disabled]="loading">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Regisztráció
+            </button>
+        </div>
+        <div class="text-center my-3">
+            Már van hozzáférése: <a routerLink="/login">Bejelentkezés</a>
+        </div>
+
+        <label *ngIf="error" class="text-danger fw-bold my-2 text-center w-100">{{error}}</label>
+
+    </form>
+
+</div>

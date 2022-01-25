@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "catch-me": "apps/catch-me",
+    "catch-me-e2e": "apps/catch-me-e2e",
+    "my-ts-lib": "libs/my-ts-lib"
+  }
+}

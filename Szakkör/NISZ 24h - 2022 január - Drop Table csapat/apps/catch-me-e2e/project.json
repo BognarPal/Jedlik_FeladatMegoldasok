@@ -1,0 +1,28 @@
+{
+  "root": "apps/catch-me-e2e",
+  "sourceRoot": "apps/catch-me-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/catch-me-e2e/cypress.json",
+        "devServerTarget": "catch-me:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "catch-me:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/catch-me-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["catch-me"]
+}

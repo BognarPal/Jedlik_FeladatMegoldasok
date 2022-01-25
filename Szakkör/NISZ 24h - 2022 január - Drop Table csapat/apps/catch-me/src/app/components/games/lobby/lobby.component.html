@@ -1,0 +1,16 @@
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">{{gamee.lobby_id}}</h6>
+      <h5 class="card-title">{{gamee.admin_name}} szobája</h5>
+          <p>Jelenlévők: {{gamee.user_names}}</p>
+        </div>
+          <button class="btn btn-primary"
+            *ngIf="!(gamee.user_names.includes(userName))"
+            (click)="LogintoLobby(gamee)"
+          >
+            Belépek!
+          </button>
+            <button class="btn btn-primary " *ngIf="gamee.admin_name !== userName && (gamee.user_names.includes(userName))" (click)="QuitLobby(gamee)">Kilépek!</button>
+            
+            <button class="btn btn-primary" *ngIf="gamee.admin_name === userName" (click)="DeleteLobby(gamee)">Törlöm a szobát!</button>
+  </div>
