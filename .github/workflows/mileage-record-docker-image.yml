@@ -1,0 +1,28 @@
+name: Útnyilvántartó back-end - Docker image létrehozása
+
+on: workflow_dispatch
+
+jobs:
+  backend-image:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - uses: kzrnm/get-net-sdk-project-versions-action@v1
+      id: get-version
+      with:
+        proj-path: "Szoftverfejlesztők OKJ - komplex feladatsorok/Útnyilvántartás/back-end/back-end.csproj"
+
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: bognarpal
+        password: ${{ secrets.GHCR_TOKEN }}    
+    
+    - name: Build the Docker image
+      working-directory: back-end
+      run: |
+        docker build ./ --file Dockerfile -t ghcr.io/bognarpal/mileage-record:${{steps.get-version.outputs.assembly-version}} -t ghcr.io/bognarpal/mileage-record:latest 
+        docker push ghcr.io/bognarpal/mileage-record:latest
+        docker push ghcr.io/bognarpal/mileage-record:${{steps.get-version.outputs.assembly-version}}
