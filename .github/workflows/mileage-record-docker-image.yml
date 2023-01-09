@@ -21,7 +21,7 @@ jobs:
         password: ${{ secrets.GHCR_TOKEN }}    
     
     - name: Build the Docker image
-      working-directory: back-end
+      working-directory: "Szoftverfejlesztők OKJ - komplex feladatsorok/Útnyilvántartás/back-end"
       run: |
         docker build ./ --file Dockerfile -t ghcr.io/bognarpal/mileage-record:${{steps.get-version.outputs.assembly-version}} -t ghcr.io/bognarpal/mileage-record:latest 
         docker push ghcr.io/bognarpal/mileage-record:latest
