@@ -36,11 +36,15 @@ if (app.Environment.IsDevelopment())
 {
 }
 app.UseCors("EnableCORS");
-app.UseSwagger();
+app.UseSwagger( c=>
+{
+    c.RouteTemplate = "docs/{documentName}/swagger.json";
+});
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("../swagger/v1/swagger.json", "Pizzarendelés API");
     c.RoutePrefix = "docs";
+   
 });
 
 using (var scope = app.Services.CreateScope())
