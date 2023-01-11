@@ -39,6 +39,15 @@ app.UseCors("EnableCORS");
 app.UseSwagger( c=>
 {
     c.RouteTemplate = "docs/{documentName}/swagger.json";
+    c.PreSerializeFilters.Add((swagger, httpReq) =>
+    {
+        var oldPaths = swagger.Paths.ToDictionary(entry => entry.Key, entry => entry.Value);
+        foreach (var path in oldPaths)
+        {
+            swagger.Paths.Remove(path.Key);
+            swagger.Paths.Add(path.Key.Replace("api", "dolgozat/api"), path.Value);
+        }
+    });
 });
 app.UseSwaggerUI(c =>
 {
