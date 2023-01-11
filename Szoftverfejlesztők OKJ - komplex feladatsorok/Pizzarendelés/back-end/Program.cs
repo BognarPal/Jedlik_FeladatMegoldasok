@@ -42,7 +42,7 @@ app.UseSwagger( c=>
 });
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("../swagger/v1/swagger.json", "Pizzarendelés API");
+    c.SwaggerEndpoint("v1/swagger.json", "Pizzarendelés API");
     c.RoutePrefix = "docs";
    
 });

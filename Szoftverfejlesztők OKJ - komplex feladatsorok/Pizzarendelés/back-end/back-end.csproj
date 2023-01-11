@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>back_end</RootNamespace>
-	<AssemblyVersion>1.0.2</AssemblyVersion>
+	<AssemblyVersion>1.0.3</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
