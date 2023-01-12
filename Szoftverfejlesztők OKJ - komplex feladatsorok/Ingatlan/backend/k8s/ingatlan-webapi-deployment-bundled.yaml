@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/bognarpal/intaglan-webapi:1.0.1
+          image: ghcr.io/bognarpal/intaglan-webapi:1.0.2
           ports:
             - containerPort: 80
       imagePullSecrets:
