@@ -3,20 +3,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: intaglan-webapi-deployment
+  name: ingatlan-webapi-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: intaglan-webapi
+      component: ingatlan-webapi
   template:
     metadata:
       labels:
-        component: intaglan-webapi
+        component: ingatlan-webapi
     spec:
       containers:
         - name: backend
-          image: ghcr.io/bognarpal/intaglan-webapi:1.0.2
+          image: ghcr.io/bognarpal/ingatlan-webapi:1.0.2
           ports:
             - containerPort: 80
       imagePullSecrets:
@@ -27,11 +27,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: intaglan-webapi-cluster-ip-service
+  name: ingatlan-webapi-cluster-ip-service
 spec:
   type: ClusterIP
   ports:
     - port: 80
       targetPort: 80
   selector:
-    component: intaglan-webapi
+    component: ingatlan-webapi
