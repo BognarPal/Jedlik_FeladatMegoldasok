@@ -1,0 +1,37 @@
+# kubectl create secret docker-registry bognarpal-ghcr-io-registry-secret --docker-server=ghcr.io --docker-username=bognarpal --docker-password=************************* --docker-email=bognar.pal@jedlik.eu
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: intaglan-webapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: intaglan-webapi
+  template:
+    metadata:
+      labels:
+        component: intaglan-webapi
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/bognarpal/intaglan-webapi:1.0.1
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: bognarpal-ghcr-io-registry-secret
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: intaglan-webapi-cluster-ip-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    component: intaglan-webapi
