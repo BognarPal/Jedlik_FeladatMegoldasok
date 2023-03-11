@@ -20,7 +20,7 @@ spec:
           ports:
             - containerPort: 80
       imagePullSecrets:
-        - name: bognarpal-ghcr-io-registry-secret
+        - name: jedlik-gyor-ghcr-io-registry-secret
 
 ---
 
