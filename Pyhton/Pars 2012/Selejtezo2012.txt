@@ -1,0 +1,42 @@
+Név;Csoport;NemzetÉsKód;D1;D2;D3
+A. G. Kruger;B;Egyesült Államok (USA);X;72,13;X
+Alekszej Zagornij;B;Oroszország (RUS);71,02;72,52;X
+Alexander Smith;A;Nagy-Britannia (GBR);72,59;74,71;73,21
+Aléxandrosz Papadimitríu;A;Görögország (GRE);X;66,91;67,19
+Ali ez-Zinkavi;B;Kuvait (KUW);70,67;73,4;X
+Artem Rubanko;B;Ukrajna (UKR);X;X;X
+David Söderberg;B;Finnország (FIN);X;71,26;71,76
+Dilsod Nazarov;A;Tádzsikisztán (TJK);73,9;X;75,91
+Dmitri Marşin;B;Azerbajdzsán (AZE);72,06;X;72,85
+Eivind Henriksen;B;Norvégia (NOR);72,67;X;74,62
+Eşref Apak;A;Törökország (TUR);X;X;73,47
+Haklits András;A;Horvátország (CRO);X;70,61;X
+Igors Sokolovs;A;Lettország (LAT);X;71,77;72,76
+James Steacy;B;Kanada (CAN);X;X;X
+Javier Cienfuegos;B;Spanyolország (ESP);X;63,79;73,73
+Jerome Bortoluzzi;B;Franciaország (FRA);X;70,36;74,15
+Juan Ignacio Cerra;B;Argentína (ARG);X;X;68,2
+Kaveh Mousavi;B;Irán (IRI);67,25;71,42;72,7
+Kibwe Johnson;A;Egyesült Államok (USA);X;X;77,17
+Kirill Ikonnyikov;A;Oroszország (RUS);X;76,43;76,85
+Konsztandínosz Sztathelákosz;B;Ciprus (CYP);69,65;X;X
+Lorenzo Povegliano;B;Olaszország (ITA);71,55;68,77;X
+Lukáš Melich;A;Csehország (CZE);75,88;75,29;72,49
+Marcel Lomnicky;B;Szlovákia (SVK);X;74;X
+Mergen Mämmedow;B;Türkmenisztán (TKM);68,39;66,99;67,23
+Mostafa Al-Gamel;A;Egyiptom (EGY);X;70,23;71,36
+Murofusi Kódzsi;A;Japán (JPN);77,18;78,48;-
+Nicola Vizzoni;A;Olaszország (ITA);74,79;73,88;74,12
+Nicolas Figère;B;Franciaország (FRA);69,74;X;X
+Olekszandr Drihol;A;Ukrajna (UKR);X;68,02;69,57
+Olekszij Szokirszkij;A;Ukrajna Ukrajna (UKR);X;X;77,65
+Pars Krisztián;B;Magyarország (HUN);77,11;79,37;-
+Pavel Krivicki;A;Fehéroroszország (BLR);71,49;X;X
+Paweł Fajdek;B;Lengyelország (POL);X;X;X
+Primož Kozmus;A;Szlovénia (SLO);78,12;-;-
+Quentin Bigot;A;Franciaország (FRA);69,22;68,17;72,42
+Roberto Janet;B;Kuba (CUB);72,52;73,34;70,19
+Serghei Marghiev;A;Moldova (MDA);67,17;67,32;69,76
+Suhrob Xo'jayev;A;Üzbegisztán (UZB);65,88;64,74;X
+Szymon Ziółkowski;A;Lengyelország (POL);76,22;X;75,68
+Valerij Szvjatoha;B;Fehéroroszország (BLR);73,11;73,07;74,69

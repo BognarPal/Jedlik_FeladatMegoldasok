@@ -1,0 +1,12 @@
+Helyezés;Név;Csoport;Nemzet;NemzetKód;Sorozat;Eredmény1;Pars Krisztián;B;Magyarország;HUN;77,11;79,37;-;79.37
+2;Murofusi Kódzsi;A;Japán;JPN;77,18;78,48;-;78.48
+3;Primož Kozmus;A;Szlovénia;SLO;78,12;-;-;78.12
+4;Olekszij Szokirszkij;A;Ukrajna Ukrajna;UKR;X;X;77,65;77.65
+5;Kibwe Johnson;A;Egyesült Államok;USA;X;X;77,17;77.17
+6;Kirill Ikonnyikov;A;Oroszország;RUS;X;76,43;76,85;76.85
+7;Szymon Ziółkowski;A;Lengyelország;POL;76,22;X;75,68;76.22
+8;Dilsod Nazarov;A;Tádzsikisztán;TJK;73,9;X;75,91;75.91
+9;Lukáš Melich;A;Csehország;CZE;75,88;75,29;72,49;75.88
+10;Nicola Vizzoni;A;Olaszország;ITA;74,79;73,88;74,12;74.79
+11;Alexander Smith;A;Nagy-Britannia;GBR;72,59;74,71;73,21;74.71
+12;Valerij Szvjatoha;B;Fehéroroszország;BLR;73,11;73,07;74,69;74.69
