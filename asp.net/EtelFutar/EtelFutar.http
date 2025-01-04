@@ -1,0 +1,6 @@
+@EtelFutar_HostAddress = http://localhost:5188
+
+GET {{EtelFutar_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
