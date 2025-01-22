@@ -20,10 +20,15 @@ Kissebb dokumentáció: /catch-me/Kapj_El_Ha_Tudsz_-_Dokumentáció.odt
 ## Használat módja:
 Az npm parancsokat a /catch-me azaz a root alatt futtasd! továbbiak->https://nx.dev/
 
-Az API felé a kérésgyűjtemény megtalálható thunder-collection*.json névvel ellátva. továbbiak->https://www.thunderclient.com/
+Az API felé a kérésgyűjtemény megtalálható thunder-collection*.json névvel ellátva. továbbiak->https://www.thunderclient.com/ 
+
+## Itt tudod online futtatni az appot codeanywhere segítségével:
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://versenydonto.nisz.hu/csapat03/projekt03)
+
 ## Itt tudod online futtatni az appot gitpod segítségével:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://versenydonto.nisz.hu/csapat03/projekt03)
+
 továbbiak-> https://www.gitpod.io/
 
 ### Az elindításhoz szükséges:
