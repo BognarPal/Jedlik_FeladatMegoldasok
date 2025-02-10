@@ -26,6 +26,9 @@ Az API felé a kérésgyűjtemény megtalálható thunder-collection*.json névv
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://versenydonto.nisz.hu/csapat03/projekt03)
 továbbiak-> https://www.gitpod.io/
 
+## Itt tudod online futtatni az appot codeanywhere segítségével:
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://versenydonto.nisz.hu/csapat03/projekt03)
+
 ### Az elindításhoz szükséges:
 
 - `npm i`
